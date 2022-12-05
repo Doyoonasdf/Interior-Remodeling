@@ -16,13 +16,20 @@ a {
 
 #header {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
   width: 100%;
+  height: 100px;
 }
 #header::after {
   content: "";
   display: block;
-  height: 1px;
-  border-bottom: 1px solid pink;
+  width: 100%;
+  background-color: pink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 #header .inner {
   width: 1180px;
@@ -48,6 +55,7 @@ a {
 #header .inner .menuWeb #gnb li a:hover {
   background-color: #555;
   color: #fff;
+  transition: 3s ease;
 }
 #header .inner .menuWeb .util {
   position: absolute;
@@ -66,10 +74,11 @@ a {
 #visual {
   width: 100%;
   height: calc(100vh - 400px);
+  margin-top: -100px;
   overflow: hidden;
   background-color: #000;
 }
-#visual video {
+#visual .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -92,38 +101,6 @@ a {
   font: 16px/1.4 "arial";
   color: #888;
   margin-bottom: 80px;
-}
-
-#section {
-  width: 100%;
-  padding: 100px 0;
-}
-#section .inner {
-  width: 580px;
-  left: 25%;
-  position: relative;
-}
-#section .inner h1 {
-  font: bold 50px/1 "arial";
-  color: black;
-  text-align: LEFT;
-  margin-bottom: 50px;
-}
-#section .inner p {
-  margin-bottom: 50px;
-}
-#section .inner a {
-  display: block;
-  width: 400px;
-  height: 30px;
-  border: 1px solid #bbb;
-  font: bold 11px/30px "arial";
-  color: balck;
-  text-align: center;
-}
-#section .inner a:hover {
-  background: #fff;
-  color: #555;
 }
 
 /*# sourceMappingURL=style.css.map */
