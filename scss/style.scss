@@ -16,46 +16,55 @@ a {
 	text-decoration: none;
 }
 
+.hidden {
+	position: absolute;
+	top: -99999999px;
+	opacity: 0;
+}
 // Header 영역
 #header {
+	width: 100%;
+	height: 100px;
 	position: relative;
 	top: 50%;
 	left: 50%;
-	transform: translateY(-50%);
-	width: 100%;
-	height: 100px;
+	margin-left: -50%;
+	// 에프터선 그은 이유 : nav랑 다르게 보더바텀만 좀 연하게 해주고싶어서,,
 	&::after {
-		content: "";
+		content: " ";
 		display: block;
 		width: 100%;
-		background-color: pink;
+		bottom: 0%;
+		height: 2px;
+		background-color: white;
+		opacity: 0.5;
 		position: absolute;
-		top: 50%;
-		left: 50%;
 	}
 	.inner {
 		width: 1180px;
 		height: 100px;
 		margin: 0 auto;
-		position: absolute;
-		top: 0;
-		left: 0;
-
 		.menuWeb {
 			#gnb {
 				position: absolute;
 				bottom: 0;
+
 				li {
 					float: left;
 					a {
+						width: 100%;
 						display: block;
 						padding: 14px 40px;
-						font: bold 14px/1 "arial";
-						color: #777;
+						font: bold 20px/1 "arial";
+						color: black;
+						text-align: center;
 						&:hover {
-							background-color: #555;
-							color: #fff;
-							transition: 3s ease;
+							//클릭하면 밑줄선 나오게 하고싶은데 안나옴
+							border-bottom: yellow;
+							height: 1px;
+							width: 100%;
+							color: #aaa;
+							transition: 1s ease;
 						}
 					}
 				}
@@ -64,14 +73,18 @@ a {
 				position: absolute;
 				top: 20px;
 				right: 40px;
-
+				//li에 플롯걸었으니깐 플롯해제 걸기
+				&::after {
+					content: "";
+					display: block;
+					clear: both;
+				}
 				li {
 					float: left;
-					margin-left: 20px;
-
+					margin-left: 25px;
 					a {
-						font: 12px/1 "ariarl";
-						color: #999;
+						font: 15px/1 "ariarl";
+						color: black;
 					}
 				}
 			}
@@ -83,35 +96,197 @@ a {
 
 #visual {
 	width: 100%;
-	height: calc(100vh - 400px);
-	//비쥬얼과 헤더와 섹션을 합하면 100%를 차지해야한다.
+	height: 600px;
 	margin-top: -100px;
-	overflow: hidden;
+	//사진시작이 브라우저 최상단부터니깐 마진탑
 	background-color: #000;
-	.pic {
-		img {
+	//사진 좀 어둡게 해주려고 했는데 안됨
+	.inner {
+		width: 100%;
+		height: 100%;
+		.pic {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
-			opacity: 0.4;
+			//사진 다시 바꾸기
+			background: url(../img/figure.jpg) no-repeat
+				center/cover;
+		}
+		.wrap {
+			width: 1180px;
+			padding: 0px auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			h1 {
+				font: bold 50px/1 "arial";
+				color: white;
+				text-align: center;
+				margin-bottom: 30%; //사진때매 같이 수정해야함
+			}
 		}
 	}
+}
+
+#information {
+	width: 100%;
+	height: calc(100vh - 600px);
+	//(헤더 100)  +   (비쥬얼 하이트 600 마진탑 -100)
+	.inner {
+		width: 1180px;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+		.wrap {
+			width: 580px;
+			float: left;
+			height: 100%;
+			margin-right: 20px;
+			//h1부터 p a 미동없음
+			h1 {
+				margin: 20px auto 10px;
+				text-align: left;
+				font: bold 40px/1 "arial";
+				color: black;
+
+				//p랑 a 안먹음...
+				p {
+					font: 20px/1.3 "arial";
+					color: pink;
+				}
+				a {
+					display: block;
+					width: 400px;
+					height: 30px;
+					border: 1x solid #bbb;
+					font: bold 50px/30px "arial";
+					color: black;
+					text-align: center;
+					&:hover {
+						background: pink;
+						color: #555;
+					}
+				}
+			}
+		}
+		.QiuckJoin {
+			border: 1px solid black;
+			position: relative;
+			//동의합니다가 위에있음.. 서브밋 왼쪽에 두고싶은데..
+			form {
+				position: absolute;
+				top: -54px;
+				right: 0;
+
+				h1 {
+					background-color: rgba(255, 255, 255, 0.735);
+					opacity: 0.7;
+					padding: 10px 8px;
+				}
+				table {
+					width: 100%;
+					border-top: 2px solid #999;
+					th {
+						width: 40%;
+						padding: 10px 20px;
+						font: bold 18px/1 "arial";
+						color: #666;
+						// border-right: 1px solid #bbb;
+						border-bottom: 1px solid #bbb;
+						&:last-child {
+							border-bottom: none;
+						}
+						input[type="submit"] {
+							width: 150px;
+							height: 30px;
+							border: none;
+							background: #444;
+							font: bold 14px/1 "arial";
+							color: #fff;
+						}
+					}
+					td {
+						border-bottom: 1px solid #bbb;
+						padding: 15px 30px;
+						background: white;
+
+						input[type="text"] {
+							width: 100%;
+							height: 25px;
+							border-top: none;
+							border-left: none;
+							border-right: none;
+							border-bottom: 1px solid #bbb;
+							background: white;
+							text-align: center;
+							font: bold 14px/1 "";
+						}
+					}
+					.agreement {
+						label[for="agree"] {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#services {
+	width: 100%;
+	padding: 180px 0 150px;
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		position: relative;
 		h1 {
-			font: normal 80px/1 "arial";
-			color: #fff;
-			margin-bottom: 20px;
+			font-weight: bold;
+			font-size: 24px;
+			color: #555;
+			text-align: center;
+			margin-bottom: 50px;
+			letter-spacing: 2px;
 		}
-		p {
-			font: 16px/1.4 "arial";
-			color: #888;
-			margin-bottom: 80px;
+		> .wrap1 {
+			//on 누르면 로고색이 바꼈으면 좋겠는데 안바뀜.
+			position: relative;
+			width: 100&;
+			.btns {
+				margin-top: 50px;
+				display: flex;
+				justify-content: space-between;
+				overflow: hidden;
+				li {
+					.icon {
+						img {
+							width: 50px;
+							height: 50px;
+						}
+					}
+				}
+			}
+		}
+		.wrap2 {
+			position: relative;
+			width: 100%;
+			article {
+				margin-top: 100px;
+				width: 100%;
+				&::after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+				.MorePic {
+					width: 580px;
+					float: left;
+					img {
+						width: 100%;
+						height: 200px;
+					}
+				}
+			}
 		}
 	}
 }

@@ -14,30 +14,34 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  position: absolute;
+  top: -99999999px;
+  opacity: 0;
+}
+
 #header {
+  width: 100%;
+  height: 100px;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 100px;
+  margin-left: -50%;
 }
 #header::after {
-  content: "";
+  content: " ";
   display: block;
   width: 100%;
-  background-color: pink;
+  bottom: 0%;
+  height: 2px;
+  background-color: white;
+  opacity: 0.5;
   position: absolute;
-  top: 50%;
-  left: 50%;
 }
 #header .inner {
   width: 1180px;
   height: 100px;
   margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 #header .inner .menuWeb #gnb {
   position: absolute;
@@ -47,60 +51,215 @@ a {
   float: left;
 }
 #header .inner .menuWeb #gnb li a {
+  width: 100%;
   display: block;
   padding: 14px 40px;
-  font: bold 14px/1 "arial";
-  color: #777;
+  font: bold 20px/1 "arial";
+  color: black;
+  text-align: center;
 }
 #header .inner .menuWeb #gnb li a:hover {
-  background-color: #555;
-  color: #fff;
-  transition: 3s ease;
+  border-bottom: yellow;
+  height: 1px;
+  width: 100%;
+  color: #aaa;
+  transition: 1s ease;
 }
 #header .inner .menuWeb .util {
   position: absolute;
   top: 20px;
   right: 40px;
 }
+#header .inner .menuWeb .util::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 #header .inner .menuWeb .util li {
   float: left;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 #header .inner .menuWeb .util li a {
-  font: 12px/1 "ariarl";
-  color: #999;
+  font: 15px/1 "ariarl";
+  color: black;
 }
 
 #visual {
   width: 100%;
-  height: calc(100vh - 400px);
+  height: 600px;
   margin-top: -100px;
-  overflow: hidden;
   background-color: #000;
 }
-#visual .pic img {
+#visual .inner {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
 }
-#visual .inner {
+#visual .inner .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/figure.jpg) no-repeat center/cover;
+}
+#visual .inner .wrap {
   width: 1180px;
-  margin: 0 auto;
+  padding: 0px auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#visual .inner h1 {
-  font: normal 80px/1 "arial";
-  color: #fff;
-  margin-bottom: 20px;
+#visual .inner .wrap h1 {
+  font: bold 50px/1 "arial";
+  color: white;
+  text-align: center;
+  margin-bottom: 30%;
 }
-#visual .inner p {
-  font: 16px/1.4 "arial";
-  color: #888;
-  margin-bottom: 80px;
+
+#information {
+  width: 100%;
+  height: calc(100vh - 600px);
+}
+#information .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+#information .inner .wrap {
+  width: 580px;
+  float: left;
+  height: 100%;
+  margin-right: 20px;
+}
+#information .inner .wrap h1 {
+  margin: 20px auto 10px;
+  text-align: left;
+  font: bold 40px/1 "arial";
+  color: black;
+}
+#information .inner .wrap h1 p {
+  font: 20px/1.3 "arial";
+  color: pink;
+}
+#information .inner .wrap h1 a {
+  display: block;
+  width: 400px;
+  height: 30px;
+  border: 1x solid #bbb;
+  font: bold 50px/30px "arial";
+  color: black;
+  text-align: center;
+}
+#information .inner .wrap h1 a:hover {
+  background: pink;
+  color: #555;
+}
+#information .inner .QiuckJoin {
+  border: 1px solid black;
+  position: relative;
+}
+#information .inner .QiuckJoin form {
+  position: absolute;
+  top: -54px;
+  right: 0;
+}
+#information .inner .QiuckJoin form h1 {
+  background-color: rgba(255, 255, 255, 0.735);
+  opacity: 0.7;
+  padding: 10px 8px;
+}
+#information .inner .QiuckJoin form table {
+  width: 100%;
+  border-top: 2px solid #999;
+}
+#information .inner .QiuckJoin form table th {
+  width: 40%;
+  padding: 10px 20px;
+  font: bold 18px/1 "arial";
+  color: #666;
+  border-bottom: 1px solid #bbb;
+}
+#information .inner .QiuckJoin form table th:last-child {
+  border-bottom: none;
+}
+#information .inner .QiuckJoin form table th input[type=submit] {
+  width: 150px;
+  height: 30px;
+  border: none;
+  background: #444;
+  font: bold 14px/1 "arial";
+  color: #fff;
+}
+#information .inner .QiuckJoin form table td {
+  border-bottom: 1px solid #bbb;
+  padding: 15px 30px;
+  background: white;
+}
+#information .inner .QiuckJoin form table td input[type=text] {
+  width: 100%;
+  height: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #bbb;
+  background: white;
+  text-align: center;
+  font: bold 14px/1 "";
+}
+#information .inner .QiuckJoin form table .agreement label[for=agree] {
+  font-size: 20px;
+}
+
+#services {
+  width: 100%;
+  padding: 180px 0 150px;
+}
+#services .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+#services .inner h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+#services .inner > .wrap1 {
+  position: relative;
+  width: 100 #services .inner > .wrap1;
+}
+#services .inner > .wrap1 .btns {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+#services .inner > .wrap1 .btns li .icon img {
+  width: 50px;
+  height: 50px;
+}
+#services .inner .wrap2 {
+  position: relative;
+  width: 100%;
+}
+#services .inner .wrap2 article {
+  margin-top: 100px;
+  width: 100%;
+}
+#services .inner .wrap2 article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#services .inner .wrap2 article .MorePic {
+  width: 580px;
+  float: left;
+}
+#services .inner .wrap2 article .MorePic img {
+  width: 100%;
+  height: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

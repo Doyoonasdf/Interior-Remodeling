@@ -33,187 +33,263 @@
           <li><a href="#">SiteMap</a></li>
         </ul>
       </nav>
+
+      <!-- <a href="#" class="btnCall">
+        <span>메뉴호출</span>
+      </a>
+
+      <nav class="menuMo">
+        <h1>
+          <a href="#">DCODELAB</a>
+          <span>UI/UX DEVELPMENT INSTUTUTE</span>
+        </h1>
+        <ul id="gnbMo">
+          <li><a href="#">DEPARTMENT</a></li>
+          <li><a href="#">YOUTUBE</a></li>
+          <li><a href="#">COMMUNITY</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">LOCATION</a></li>
+        </ul>
+      </nav>
+       -->
     </div>
   </header>
 
   <figure id="visual">
-    <div class="pic">
-      <img src="img/figure.jpg" alt="건축 인테리어">
-    </div>
     <div class="inner">
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <p>Lorem ipsum dolor sit.</p>
+      <div class="pic">
+      </div>
+      <div class="wrap">
+        <h1>DO YOU WANT TO BE <span></span>CREATIVE?<span></span></h1>
+      </div>
     </div>
   </figure>
 
   <!-- 짧은 액션폼부여 -->
   <section id="information">
-
     <div class="inner">
-      <h1>ABOUT US</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
-        architectoLLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
-        architectoorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
-        architecto
-        sequi officia iusto expedita cum exercitationem.</p>
-      <p>Lorem ipsum doLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
-        architectolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed architecto
-        sequi officia iusto expedita cum exercitationem.</p>
-      <a href="#">More</a>
-    </div>
+      <div class="wrap">
+        <h1>ABOUT US</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
+          architectoLLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
+          architectoorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
+          architecto
+          sequi officia iusto expedita cum exercitationem.
+          Lorem ipsum doLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores,
+          sed
+          architectolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed architecto
+          sequi officia iusto expedita cum exercitationem.</p>
+        <a href="#">More</a>
+      </div>
+      <div class="QiuckJoin">
+        <form action="index.html">
+          <h1>Ask for Information</h1>
+          <fieldset>
+            <legend class="hidden">빠른 상담 신청</legend>
+            <table>
+              <caption class="hidden">정보 입력양식 테이블</caption>
+              <tr>
+                <th scope="row"><label for="name">NAME</label></th>
+                <td>
+                  <input type="text" id="name" required placeholder="이름을 입력해 주세요">
+                </td>
+              </tr>
 
-    <div class="QiuckJoin">
-      <h1>Lorem ipsum dolor sit.(빠른 상담 신청)</h1>
-      <form action="index.html">
-        <fieldset>
-          <legend class="hidden">빠른 상담 신청</legend>
-          <table>
-            <caption class="hidden">정보 입력양식 테이블</caption>
-            <tr>
-              <th scope="row"><label for="name">NAME</label></th>
-              <td>
-                <input type="text" id="name" required placeholder="이름을 입력해 주세요">
-              </td>
-            </tr>
+              <tr>
+                <th scope="row"><label for="PhoneNumber">PhoneNumber</label></th>
+                <td>
+                  <input type="text" id="PhoneNumber" required placeholder="핸드폰 번호를 입력해 주세요">
+                </td>
+              </tr>
 
-            <tr>
-              <th scope="row"><label for="PhoneNumber">PhoneNumber</label></th>
-              <td>
-                <input type="text" id="PhoneNumber" required placeholder="핸드폰 번호를 입력해 주세요">
-              </td>
-            </tr>
+              <tr>
+                <th scope="row"><label for="email">E-MAIL</label></th>
+                <td>
+                  <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해 주세요">
+                  <!-- 
+                    안쓰는게 나을듯
+                    <select name="company" id="company">
+                    <option value="">선택하세요</option>
+                    <option value="naver">@naver.com</option>
+                    <option value="daum">@hanmail.net</option>
+                    <option value="nate">@nate.com</option>
+                  </select> -->
+                </td>
+              </tr>
 
-            <tr>
-              <th scope="row"><label for="email">E-MAIL</label></th>
-              <td>
-                <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해 주세요">
-                <select name="company" id="company">
-                  <option value="">선택하세요</option>
-                  <option value="naver">@naver.com</option>
-                  <option value="daum">@hanmail.net</option>
-                  <option value="nate">@nate.com</option>
-                </select>
-              </td>
-            </tr>
+              <div class="agreement">
+                <input type="checkbox" name="agree" id="agree">
+                <label for="agree">약관에 동의합니다</label>
+              </div>
 
-            <div class="agreement">
-              <input type="checkbox" name="agree" id="agree">
-              <label for="agree">약관에 동의합니다</label>
-            </div>
-
-            <tr>
-              <th colspan="1">
-                <input type="submit" value="SUBMIT">
-              </th>
-            </tr>
-          </table>
-        </fieldset>
-      </form>
+              <tr>
+                <th colspan="2">
+                  <input type="submit" value="SUBMIT">
+                </th>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- //탭기능부여 -->
   <section id="services">
-    <nav class="controls">
-      <h1>
-        <i>logo</i>
-      </h1>
-      <ul class="btns">
-        <li class="on"><i>BRANDIDENTITY1</i></li>
-        <li><i>BRANDIDENTITY2</i></li>
-        <li><i>BRANDIDENTITY3</i></li>
-        <li><i>BRANDIDENTITY4</i></li>
-        <li><i>BRANDIDENTITY5</i></li>
-        <li><i>BRANDIDENTITY6</i></li>
-      </ul>
-    </nav>
+    <div class="inner">
+      <h1>OUR SERVICES</h1>
+      <!-- 로고 묶음 -->
+      <div class="wrap1">
+        <ul class="btns">
+          <li class="on">
+            <div class="icon">
+              <img src="img/services_living-room-1606197.png" alt="거실아이콘">
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="img/services_kitchen-1606177.png" alt="주방아이콘">
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="img/services_bed-1606220.png" alt="침실아이콘">
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="img/services_cradle-1606215.png" alt="아이방아이콘">
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="img/services_bathtub-1606180.png" alt="욕실아이콘">
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="img/services_door-1606229.png" alt="현관아이콘">
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    <div class="wrap">
-      <article class="on">
-        <div class="pic">
-          <img src="img/img1.jpg" alt="어쩌꾸">
-        </div>
-        <h2>. 02 BRANDIDENTITY1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto enim adipisci tempora vero tempore debitis,
-          repellat nam provident laudantium minima accusantium! Vero, dolor tenetur dolores fuga quia porro repellat
-          modi!</p>
-        <a href="#">MORE</a>
-      </article>
-      <article>
-        <div class="pic">
-          <img src="img/img1.jpg" alt="어쩌꾸">
-        </div>
-        <h2>. 02 BRANDIDENTITY1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto enim adipisci tempora vero tempore debitis,
-          repellat nam provident laudantium minima accusantium! Vero, dolor tenetur dolores fuga quia porro repellat
-          modi!</p>
-        <a href="#">MORE</a>
-      </article>
-      <article>
-        <div class="pic">
-          <img src="img/img1.jpg" alt="어쩌꾸">
-        </div>
-        <h2>. 02 BRANDIDENTITY1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto enim adipisci tempora vero tempore debitis,
-          repellat nam provident laudantium minima accusantium! Vero, dolor tenetur dolores fuga quia porro repellat
-          modi!</p>
-        <a href="#">MORE</a>
-      </article>
-      <article>
-        <div class="pic">
-          <img src="img/img1.jpg" alt="어쩌꾸">
-        </div>
-        <h2>. 02 BRANDIDENTITY1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto enim adipisci tempora vero tempore debitis,
-          repellat nam provident laudantium minima accusantium! Vero, dolor tenetur dolores fuga quia porro repellat
-          modi!</p>
-        <a href="#">MORE</a>
-      </article>
-      <article>
-        <div class="pic">
-          <img src="img/img1.jpg" alt="어쩌꾸">
-        </div>
-        <h2>. 02 BRANDIDENTITY1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto enim adipisci tempora vero tempore debitis,
-          repellat nam provident laudantium minima accusantium! Vero, dolor tenetur dolores fuga quia porro repellat
-          modi!</p>
-        <a href="#">MORE</a>
-      </article>
-      <article>
-        <div class="pic">
-          <img src="img/img1.jpg" alt="어쩌꾸">
-        </div>
-        <h2>. 02 BRANDIDENTITY1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto enim adipisci tempora vero tempore debitis,
-          repellat nam provident laudantium minima accusantium! Vero, dolor tenetur dolores fuga quia porro repellat
-          modi!</p>
-        <a href="#">MORE</a>
-      </article>
+      <div class="wrap2">
+        <article class="on">
+          <div class="MorePic">
+            <img src="img/거실.png" alt="거실인테리어사진">
+          </div>
+          <div class="inner">
+            <h2>Living-Room</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#">MORE</a>
+          </div>
+        </article>
+        <article>
+          <div class="pic">
+            <img src="img/주방.jpg" alt="주방인테리어사진">
+          </div>
+          <div class="inner">
+            <h2>Kitchen</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#">MORE</a>
+          </div>
+        </article>
+        <article>
+          <div class="pic">
+            <img src="img/침실.jpg" alt="침실인테리어사진">
+          </div>
+          <div class="inner">
+            <h2>Bed-Room</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#">MORE</a>
+          </div>
+        </article>
+        <article>
+          <div class="pic">
+            <img src="img/아이방.jpg" alt="아이방인테리어사진">
+          </div>
+          <div class="inner">
+            <h2>Nursery-Room</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#">MORE</a>
+          </div>
+        </article>
+        <article>
+          <div class="pic">
+            <img src="img/욕실.jpg" alt="욕실인테리어사진">
+          </div>
+          <div class="inner">
+            <h2>Bathroom</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#">MORE</a>
+          </div>
+        </article>
+        <article>
+          <div class="pic">
+            <img src="img/현관.jpg" alt="현관인테리어사진">
+          </div>
+          <div class="inner">
+            <h2>Front door</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#">MORE</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
 
   <!-- 슬라이더_루프 부여 -->
   <section id="LatestProjects">
-    <h1>
-      <i>logo</i>
-    </h1>
-    <article class="slider">
-      <ul>
-        <li data-index="1">1</li>
-        <li data-index="2">2</li>
-        <li data-index="3">3</li>
-      </ul>
-    </article>
-  </section>
-
-
-  <section id="banner">
     <div class="inner">
-      <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi sint maiores.</p>
+      <h1>
+        <i>logo</i>
+      </h1>
+      <article class="slider">
+        <ul>
+          <li data-index="1">1</li>
+          <li data-index="2">2</li>
+          <li data-index="3">3</li>
+          <li data-index="4">4</li>
+        </ul>
+      </article>
+
+      <a href="#" class="prev">
+        <img src="img/btnPrev.png" alt="">
+      </a>
+
+      <a href="#" class="next">
+        <img src="img/btnNext.png" alt="">
+      </a>
     </div>
   </section>
+
+  <!-- 배너지움 -->
 
   <footer id="footer">
     <div class="inner">
