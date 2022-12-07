@@ -41,11 +41,17 @@ a {
 #header .inner {
   width: 1180px;
   height: 100px;
+  position: relative;
   margin: 0 auto;
 }
 #header .inner .menuWeb #gnb {
   position: absolute;
   bottom: 0;
+}
+#header .inner .menuWeb #gnb::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 #header .inner .menuWeb #gnb li {
   float: left;
@@ -89,17 +95,9 @@ a {
   height: 600px;
   margin-top: -100px;
   background-color: #000;
-}
-#visual .inner {
-  width: 100%;
-  height: 100%;
-}
-#visual .inner .pic {
-  width: 100%;
-  height: 100%;
   background: url(../img/figure.jpg) no-repeat center/cover;
 }
-#visual .inner .wrap {
+#visual .inner {
   width: 1180px;
   padding: 0px auto;
   position: absolute;
@@ -107,7 +105,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#visual .inner .wrap h1 {
+#visual .inner h1 {
   font: bold 50px/1 "arial";
   color: white;
   text-align: center;
@@ -211,55 +209,112 @@ a {
 
 #services {
   width: 100%;
-  padding: 180px 0 150px;
 }
 #services .inner {
   width: 1180px;
-  margin: 0 auto;
   position: relative;
+  margin: 0 auto;
 }
 #services .inner h1 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
   color: #555;
   text-align: center;
-  margin-bottom: 50px;
-  letter-spacing: 2px;
-}
-#services .inner > .wrap1 {
-  position: relative;
-  width: 100 #services .inner > .wrap1;
-}
-#services .inner > .wrap1 .btns {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-}
-#services .inner > .wrap1 .btns li .icon img {
-  width: 50px;
-  height: 50px;
-}
-#services .inner .wrap2 {
-  position: relative;
-  width: 100%;
-}
-#services .inner .wrap2 article {
   margin-top: 100px;
+  letter-spacing: 1px;
+}
+#services .inner .tab {
+  width: 100%;
+  padding-top: 40px;
+  margin: 100px auto;
+  position: relative;
+}
+#services .inner .tab dt {
+  width: 16.6666666667%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+}
+#services .inner .tab dt:nth-of-type(1) {
+  left: 0%;
+}
+#services .inner .tab dt:nth-of-type(2) {
+  left: 16.6666666667%;
+}
+#services .inner .tab dt:nth-of-type(3) {
+  left: 33.3333333333%;
+}
+#services .inner .tab dt:nth-of-type(4) {
+  left: 50%;
+}
+#services .inner .tab dt:nth-of-type(5) {
+  left: 66.6666666667%;
+}
+#services .inner .tab dt:nth-of-type(6) {
+  left: 83.3333333333%;
+}
+#services .inner .tab dt .icon {
   width: 100%;
 }
-#services .inner .wrap2 article::after {
+#services .inner .tab dt .icon img {
+  width: 45px;
+  height: 45px;
+}
+#services .inner .tab dt.on .icon {
+  opacity: 1;
+}
+#services .inner .tab dd {
+  width: 100%;
+  height: 200px;
+}
+#services .inner .tab dd article {
+  width: 100%;
+  height: 100%;
+}
+#services .inner .tab dd article::after {
   content: "";
   display: block;
   clear: both;
 }
-#services .inner .wrap2 article .MorePic {
-  width: 580px;
+#services .inner .tab dd article .pic {
   float: left;
+  overflow: hidden;
+  width: 580px;
 }
-#services .inner .wrap2 article .MorePic img {
+#services .inner .tab dd article .pic img {
   width: 100%;
-  height: 200px;
+  height: 500px;
+  object-fit: cover;
+}
+#services .inner .tab dd article .inner {
+  float: left;
+  width: 580px;
+  height: 400px;
+  background-color: rgba(173, 169, 52, 0.7568627451);
+  position: relative;
+}
+#services .inner .tab dd article .inner h2 {
+  padding: 80px 10px 40px;
+  font: bold 40px/1.3 "arial";
+}
+#services .inner .tab dd article .inner p {
+  padding-left: 10px;
+  font: 18px/1.3 "arial";
+  width: 100%;
+  text-align: left;
+}
+#services .inner .tab dd article .inner a {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  border: 1px solid black;
+  padding: 8px 20px;
+  color: black;
+  font: 13px/1.3 "arial";
+}
+#services .inner .tab dd.on .pic {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

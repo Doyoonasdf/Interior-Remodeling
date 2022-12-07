@@ -43,12 +43,18 @@ a {
 	.inner {
 		width: 1180px;
 		height: 100px;
+		position: relative;
 		margin: 0 auto;
 		.menuWeb {
 			#gnb {
 				position: absolute;
 				bottom: 0;
-
+				//li에 플롯거니깐 플롯해제
+				&::after {
+					content: "";
+					display: block;
+					clear: both;
+				}
 				li {
 					float: left;
 					a {
@@ -101,29 +107,19 @@ a {
 	//사진시작이 브라우저 최상단부터니깐 마진탑
 	background-color: #000;
 	//사진 좀 어둡게 해주려고 했는데 안됨
+	background: url(../img/figure.jpg) no-repeat center/cover;
 	.inner {
-		width: 100%;
-		height: 100%;
-		.pic {
-			width: 100%;
-			height: 100%;
-			//사진 다시 바꾸기
-			background: url(../img/figure.jpg) no-repeat
-				center/cover;
-		}
-		.wrap {
-			width: 1180px;
-			padding: 0px auto;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			h1 {
-				font: bold 50px/1 "arial";
-				color: white;
-				text-align: center;
-				margin-bottom: 30%; //사진때매 같이 수정해야함
-			}
+		width: 1180px;
+		padding: 0px auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		h1 {
+			font: bold 50px/1 "arial";
+			color: white;
+			text-align: center;
+			margin-bottom: 30%; //사진때매 같이 수정해야함
 		}
 	}
 }
@@ -232,59 +228,119 @@ a {
 		}
 	}
 }
+//전체적으로 망함
+//js 탭메뉴 + 하면서 on클릭될때 아이콘이 사라지고 글씨가 보이게
 
 #services {
 	width: 100%;
-	padding: 180px 0 150px;
 	.inner {
 		width: 1180px;
-		margin: 0 auto;
 		position: relative;
+		margin: 0 auto;
 		h1 {
 			font-weight: bold;
-			font-size: 24px;
+			font-size: 30px;
 			color: #555;
 			text-align: center;
-			margin-bottom: 50px;
-			letter-spacing: 2px;
+			margin-top: 100px;
+			letter-spacing: 1px;
 		}
-		> .wrap1 {
-			//on 누르면 로고색이 바꼈으면 좋겠는데 안바뀜.
+		.tab {
+			width: 100%;
+			padding-top: 40px;
+			// border: 1px solid blue;
+			margin: 100px auto;
 			position: relative;
-			width: 100&;
-			.btns {
-				margin-top: 50px;
-				display: flex;
-				justify-content: space-between;
-				overflow: hidden;
-				li {
-					.icon {
+			dt {
+				width: calc(100% / 6);
+				height: 40px;
+				position: absolute;
+				top: 0;
+				opacity: 1; // 자바스크립타하고 나중에 0으로 바꿔보기
+				&:nth-of-type(1) {
+					left: calc((100% / 6) * 0);
+				}
+				&:nth-of-type(2) {
+					left: calc((100% / 6) * 1);
+				}
+				&:nth-of-type(3) {
+					left: calc((100% / 6) * 2);
+				}
+				&:nth-of-type(4) {
+					left: calc((100% / 6) * 3);
+				}
+				&:nth-of-type(5) {
+					left: calc((100% / 6) * 4);
+				}
+				&:nth-of-type(6) {
+					left: calc((100% / 6) * 5);
+				}
+				.icon {
+					width: 100%;
+					img {
+						width: 45px;
+						height: 45px;
+						// background: #555;
+					}
+				}
+				&.on .icon {
+					opacity: 1;
+				}
+			}
+			dd {
+				width: 100%;
+				height: 200px;
+				// display: none; // 자바스크립트하고 풀어주기
+
+				article {
+					width: 100%;
+					height: 100%;
+					&::after {
+						content: "";
+						display: block;
+						clear: both;
+					}
+					.pic {
+						//사진있는곳
+						float: left;
+						overflow: hidden;
+						width: 580px;
 						img {
-							width: 50px;
-							height: 50px;
+							width: 100%;
+							height: 500px;
+							object-fit: cover;
+						}
+					}
+					.inner {
+						//문구있는곳
+						float: left;
+						width: 580px;
+						height: 400px;
+						background-color: #ada934c1;
+						position: relative;
+						h2 {
+							padding: 80px 10px 40px;
+							font: bold 40px/1.3 "arial";
+						}
+						p {
+							padding-left: 10px;
+							font: 18px/1.3 "arial";
+							width: 100%;
+							text-align: left;
+						}
+						a {
+							position: absolute;
+							bottom: 50px;
+							left: 10px;
+							border: 1px solid black;
+							padding: 8px 20px;
+							color: black;
+							font: 13px/1.3 "arial";
 						}
 					}
 				}
-			}
-		}
-		.wrap2 {
-			position: relative;
-			width: 100%;
-			article {
-				margin-top: 100px;
-				width: 100%;
-				&::after {
-					content: "";
-					display: block;
-					clear: both;
-				}
-				.MorePic {
-					width: 580px;
-					float: left;
-					img {
-						width: 100%;
-						height: 200px;
-					}
+				&.on .pic {
+					display: flex;
 				}
 			}
 		}
