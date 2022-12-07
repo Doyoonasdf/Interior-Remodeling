@@ -213,7 +213,7 @@ a {
 							border-left: none;
 							border-right: none;
 							border-bottom: 1px solid #bbb;
-							background: white;
+							background: none;
 							text-align: center;
 							font: bold 14px/1 "";
 						}
@@ -233,10 +233,14 @@ a {
 
 #services {
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	.inner {
 		width: 1180px;
 		position: relative;
 		margin: 0 auto;
+
 		h1 {
 			font-weight: bold;
 			font-size: 30px;
@@ -289,8 +293,10 @@ a {
 			}
 			dd {
 				width: 100%;
-				height: 200px;
-				position: relative;
+				height: 350px;
+				// position: relative;1
+				position: absolute;
+				top: 100px;
 				// display: none; // 자바스크립트하고 풀어주기
 				article {
 					width: 100%;
@@ -299,7 +305,6 @@ a {
 					overflow: hidden;
 					top: 0;
 					left: 0;
-
 					&::after {
 						content: "";
 						display: block;
@@ -313,7 +318,7 @@ a {
 						height: 400px;
 						img {
 							width: 100%;
-							height: 200px;
+							min-height: 350px;
 							object-fit: cover;
 						}
 					}
@@ -321,25 +326,30 @@ a {
 						//문구있는곳
 						float: left;
 						width: 50%;
-						height: 100%;
+						min-height: 350px; //텍스트가 어던건 두줄일수도있고 높이값이 바뀌니간
 						background-color: #ada934c1;
 						position: relative;
 						h2 {
-							padding: 30px 10px 10px;
+							padding: 30px 10px 0px;
 							font: bold 40px/1.3 "arial";
 						}
 						p {
-							padding-left: 10px;
+							padding-left: 30px;
 							font: 18px/1.3 "arial";
 							width: 100%;
 							text-align: left;
+							margin-bottom: 50px;
 						}
 						a {
-							bottom: 50px;
-							left: 10px;
+							// position: absolute;
+							display: block;
+							width: 100px;
+							height: 100%;
+							margin: 80px 10px 10px;
 							border: 1px solid black;
-							padding: 10px 20px;
+							padding: 10px 30px;
 							color: black;
+							letter-spacing: 1px;
 							font: 13px/1.3 "arial";
 						}
 					}
