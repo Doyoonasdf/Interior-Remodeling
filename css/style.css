@@ -296,12 +296,12 @@ a {
 #services .inner .tab dd article .wrap {
   float: left;
   width: 50%;
-  height: 400px;
+  height: 100%;
   background-color: rgba(173, 169, 52, 0.7568627451);
   position: relative;
 }
 #services .inner .tab dd article .wrap h2 {
-  padding: 80px 10px 40px;
+  padding: 30px 10px 10px;
   font: bold 40px/1.3 "arial";
 }
 #services .inner .tab dd article .wrap p {
@@ -314,7 +314,7 @@ a {
   bottom: 50px;
   left: 10px;
   border: 1px solid black;
-  padding: 8px 20px;
+  padding: 10px 20px;
   color: black;
   font: 13px/1.3 "arial";
 }
