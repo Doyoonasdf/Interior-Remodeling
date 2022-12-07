@@ -203,7 +203,7 @@ a {
   text-align: center;
   font: bold 14px/1 "";
 }
-#information .inner .QiuckJoin form table .agreement label[for=agree] {
+#information .inner .QiuckJoin form .agreement label[for=agree] {
   font-size: 20px;
 }
 
@@ -231,10 +231,13 @@ a {
   padding-top: 100px;
   margin: 100px auto;
   position: relative;
+  height: 400px;
 }
 #services .inner .tab dt {
+  text-align: center;
   width: 16.6666666667%;
   height: 40px;
+  text-align: center;
   position: absolute;
   top: 0;
   opacity: 1;
@@ -328,6 +331,98 @@ a {
 }
 #services .inner .tab dd.on .pic {
   display: flex;
+}
+
+#LatestProjects {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#LatestProjects .inner {
+  width: 1180px;
+  position: relative;
+  margin: 50px auto;
+}
+#LatestProjects .inner h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #555;
+  text-align: center;
+  margin-top: 100px;
+  letter-spacing: 1px;
+}
+#LatestProjects .inner ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 60px;
+}
+#LatestProjects .inner ul li {
+  display: block;
+  padding: 1px 40px;
+  font: bold 20px/1 "arial";
+  color: black;
+  text-align: center;
+}
+#LatestProjects .inner ul a {
+  width: 100%;
+  display: block;
+  padding: 14px 40px;
+  font: 15px/1 "arial";
+  color: black;
+  text-align: center;
+}
+#LatestProjects .inner ul a:hover {
+  width: 100%;
+  color: #aaa;
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+#LatestProjects .inner .slider {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  margin: 0px auto;
+  overflow: hidden;
+}
+#LatestProjects .inner .slider ul {
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#LatestProjects .inner .slider ul li {
+  width: 33.3333333333%;
+  height: 100%;
+  font-size: 40px;
+  color: #000;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#LatestProjects .inner .slider ul li[data-index="1"] {
+  background: url(../img/figure.jpg) no-repeat center/cover;
+}
+#LatestProjects .inner .slider ul li[data-index="2"] {
+  background: url(../img/figure.jpg) no-repeat center/cover;
+}
+#LatestProjects .inner .slider ul li[data-index="3"] {
+  background: url(../img/figure.jpg) no-repeat center/cover;
+}
+#LatestProjects .inner .prev {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -50px;
+}
+#LatestProjects .inner .next {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  margin-top: -50px;
 }
 
 /*# sourceMappingURL=style.css.map */
