@@ -225,7 +225,7 @@ a {
 }
 #services .inner .tab {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 100px;
   margin: 100px auto;
   position: relative;
 }
@@ -267,10 +267,15 @@ a {
 #services .inner .tab dd {
   width: 100%;
   height: 200px;
+  position: relative;
 }
 #services .inner .tab dd article {
   width: 100%;
   height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
 }
 #services .inner .tab dd article::after {
   content: "";
@@ -279,33 +284,33 @@ a {
 }
 #services .inner .tab dd article .pic {
   float: left;
+  width: 50%;
   overflow: hidden;
-  width: 580px;
+  height: 400px;
 }
 #services .inner .tab dd article .pic img {
   width: 100%;
-  height: 500px;
+  height: 200px;
   object-fit: cover;
 }
-#services .inner .tab dd article .inner {
+#services .inner .tab dd article .wrap {
   float: left;
-  width: 580px;
+  width: 50%;
   height: 400px;
   background-color: rgba(173, 169, 52, 0.7568627451);
   position: relative;
 }
-#services .inner .tab dd article .inner h2 {
+#services .inner .tab dd article .wrap h2 {
   padding: 80px 10px 40px;
   font: bold 40px/1.3 "arial";
 }
-#services .inner .tab dd article .inner p {
+#services .inner .tab dd article .wrap p {
   padding-left: 10px;
   font: 18px/1.3 "arial";
   width: 100%;
   text-align: left;
 }
-#services .inner .tab dd article .inner a {
-  position: absolute;
+#services .inner .tab dd article .wrap a {
   bottom: 50px;
   left: 10px;
   border: 1px solid black;
