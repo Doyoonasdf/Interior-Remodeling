@@ -21,22 +21,13 @@ a {
 }
 
 #header {
+  z-index: 10;
   width: 100%;
   height: 100px;
   position: relative;
   top: 50%;
   left: 50%;
   margin-left: -50%;
-}
-#header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  bottom: 0%;
-  height: 2px;
-  background-color: white;
-  opacity: 0.5;
-  position: absolute;
 }
 #header .inner {
   width: 1180px;
@@ -61,45 +52,73 @@ a {
   display: block;
   padding: 14px 40px;
   font: bold 20px/1 "arial";
-  color: black;
+  color: white;
+  opacity: 0.7;
   text-align: center;
 }
 #header .inner .menuWeb #gnb li a:hover {
-  border-bottom: yellow;
-  height: 1px;
+  height: 5px;
   width: 100%;
-  color: #aaa;
+  color: rgba(235, 213, 69, 0.989);
   transition: 1s ease;
-}
-#header .inner .menuWeb .util {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-}
-#header .inner .menuWeb .util::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#header .inner .menuWeb .util li {
-  float: left;
-  margin-left: 25px;
-}
-#header .inner .menuWeb .util li a {
-  font: 15px/1 "ariarl";
-  color: black;
 }
 
 #visual {
   width: 100%;
   height: 600px;
   margin-top: -100px;
-  background-color: #000;
-  background: url(../img/figure.jpg) no-repeat center/cover;
+}
+#visual .slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#visual .slider ul {
+  width: 300%;
+  height: 100%;
+  margin-left: 0;
+}
+#visual .slider ul li {
+  width: 33.3333333333%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold 20vw/1 "arial";
+  opacity: 0.7;
+}
+#visual .slider ul li[data-index="1"] {
+  background: url(../img/DEUX\ VILLE\ _\ livingaxis.jpg) no-repeat center/cover;
+}
+#visual .slider ul li[data-index="2"] {
+  background: url(../img/Koral\ Brothers\ Inc_\ -\ Hamptons\ Custom\ Home\ Builder\ &\ General\ Contractors.png) no-repeat center/cover;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
+#visual .slider ul li[data-index="3"] {
+  background: url(../img//project_villa.jpg) no-repeat center/cover;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+#visual .slider ul li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.279);
 }
 #visual .inner {
   width: 1180px;
-  padding: 0px auto;
+  margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,9 +126,128 @@ a {
 }
 #visual .inner h1 {
   font: bold 50px/1 "arial";
-  color: white;
+  color: rgba(235, 213, 69, 0.989);
+  margin-bottom: 25%;
   text-align: center;
-  margin-bottom: 30%;
+}
+#visual .prev {
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 25%;
+  float: left;
+  margin: 100px;
+  position: absolute;
+}
+#visual .prev strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translate(100%, -50%);
+  font: bold 12px/1 "arial";
+  color: rgba(235, 213, 69, 0.989);
+}
+#visual .prev::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-30deg);
+  transform-origin: left center;
+  transition: all 0.5s;
+}
+#visual .prev::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(30deg);
+  transform-origin: left center;
+  transition: all 0.5s;
+}
+#visual .prev:hover::before {
+  top: 0%;
+  transform: rotate(-180deg);
+  transform-origin: center center;
+}
+#visual .prev:hover::after {
+  top: 100%;
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+#visual .prev:hover strong {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+#visual .next {
+  display: block;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 100px;
+  top: 25%;
+  right: 0%;
+  position: absolute;
+}
+#visual .next strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  opacity: 0;
+  transition: all 0.5s;
+  font: bold 12px/1 "arial";
+  color: rgba(235, 213, 69, 0.989);
+}
+#visual .next::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(30deg);
+  transform-origin: right center;
+  transition: all 0.5s;
+}
+#visual .next::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(-30deg);
+  transform-origin: right center;
+  transition: all 0.5s;
+}
+#visual .next:hover::before {
+  top: 0%;
+  transform-origin: center center;
+  transform: rotate(180deg);
+}
+#visual .next:hover::after {
+  top: 100%;
+  transform: rotate(-180deg);
+  transform-origin: center center;
+}
+#visual .next:hover strong {
+  transform: translate(-50%, -50%);
+  opacity: 1;
 }
 
 #information {
@@ -123,22 +261,21 @@ a {
   position: relative;
 }
 #information .inner .wrap {
-  width: 580px;
+  width: 750px;
   float: left;
   height: 100%;
   margin-right: 20px;
 }
 #information .inner .wrap h1 {
-  margin: 20px auto 10px;
+  margin: 30px auto 10px;
   text-align: left;
   font: bold 40px/1 "arial";
-  color: black;
+  color: rgba(235, 213, 69, 0.989);
 }
-#information .inner .wrap h1 p {
+#information .inner .wrap p {
   font: 20px/1.3 "arial";
-  color: pink;
 }
-#information .inner .wrap h1 a {
+#information .inner .wrap a {
   display: block;
   width: 400px;
   height: 30px;
@@ -147,64 +284,70 @@ a {
   color: black;
   text-align: center;
 }
-#information .inner .wrap h1 a:hover {
-  background: pink;
+#information .inner .wrap a:hover {
   color: #555;
 }
-#information .inner .QiuckJoin {
-  border: 1px solid black;
+#information .QiuckJoin {
   position: relative;
+  opacity: 0;
+  border-radius: 0px;
+  transform: translateY(100px);
+  transition-property: all;
+  transition-duration: 1s;
 }
-#information .inner .QiuckJoin form {
+#information .QiuckJoin form {
   position: absolute;
   top: -54px;
   right: 0;
 }
-#information .inner .QiuckJoin form h1 {
-  background-color: rgba(255, 255, 255, 0.735);
-  opacity: 0.7;
+#information .QiuckJoin form h1 {
+  color: rgba(255, 255, 255, 0.735);
+  background-color: rgba(235, 213, 69, 0.989);
   padding: 10px 8px;
 }
-#information .inner .QiuckJoin form table {
+#information .QiuckJoin form table {
   width: 100%;
-  border-top: 2px solid #999;
 }
-#information .inner .QiuckJoin form table th {
+#information .QiuckJoin form table th {
   width: 40%;
   padding: 10px 20px;
   font: bold 18px/1 "arial";
   color: #666;
-  border-bottom: 1px solid #bbb;
 }
-#information .inner .QiuckJoin form table th:last-child {
+#information .QiuckJoin form table th:last-child {
   border-bottom: none;
 }
-#information .inner .QiuckJoin form table th input[type=submit] {
+#information .QiuckJoin form table th input[type=submit] {
   width: 150px;
   height: 30px;
   border: none;
-  background: #444;
+  background-color: rgba(28, 27, 23, 0.989);
   font: bold 14px/1 "arial";
   color: #fff;
 }
-#information .inner .QiuckJoin form table td {
-  border-bottom: 1px solid #bbb;
+#information .QiuckJoin form table td {
   padding: 15px 30px;
   background: white;
 }
-#information .inner .QiuckJoin form table td input[type=text] {
+#information .QiuckJoin form table td input[type=text] {
   width: 100%;
   height: 25px;
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid rgba(235, 213, 69, 0.989);
   background: none;
   text-align: center;
-  font: bold 14px/1 "";
+  font: bold 12px/1 "";
 }
-#information .inner .QiuckJoin form .agreement label[for=agree] {
+#information .QiuckJoin form .agreement label[for=agree] {
   font-size: 20px;
+}
+#information .QiuckJoin:hover {
+  opacity: 1;
+  border-radius: 20px;
+  height: 150px;
+  transform: translateY(0px);
 }
 
 #services {
@@ -215,8 +358,6 @@ a {
 }
 #services .inner {
   width: 1180px;
-  position: relative;
-  margin: 0 auto;
 }
 #services .inner h1 {
   font-weight: bold;
@@ -226,102 +367,94 @@ a {
   margin-top: 100px;
   letter-spacing: 1px;
 }
-#services .inner .tab {
-  width: 100%;
-  padding-top: 100px;
-  margin: 100px auto;
-  position: relative;
-  height: 400px;
+#services .inner main {
+  width: 1180px;
 }
-#services .inner .tab dt {
-  text-align: center;
-  width: 16.6666666667%;
-  height: 40px;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  opacity: 1;
-}
-#services .inner .tab dt:nth-of-type(1) {
-  left: 0%;
-}
-#services .inner .tab dt:nth-of-type(2) {
-  left: 16.6666666667%;
-}
-#services .inner .tab dt:nth-of-type(3) {
-  left: 33.3333333333%;
-}
-#services .inner .tab dt:nth-of-type(4) {
-  left: 50%;
-}
-#services .inner .tab dt:nth-of-type(5) {
-  left: 66.6666666667%;
-}
-#services .inner .tab dt:nth-of-type(6) {
-  left: 83.3333333333%;
-}
-#services .inner .tab dt .icon {
+#services .inner main div {
   width: 100%;
 }
-#services .inner .tab dt .icon img {
-  width: 45px;
-  height: 45px;
-}
-#services .inner .tab dt.on .icon {
-  opacity: 1;
-}
-#services .inner .tab dd {
+#services .inner main div ul {
   width: 100%;
-  height: 350px;
-  position: absolute;
-  top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 80px;
 }
-#services .inner .tab dd article {
+#services .inner main div ul li {
   width: 100%;
   height: 100%;
+  padding: 1px 41px;
+  font: bold 20px/1 "arial";
+  color: black;
+  text-align: center;
+}
+#services .inner main div ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 20px 0px;
+  font: bold 18px/1 "arial";
+  color: rgba(0, 0, 0, 0.747);
+  text-align: center;
+  transition: all 1s;
+}
+#services .inner main div ul li.on a {
+  color: rgba(235, 213, 69, 0.989);
+  scale: 1.2;
+}
+#services .inner main section {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  margin-top: 50px;
+}
+#services .inner main section article {
   position: absolute;
-  overflow: hidden;
   top: 0;
   left: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  display: none;
 }
-#services .inner .tab dd article::after {
+#services .inner main section article::after {
   content: "";
   display: block;
   clear: both;
 }
-#services .inner .tab dd article .pic {
+#services .inner main section article .pic {
   float: left;
   width: 50%;
   overflow: hidden;
   height: 400px;
 }
-#services .inner .tab dd article .pic img {
+#services .inner main section article .pic img {
   width: 100%;
   min-height: 350px;
   object-fit: cover;
+  transition: 0.5s;
 }
-#services .inner .tab dd article .wrap {
+#services .inner main section article .wrap {
   float: left;
   width: 50%;
+  overflow: hidden;
   min-height: 350px;
-  background-color: rgba(173, 169, 52, 0.7568627451);
+  background-color: rgba(235, 213, 69, 0.989);
   position: relative;
 }
-#services .inner .tab dd article .wrap h2 {
-  padding: 30px 10px 0px;
+#services .inner main section article .wrap h2 {
+  padding: 30px 30px 10px;
   font: bold 40px/1.3 "arial";
 }
-#services .inner .tab dd article .wrap p {
-  padding-left: 30px;
+#services .inner main section article .wrap p {
+  padding-left: 50px;
   font: 18px/1.3 "arial";
   width: 100%;
   text-align: left;
   margin-bottom: 50px;
 }
-#services .inner .tab dd article .wrap a {
+#services .inner main section article .wrap a {
   display: block;
   width: 100px;
-  height: 100%;
   margin: 80px 10px 10px;
   border: 1px solid black;
   padding: 10px 30px;
@@ -329,20 +462,18 @@ a {
   letter-spacing: 1px;
   font: 13px/1.3 "arial";
 }
-#services .inner .tab dd.on .pic {
+#services .inner main section article.on {
   display: flex;
 }
 
 #LatestProjects {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 180px 0 150px;
 }
 #LatestProjects .inner {
   width: 1180px;
+  margin: 0 auto;
   position: relative;
-  margin: 50px auto;
 }
 #LatestProjects .inner h1 {
   font-weight: bold;
@@ -352,190 +483,73 @@ a {
   margin-top: 100px;
   letter-spacing: 1px;
 }
-#LatestProjects .inner ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 60px;
-}
-#LatestProjects .inner ul li {
-  display: block;
-  padding: 1px 40px;
-  font: bold 20px/1 "arial";
-  color: black;
-  text-align: center;
-}
-#LatestProjects .inner ul a {
+#LatestProjects .inner .wrap {
+  padding-top: 80px;
   width: 100%;
+}
+#LatestProjects .inner .wrap::after {
+  content: "";
   display: block;
-  padding: 14px 40px;
-  font: 15px/1 "arial";
-  color: black;
-  text-align: center;
+  clear: both;
 }
-#LatestProjects .inner ul a:hover {
-  width: 100%;
-  color: #aaa;
-  transition: 0.5s;
-  transform: scale(1.2);
-}
-#LatestProjects .inner .slider {
-  width: 500px;
-  height: 400px;
+#LatestProjects .inner .wrap article {
+  width: 280px;
+  height: 200px;
+  float: left;
+  margin-right: 20px;
   position: relative;
-  margin: 0px auto;
   overflow: hidden;
 }
-#LatestProjects .inner .slider ul {
-  width: 300%;
+#LatestProjects .inner .wrap article:last-child {
+  margin-right: 0px;
+}
+#LatestProjects .inner .wrap article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+#LatestProjects .inner .wrap article::after {
+  content: "";
+  display: block;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  transition: 0.5s;
+  z-index: 3;
 }
-#LatestProjects .inner .slider ul li {
-  width: 33.3333333333%;
-  height: 100%;
-  font-size: 40px;
-  color: #000;
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#LatestProjects .inner .slider ul li[data-index="1"] {
-  background: url(../img/figure.jpg) no-repeat center/cover;
-}
-#LatestProjects .inner .slider ul li[data-index="2"] {
-  background: url(../img/figure.jpg) no-repeat center/cover;
-}
-#LatestProjects .inner .slider ul li[data-index="3"] {
-  background: url(../img/figure.jpg) no-repeat center/cover;
-}
-#LatestProjects .inner .prev {
-  display: block;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  float: left;
-  margin: 100px;
+#LatestProjects .inner .wrap article a {
+  font-size: 20px;
+  font-family: "arial";
+  color: rgba(235, 213, 69, 0.989);
   position: absolute;
+  z-index: 5;
+  letter-spacing: 1px;
+  opacity: 0;
 }
-#LatestProjects .inner .prev strong {
-  position: absolute;
+#LatestProjects .inner .wrap article:hover a {
+  opacity: 1;
   top: 50%;
   left: 50%;
-  transition: all 0.5s;
-  opacity: 0;
-  transform: translate(100%, -50%);
-  font: bold 12px/1 "arial";
-  color: #111;
-}
-#LatestProjects .inner .prev::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: rotate(-30deg);
-  transform-origin: left center;
-  transition: all 0.5s;
-}
-#LatestProjects .inner .prev::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: rotate(30deg);
-  transform-origin: left center;
-  transition: all 0.5s;
-}
-#LatestProjects .inner .prev:hover::before {
-  top: 0%;
-  transform: rotate(-180deg);
-  transform-origin: center center;
-}
-#LatestProjects .inner .prev:hover::after {
-  top: 100%;
-  transform: rotate(180deg);
-  transform-origin: center center;
-}
-#LatestProjects .inner .prev:hover strong {
   transform: translate(-50%, -50%);
-  opacity: 1;
+  border-bottom: 1px solid rgba(235, 213, 69, 0.989);
 }
-#LatestProjects .inner .next {
-  display: block;
-  width: 50px;
-  height: 50px;
-  float: left;
-  margin: 100px;
-  top: 50%;
-  right: 0%;
-  position: absolute;
+#LatestProjects .inner .wrap article:hover img {
+  transform: scale(1.2);
 }
-#LatestProjects .inner .next strong {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-150%, -50%);
-  opacity: 0;
-  transition: all 0.5s;
-  font: bold 12px/1 "arial";
-  color: #111;
-}
-#LatestProjects .inner .next::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: rotate(30deg);
-  transform-origin: right center;
-  transition: all 0.5s;
-}
-#LatestProjects .inner .next::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: rotate(-30deg);
-  transform-origin: right center;
-  transition: all 0.5s;
-}
-#LatestProjects .inner .next:hover::before {
-  top: 0%;
-  transform-origin: center center;
-  transform: rotate(180deg);
-}
-#LatestProjects .inner .next:hover::after {
-  top: 100%;
-  transform: rotate(-180deg);
-  transform-origin: center center;
-}
-#LatestProjects .inner .next:hover strong {
-  transform: translate(-50%, -50%);
-  opacity: 1;
+#LatestProjects .inner .wrap article:hover::after {
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.279);
 }
 
 #footer {
   width: 100%;
   padding: 80px 0;
-  background: #444;
+  background-color: rgba(50, 49, 44, 0.989);
+  opacity: 0.9;
 }
 #footer .inner {
   width: 1180px;
@@ -548,7 +562,7 @@ a {
 }
 #footer .inner h1 {
   font: bold 30px/1 "arial";
-  color: #666;
+  color: rgba(235, 213, 69, 0.989);
   float: left;
 }
 #footer .inner ul {
@@ -560,23 +574,23 @@ a {
 }
 #footer .inner ul li a {
   font: bold 14px/1 "arial";
-  color: #666;
+  color: rgba(235, 213, 69, 0.989);
 }
 #footer .inner address {
   float: left;
   width: 100%;
   font: 14px/1.3 "arial";
-  color: #777;
+  color: rgba(235, 213, 69, 0.989);
   margin-bottom: 20px;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #888;
+  border-top: 1px solid white;
 }
 #footer .inner p {
   float: left;
   width: 100%;
   font: 12px/1 "arial";
-  color: #777;
+  color: rgba(235, 213, 69, 0.989);
 }
 
 /*# sourceMappingURL=style.css.map */

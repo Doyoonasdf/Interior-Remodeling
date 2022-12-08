@@ -1,37 +1,37 @@
 // ___상단은 탭메뉴
 
-const dts = document.querySelectorAll("dt");
-const dds = document.querySelectorAll("dd");
+// const dts = document.querySelectorAll("dt");
+// const dds = document.querySelectorAll("dd");
 
-const dts_icon = document.querySelectorAll("dt .icon");
+// const dts_icon = document.querySelectorAll("dt .icon");
 
-dts_icon.forEach((el, index) => {
-  el.addEventListener("focusin", () => {
-    activation(dts, index);
-    activation(dds, index);
-  })
-})
-
-
+// dts_icon.forEach((el, index) => {
+//   el.addEventListener("focusin", () => {
+//     activation(dts, index);
+//     activation(dds, index);
+//   })
+// })
 
 
-dts.forEach((el, index) => {
-
-  el.addEventListener("click", () => {
-    activation(dts, index);
-    activation(dds, index);
 
 
-  })
-})
+// dts.forEach((el, index) => {
+
+//   el.addEventListener("click", () => {
+//     activation(dts, index);
+//     activation(dds, index);
+
+
+//   })
+// })
 
 //활성화 함수를 만듦
-function activation(arr, index) {
-  for (let el of arr) {
-    el.classList.remove("on");
-  }
-  arr[index].classList.add("on");
-}
+// function activation(arr, index) {
+//   for (let el of arr) {
+//     el.classList.remove("on");
+//   }
+//   arr[index].classList.add("on");
+// }
 
 
 
@@ -41,11 +41,11 @@ function activation(arr, index) {
 
 
 // ________ 하단은 슬라이더
-
-const Slider = document.querySelector(".slider")
+const visual = document.querySelector("#visual");
+const Slider = visual.querySelector(".slider")
 const ul = Slider.querySelector("ul");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
+const prev = visual.querySelector(".prev");
+const next = visual.querySelector(".next");
 const lis = ul.querySelectorAll("li");
 let len = lis.length; //추가가되도 자동 li의 갯수를 세어줌
 let enableClick = true;
@@ -114,4 +114,39 @@ function prevSlide() {
       enableClick = true;
     }
   })
+}
+
+// -----------------------------
+const services = document.querySelector("#services");
+const btns = services.querySelectorAll("ul li");
+const boxes = services.querySelectorAll("section article");
+
+btns.forEach((_el, _ind) => {
+  _el.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let isOn = e.currentTarget.classList.contains("on");
+    if (isOn) return;
+
+    if (enableClick) {
+      enableClick = false;
+
+      activation(btns, _ind);
+      activation(boxes, _ind);
+    }
+  })
+})
+
+//활성화 함수를 만듦
+function activation(list, index) {
+  for (let k of list) {
+    k.classList.remove("on");
+    list[index].classList.add("on");
+
+    setTimeout(() => {
+      enableClick = true;
+    }, speed)
+
+  }
+
 }

@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/c12878d3ba.js" crossorigin="anonymous"></script>
   <script defer src="js/main.js"></script>
+  <!-- <script defer src="js/Slider.js"></script> -->
   <script defer src="js/anime.js"></script>
+  <!-- <script defer src="js/Tab.js/"></script> -->
 </head>
 
 <body>
@@ -20,18 +22,10 @@
         <ul id="gnb">
           <li><a href="index.html">HOME</a></li>
           <li><a href="#">DEPARTMENT</a></li>
-          <li><a href="#">YOUTUBE</a></li>
-          <li><a href="#">COMMUNITY</a></li>
+          <li><a href="#">JOIN</a></li>
           <li><a href="#">GALLERY</a></li>
-          <li><a href="#">LOCATION</a></li>
-        </ul>
-
-        <ul class="util">
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Join</a></li>
-          <li><a href="#">SiteMap</a></li>
+          <li><a href="#">COMMUNITY</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
 
@@ -57,8 +51,21 @@
   </header>
 
   <figure id="visual">
+    <article class="slider">
+      <ul>
+        <li data-index="1"></li>
+        <li data-index="2"></li>
+        <li data-index="3"></li>
+      </ul>
+    </article>
+    <a href="#" class="prev">
+      <strong>prev</strong>
+    </a>
+    <a href="#" class="next">
+      <strong>next</strong>
+    </a>
     <div class="inner">
-      <h1>DO YOU WANT TO BE <span>CREATIVE?</span></h1>
+      <h1>A BUILDER YOU CAN TRUST</h1>
     </div>
   </figure>
 
@@ -69,14 +76,12 @@
         <h1>ABOUT US</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
           architectoLLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
-          architectoorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
-          architecto
-          sequi officia iusto expedita cum exercitationem.
-          Lorem ipsum doLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores,
+          architectooremet cdipisicing elit. Perferendis quisq cdipisicing elit. Perferendis quisquam fugit maiores, sed
+          architectooremet consectecte cdipisicing elit. Perferendis quisquam fugit maiores, sed
+          architectooremet consectetur, adipisicing elit. Perferendis quisquam fugit maiores,
           sed
           architectolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed architecto
-          sequi officia iusto expedita cum exercitationem.</p>
-        <a href="#">More</a>
+          sequi officia iusto expedita cum </p>
       </div>
       <div class="QiuckJoin">
         <form action="index.html">
@@ -135,18 +140,23 @@
   <section id="services">
     <div class="inner">
       <h1>OUR SERVICES</h1>
-      <dl class="tab">
-        <dt class="on">
-          <div class="icon">
-            <img src="img/services_living-room-1606197.png" alt="거실아이콘">
-          </div>
-        </dt>
-        <dd class="on">
-          <article>
+      <main>
+        <div>
+          <ul>
+            <li class="on"><a href="#">Living-room</a></li>
+            <li><a href="#">Kitchen</a></li>
+            <li><a href="#">Bed-Room</a></li>
+            <li><a href="#">Nursery-Room</a></li>
+            <li><a href="#">Bathroom</a></li>
+            <li><a href="#">Front door</a></li>
+          </ul>
+        </div>
+
+        <section>
+          <article class="on">
             <div class="pic">
               <img src="img/거실.png" alt="거실인테리어사진">
             </div>
-
             <div class="wrap">
               <h2>Living-room</h2>
               <p>
@@ -158,17 +168,9 @@
                 excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
                 neque non optio eligendi?
               </p>
-              <a href="#">MORE</a>
             </div>
           </article>
-        </dd>
 
-        <dt>
-          <div class="icon">
-            <img src="img/services_kitchen-1606177.png" alt="주방아이콘">
-          </div>
-        </dt>
-        <dd>
           <article>
             <div class="pic">
               <img src="img/주방.jpg" alt="주방인테리어사진">
@@ -185,17 +187,9 @@
                 excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
                 neque non optio eligendi?
               </p>
-              <a href="#">MORE</a>
             </div>
           </article>
-        </dd>
 
-        <dt>
-          <div class="icon">
-            <img src="img/services_bed-1606220.png" alt="침실아이콘">
-          </div>
-        </dt>
-        <dd>
           <article>
             <div class="pic">
               <img src="img/침실.jpg" alt="침실인테리어사진">
@@ -205,20 +199,13 @@
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
                 ipsa
-                excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+                excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam
+                molestiae
                 neque non optio eligendi?
               </p>
-              <a href="#">MORE</a>
             </div>
           </article>
-        </dd>
 
-        <dt>
-          <div class="icon">
-            <img src="img/services_cradle-1606215.png" alt="아이방아이콘">
-          </div>
-        </dt>
-        <dd>
           <article>
             <div class="pic">
               <img src="img/아이방.jpg" alt="아이방인테리어사진">
@@ -227,21 +214,14 @@
               <h2>Nursery-Room</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
-                ipsa
+                ipsaatibus at ducimus
+                ipsaLorem ipsum dolor sit amet consectetur adipisicin
                 excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
                 neque non optio eligendi?
               </p>
-              <a href="#">MORE</a>
             </div>
           </article>
-        </dd>
 
-        <dt>
-          <div class="icon">
-            <img src="img/services_bathtub-1606180.png" alt="욕실아이콘">
-          </div>
-        </dt>
-        <dd>
           <article>
             <div class="pic">
               <img src="img/욕실.jpg" alt="욕실인테리어사진">
@@ -249,22 +229,17 @@
             <div class="wrap">
               <h2>Bathroom</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus atatibus at
+                ducimus
+                ipsaLorem ipsum dolor sit amet consectetur adipisicinatibus at ducimus
+                ipsaLorem ipsum dolor sit amet consectetur adipisicin ducimus
                 ipsa
                 excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
                 neque non optio eligendi?
               </p>
-              <a href="#">MORE</a>
             </div>
           </article>
-        </dd>
 
-        <dt>
-          <div class="icon">
-            <img src="img/services_door-1606229.png" alt="현관아이콘">
-          </div>
-        </dt>
-        <dd>
           <article>
             <div class="pic">
               <img src="img/현관.jpg" alt="현관인테리어사진">
@@ -276,39 +251,40 @@
                 ipsaLorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
                 ipsaLorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at
               </p>
-              <a href="#">MORE</a>
             </div>
           </article>
-        </dd>
-      </dl>
+        </section>
+      </main>
     </div>
   </section>
-
 
 
   <!-- 슬라이더_루프 부여 -->
   <section id="LatestProjects">
     <div class="inner">
       <h1>LATEST PROJECTS</h1>
-      <ul>
-        <l1><a href="javascript:void(0)">Apartment/ House</a></l1>
-        <l1><a href="javascript:void(0)">Hospital / Clinic</a></l1>
-        <l1><a href="javascript:void(0)">Cafe / Restaurant</a></l1>
-        <l1><a href="javascript:void(0)">Office / Class</a></l1>
-      </ul>
-      <article class="slider">
-        <ul>
-          <li data-index="1"></li>
-          <li data-index="2"></li>
-          <li data-index="3"></li>
-        </ul>
-      </article>
-      <a href="#" class="prev">
-        <strong>prev</strong>
-      </a>
-      <a href="#" class="next">
-        <strong>next</strong>
-      </a>
+      <div class="wrap">
+        <!-- article*4>img+p -->
+        <article>
+          <img src="img/Home - BDS Contract.jpg" alt="">
+          <a href="#">VIEW MORE</a>
+        </article>
+        <article>
+          <img src="img/office interior design.png" alt="">
+          <a href="#">VIEW MORE</a>
+
+        </article>
+        <article>
+          <img src="img/ofiso baldai.jpg" alt="">
+          <a href="#">VIEW MORE</a>
+
+        </article>
+        <article>
+          <img src="img/플랜디자인.jpg" alt="">
+          <a href="#">VIEW MORE</a>
+
+        </article>
+      </div>
     </div>
   </section>
 

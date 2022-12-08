@@ -23,6 +23,7 @@ a {
 }
 // Header 영역
 #header {
+	z-index: 10;
 	width: 100%;
 	height: 100px;
 	position: relative;
@@ -30,16 +31,17 @@ a {
 	left: 50%;
 	margin-left: -50%;
 	// 에프터선 그은 이유 : nav랑 다르게 보더바텀만 좀 연하게 해주고싶어서,,
-	&::after {
-		content: " ";
-		display: block;
-		width: 100%;
-		bottom: 0%;
-		height: 2px;
-		background-color: white;
-		opacity: 0.5;
-		position: absolute;
-	}
+	// &::after {
+	// 	content: " ";
+	// 	display: block;
+	// 	width: 80%;
+	// 	left: 50%;
+	// 	transform: translate(-50%);
+	// 	height: 2px;
+	// 	opacity: 0.5;
+	// 	position: absolute;
+	// 	background-color: black;
+	// }
 	.inner {
 		width: 1180px;
 		height: 100px;
@@ -62,35 +64,16 @@ a {
 						display: block;
 						padding: 14px 40px;
 						font: bold 20px/1 "arial";
-						color: black;
+						color: white;
+						opacity: 0.7;
 						text-align: center;
 						&:hover {
 							//클릭하면 밑줄선 나오게 하고싶은데 안나옴
-							border-bottom: yellow;
-							height: 1px;
+							height: 5px;
 							width: 100%;
-							color: #aaa;
+							color: rgba(235, 213, 69, 0.989);
 							transition: 1s ease;
 						}
-					}
-				}
-			}
-			.util {
-				position: absolute;
-				top: 20px;
-				right: 40px;
-				//li에 플롯걸었으니깐 플롯해제 걸기
-				&::after {
-					content: "";
-					display: block;
-					clear: both;
-				}
-				li {
-					float: left;
-					margin-left: 25px;
-					a {
-						font: 15px/1 "ariarl";
-						color: black;
 					}
 				}
 			}
@@ -104,22 +87,200 @@ a {
 	width: 100%;
 	height: 600px;
 	margin-top: -100px;
-	//사진시작이 브라우저 최상단부터니깐 마진탑
-	background-color: #000;
-	//사진 좀 어둡게 해주려고 했는데 안됨
-	background: url(../img/figure.jpg) no-repeat center/cover;
+
+	.slider {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		ul {
+			width: calc(100% * 3);
+			height: 100%;
+			margin-left: 0;
+			li {
+				width: calc(100% / 3);
+				height: 100%;
+				float: left;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font: bold 20vw/1 "arial";
+				opacity: 0.7;
+				&[data-index="1"] {
+					background: url(../img/DEUX\ VILLE\ _\ livingaxis.jpg)
+						no-repeat center/cover;
+					// background-color: hotpink;
+					// height: 100%;
+					// width: 100%;
+				}
+				&[data-index="2"] {
+					background: url(../img/Koral\ Brothers\ Inc_\ -\ Hamptons\ Custom\ Home\ Builder\ &\ General\ Contractors.png)
+						no-repeat center/cover;
+					opacity: 0.5;
+					height: 100%;
+					width: 100%;
+				}
+				&[data-index="3"] {
+					background: url(../img//project_villa.jpg)
+						no-repeat center/cover;
+					background-color: white;
+					height: 100%;
+					width: 100%;
+				}
+				&::after {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transition: 0.5s;
+					z-index: 3;
+					background: rgba(0, 0, 0, 0.279);
+				}
+			}
+		}
+	}
 	.inner {
 		width: 1180px;
-		padding: 0px auto;
+		margin: 0 auto;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		h1 {
 			font: bold 50px/1 "arial";
-			color: white;
+			color: rgba(235, 213, 69, 0.989);
+			margin-bottom: 25%;
 			text-align: center;
-			margin-bottom: 30%; //사진때매 같이 수정해야함
+		}
+	}
+
+	.prev {
+		display: block;
+		width: 50px;
+		height: 50px;
+		top: 25%;
+		float: left;
+		margin: 100px;
+		position: absolute;
+
+		strong {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transition: all 0.5s;
+			opacity: 0;
+			transform: translate(100%, -50%);
+			font: bold 12px/1 "arial";
+			color: rgba(235, 213, 69, 0.989);
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: white;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: rotate(-30deg);
+			transform-origin: left center;
+			transition: all 0.5s;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: white;
+
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: rotate(30deg);
+			transform-origin: left center;
+			transition: all 0.5s;
+		}
+		&:hover {
+			&::before {
+				top: 0%;
+				transform: rotate(-180deg);
+				transform-origin: center center;
+			}
+			&::after {
+				top: 100%;
+				transform: rotate(180deg);
+				transform-origin: center center;
+			}
+			strong {
+				transform: translate(-50%, -50%);
+				opacity: 1;
+			}
+		}
+	}
+
+	.next {
+		display: block;
+		width: 50px;
+		height: 50px;
+		float: left;
+		margin: 100px;
+		top: 25%;
+		right: 0%;
+		position: absolute;
+		strong {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-150%, -50%);
+			opacity: 0;
+			transition: all 0.5s;
+			font: bold 12px/1 "arial";
+			color: rgba(235, 213, 69, 0.989);
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: white;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: rotate(30deg);
+			transform-origin: right center;
+			transition: all 0.5s;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: white;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: rotate(-30deg);
+			transform-origin: right center;
+			transition: all 0.5s;
+		}
+		&:hover {
+			&::before {
+				top: 0%;
+				transform-origin: center center;
+				transform: rotate(180deg);
+			}
+			&::after {
+				top: 100%;
+				transform: rotate(-180deg);
+				transform-origin: center center;
+			}
+			strong {
+				transform: translate(-50%, -50%);
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -127,109 +288,117 @@ a {
 #information {
 	width: 100%;
 	height: calc(100vh - 600px);
-	//(헤더 100)  +   (비쥬얼 하이트 600 마진탑 -100)
+
+	// (헤더 100)  +   (비쥬얼 하이트 600 마진탑 -100)
 	.inner {
 		width: 1180px;
 		height: 100%;
 		margin: 0 auto;
 		position: relative;
 		.wrap {
-			width: 580px;
+			width: 750px;
 			float: left;
 			height: 100%;
 			margin-right: 20px;
 			//h1부터 p a 미동없음
 			h1 {
-				margin: 20px auto 10px;
+				margin: 30px auto 10px;
 				text-align: left;
 				font: bold 40px/1 "arial";
-				color: black;
-
-				//p랑 a 안먹음...
-				p {
-					font: 20px/1.3 "arial";
-					color: pink;
-				}
-				a {
-					display: block;
-					width: 400px;
-					height: 30px;
-					border: 1x solid #bbb;
-					font: bold 50px/30px "arial";
-					color: black;
-					text-align: center;
-					&:hover {
-						background: pink;
-						color: #555;
-					}
-				}
+				color: rgba(235, 213, 69, 0.989);
 			}
-		}
-		.QiuckJoin {
-			border: 1px solid black;
-			position: relative;
-			//동의합니다가 위에있음.. 서브밋 왼쪽에 두고싶은데..
-			form {
-				position: absolute;
-				top: -54px;
-				right: 0;
-
-				h1 {
-					background-color: rgba(255, 255, 255, 0.735);
-					opacity: 0.7;
-					padding: 10px 8px;
-				}
-				table {
-					width: 100%;
-					border-top: 2px solid #999;
-					th {
-						width: 40%;
-						padding: 10px 20px;
-						font: bold 18px/1 "arial";
-						color: #666;
-						// border-right: 1px solid #bbb;
-						border-bottom: 1px solid #bbb;
-						&:last-child {
-							border-bottom: none;
-						}
-						input[type="submit"] {
-							width: 150px;
-							height: 30px;
-							border: none;
-							background: #444;
-							font: bold 14px/1 "arial";
-							color: #fff;
-						}
-					}
-					td {
-						border-bottom: 1px solid #bbb;
-						padding: 15px 30px;
-						background: white;
-
-						input[type="text"] {
-							width: 100%;
-							height: 25px;
-							border-top: none;
-							border-left: none;
-							border-right: none;
-							border-bottom: 1px solid #bbb;
-							background: none;
-							text-align: center;
-							font: bold 14px/1 "";
-						}
-					}
-				}
-				.agreement {
-					label[for="agree"] {
-						font-size: 20px;
-					}
+			p {
+				font: 20px/1.3 "arial";
+			}
+			a {
+				display: block;
+				width: 400px;
+				height: 30px;
+				border: 1x solid #bbb;
+				font: bold 50px/30px "arial";
+				color: black;
+				text-align: center;
+				&:hover {
+					// background: pink;
+					color: #555;
 				}
 			}
 		}
 	}
+	.QiuckJoin {
+		position: relative;
+		//동의합니다가 위에있음.. 서브밋 왼쪽에 두고싶은데..
+		opacity: 0;
+		border-radius: 0px;
+		transform: translateY(100px);
+		transition-property: all;
+		transition-duration: 1s;
+		form {
+			position: absolute;
+			top: -54px;
+			right: 0;
+
+			h1 {
+				color: rgba(255, 255, 255, 0.735);
+				background-color: rgba(235, 213, 69, 0.989);
+				padding: 10px 8px;
+			}
+			table {
+				width: 100%;
+				// border-top: 2px solid #999;
+				th {
+					width: 40%;
+					padding: 10px 20px;
+					font: bold 18px/1 "arial";
+					color: #666;
+					// border-right: 1px solid #bbb;
+					// border-bottom: 1px solid #bbb;
+					&:last-child {
+						border-bottom: none;
+					}
+					input[type="submit"] {
+						width: 150px;
+						height: 30px;
+						border: none;
+						background-color: rgba(28, 27, 23, 0.989);
+
+						font: bold 14px/1 "arial";
+						color: #fff;
+					}
+				}
+				td {
+					// border-bottom: 1px solid #bbb;
+					padding: 15px 30px;
+					background: white;
+
+					input[type="text"] {
+						width: 100%;
+						height: 25px;
+						border-top: none;
+						border-left: none;
+						border-right: none;
+						border-bottom: 1px solid
+							rgba(235, 213, 69, 0.989);
+						background: none;
+						text-align: center;
+						font: bold 12px/1 "";
+					}
+				}
+			}
+			.agreement {
+				label[for="agree"] {
+					font-size: 20px;
+				}
+			}
+		}
+		&:hover {
+			opacity: 1;
+			border-radius: 20px;
+			height: 150px;
+			transform: translateY(0px);
+		}
+	}
 }
-//전체적으로 망함
-//js 탭메뉴 + 하면서 on클릭될때 아이콘이 사라지고 글씨가 보이게
 
 #services {
 	width: 100%;
@@ -238,8 +407,6 @@ a {
 	align-items: center;
 	.inner {
 		width: 1180px;
-		position: relative;
-		margin: 0 auto;
 		h1 {
 			font-weight: bold;
 			font-size: 30px;
@@ -248,72 +415,64 @@ a {
 			margin-top: 100px;
 			letter-spacing: 1px;
 		}
-		.tab {
-			width: 100%;
-			padding-top: 100px;
-			// border: 1px solid blue;
-			margin: 100px auto;
-			position: relative;
-			height: 400px;
-			dt {
-				text-align: center;
-				width: calc(100% / 6);
-				height: 40px;
-				text-align: center;
-				position: absolute;
-				top: 0;
-				opacity: 1; // 자바스크립타하고 나중에 0으로 바꿔보기
-				&:nth-of-type(1) {
-					left: calc((100% / 6) * 0);
-				}
-				&:nth-of-type(2) {
-					left: calc((100% / 6) * 1);
-				}
-				&:nth-of-type(3) {
-					left: calc((100% / 6) * 2);
-				}
-				&:nth-of-type(4) {
-					left: calc((100% / 6) * 3);
-				}
-				&:nth-of-type(5) {
-					left: calc((100% / 6) * 4);
-				}
-				&:nth-of-type(6) {
-					left: calc((100% / 6) * 5);
-				}
-				.icon {
+		main {
+			width: 1180px;
+			// overflow: hidden;
+			div {
+				width: 100%;
+				ul {
 					width: 100%;
-					img {
-						width: 45px;
-						height: 45px;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					padding-top: 80px;
+					li {
+						width: 100%;
+						height: 100%;
+						// display: block;
+						padding: 1px 41px;
+						font: bold 20px/1 "arial";
+						color: black;
+						text-align: center;
+						a {
+							width: 100%;
+							height: 100%;
+							display: block;
+							padding: 20px 0px;
+							font: bold 18px/1 "arial";
+							color: rgba(0, 0, 0, 0.747);
+							text-align: center;
+							transition: all 1s;
+						}
+						&.on {
+							//li가 활성화 되었을때
+							a {
+								//그때의 a태그
+								color: rgba(235, 213, 69, 0.989);
+								scale: (1.2);
+							}
+						}
 					}
 				}
-				&.on .icon {
-					opacity: 1;
-				}
 			}
-
-			dd {
+			section {
 				width: 100%;
 				height: 350px;
-				// position: relative;1
-				position: absolute;
-				top: 100px;
-				// display: none; // 자바스크립트하고 풀어주기
+				position: relative;
+				margin-top: 50px;
 				article {
-					width: 100%;
-					height: 100%;
 					position: absolute;
-					overflow: hidden;
 					top: 0;
 					left: 0;
+					overflow: hidden;
+					transition: 0.5s;
+					display: none;
 					&::after {
 						content: "";
 						display: block;
 						clear: both;
 					}
 					.pic {
-						//사진있는곳
 						float: left;
 						width: 50%;
 						overflow: hidden;
@@ -322,31 +481,31 @@ a {
 							width: 100%;
 							min-height: 350px;
 							object-fit: cover;
+							transition: 0.5s;
 						}
 					}
 					.wrap {
-						//문구있는곳
 						float: left;
 						width: 50%;
-						min-height: 350px; //텍스트가 어던건 두줄일수도있고 높이값이 바뀌니간
-						background-color: #ada934c1;
+						overflow: hidden;
+						min-height: 350px;
+						background-color: rgba(235, 213, 69, 0.989);
+
 						position: relative;
 						h2 {
-							padding: 30px 10px 0px;
+							padding: 30px 30px 10px;
 							font: bold 40px/1.3 "arial";
 						}
 						p {
-							padding-left: 30px;
+							padding-left: 50px;
 							font: 18px/1.3 "arial";
 							width: 100%;
 							text-align: left;
 							margin-bottom: 50px;
 						}
 						a {
-							// position: absolute;
 							display: block;
 							width: 100px;
-							height: 100%;
 							margin: 80px 10px 10px;
 							border: 1px solid black;
 							padding: 10px 30px;
@@ -355,9 +514,9 @@ a {
 							font: 13px/1.3 "arial";
 						}
 					}
-				}
-				&.on .pic {
-					display: flex;
+					&.on {
+						display: flex; //활성화 된 article만 보이게 하도록
+					}
 				}
 			}
 		}
@@ -366,13 +525,11 @@ a {
 
 #LatestProjects {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 180px 0 150px;
 	.inner {
 		width: 1180px;
+		margin: 0 auto;
 		position: relative;
-		margin: 50px auto;
 		h1 {
 			font-weight: bold;
 			font-size: 30px;
@@ -381,191 +538,69 @@ a {
 			margin-top: 100px;
 			letter-spacing: 1px;
 		}
-		ul {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			padding-top: 60px;
-			li {
+		.wrap {
+			padding-top: 80px;
+			width: 100%;
+			&::after {
+				content: "";
 				display: block;
-				padding: 1px 40px;
-				font: bold 20px/1 "arial";
-				color: black;
-				text-align: center;
+				clear: both;
 			}
-			a {
-				width: 100%;
-				display: block;
-				padding: 14px 40px;
-				font: 15px/1 "arial";
-				color: black;
-				text-align: center;
-				&:hover {
+			article {
+				width: 280px;
+				height: 200px;
+				float: left;
+				margin-right: 20px;
+				position: relative;
+				overflow: hidden;
+				&:last-child {
+					margin-right: 0px;
+				}
+				img {
 					width: 100%;
-					color: #aaa;
-					transition: 0.5s;
-					transform: scale(1.2);
-				}
-			}
-		}
-		.slider {
-			width: 500px;
-			height: 400px;
-			position: relative;
-			margin: 0px auto;
-			overflow: hidden;
-			ul {
-				width: calc(100% * 3);
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				li {
-					width: calc(100% / 3);
 					height: 100%;
-					font-size: 40px;
-					color: #000;
-					float: left;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					&[data-index="1"] {
-						background: url(../img/figure.jpg) no-repeat
-							center/cover;
-					}
-					&[data-index="2"] {
-						background: url(../img/figure.jpg) no-repeat
-							center/cover;
-					}
-					&[data-index="3"] {
-						background: url(../img/figure.jpg) no-repeat
-							center/cover;
-					}
-				}
-			}
-		}
-
-		.prev {
-			display: block;
-			width: 50px;
-			height: 50px;
-			top: 50%;
-			float: left;
-			margin: 100px;
-			position: absolute;
-			strong {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transition: all 0.5s;
-				opacity: 0;
-				transform: translate(100%, -50%);
-				font: bold 12px/1 "arial";
-				color: #111;
-			}
-			&::before {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 1px;
-				background-color: #000;
-				position: absolute;
-				top: 50%;
-				left: 0;
-				transform: rotate(-30deg);
-				transform-origin: left center;
-				transition: all 0.5s;
-			}
-			&::after {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 1px;
-				background-color: #000;
-				position: absolute;
-				top: 50%;
-				left: 0;
-				transform: rotate(30deg);
-				transform-origin: left center;
-				transition: all 0.5s;
-			}
-			&:hover {
-				&::before {
-					top: 0%;
-					transform: rotate(-180deg);
-					transform-origin: center center;
+					object-fit: cover;
+					transition: 1s;
 				}
 				&::after {
-					top: 100%;
-					transform: rotate(180deg);
-					transform-origin: center center;
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transition: 0.5s;
+					z-index: 3;
 				}
-				strong {
-					transform: translate(-50%, -50%);
-					opacity: 1;
-				}
-			}
-		}
+				a {
+					font-size: 20px;
+					font-family: "arial";
+					color: rgba(235, 213, 69, 0.989);
 
-		.next {
-			display: block;
-			width: 50px;
-			height: 50px;
-			float: left;
-			margin: 100px;
-			top: 50%;
-			right: 0%;
-			position: absolute;
-			strong {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-150%, -50%);
-				opacity: 0;
-				transition: all 0.5s;
-				font: bold 12px/1 "arial";
-				color: #111;
-			}
-			&::before {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 1px;
-				background-color: #000;
-				position: absolute;
-				top: 50%;
-				right: 0;
-				transform: rotate(30deg);
-				transform-origin: right center;
-				transition: all 0.5s;
-			}
-			&::after {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 1px;
-				background-color: #000;
-				position: absolute;
-				top: 50%;
-				right: 0;
-				transform: rotate(-30deg);
-				transform-origin: right center;
-				transition: all 0.5s;
-			}
-			&:hover {
-				&::before {
-					top: 0%;
-					transform-origin: center center;
-					transform: rotate(180deg);
+					position: absolute;
+					z-index: 5;
+					// transition: 0.5s;
+					letter-spacing: 1px;
+					opacity: 0;
 				}
-				&::after {
-					top: 100%;
-					transform: rotate(-180deg);
-					transform-origin: center center;
-				}
-				strong {
-					transform: translate(-50%, -50%);
-					opacity: 1;
+				&:hover {
+					a {
+						opacity: 1;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						border-bottom: 1px solid
+							rgba(235, 213, 69, 0.989);
+					}
+					img {
+						transform: scale(1.2);
+					}
+					&::after {
+						top: 0px;
+						left: 0px;
+						background: rgba(0, 0, 0, 0.279);
+					}
 				}
 			}
 		}
@@ -575,7 +610,8 @@ a {
 #footer {
 	width: 100%;
 	padding: 80px 0;
-	background: #444;
+	background-color: rgba(50, 49, 44, 0.989);
+	opacity: 0.9;
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -586,7 +622,7 @@ a {
 		}
 		h1 {
 			font: bold 30px/1 "arial";
-			color: #666;
+			color: rgba(235, 213, 69, 0.989);
 			float: left;
 		}
 		ul {
@@ -596,7 +632,7 @@ a {
 				margin-left: 20px;
 				a {
 					font: bold 14px/1 "arial";
-					color: #666;
+					color: rgba(235, 213, 69, 0.989);
 				}
 			}
 		}
@@ -604,17 +640,18 @@ a {
 			float: left;
 			width: 100%;
 			font: 14px/1.3 "arial";
-			color: #777;
+			color: rgba(235, 213, 69, 0.989);
+
 			margin-bottom: 20px;
 			margin-top: 20px;
 			padding-top: 20px;
-			border-top: 1px solid #888;
+			border-top: 1px solid white;
 		}
 		p {
 			float: left;
 			width: 100%;
 			font: 12px/1 "arial";
-			color: #777;
+			color: rgba(235, 213, 69, 0.989);
 		}
 	}
 }
