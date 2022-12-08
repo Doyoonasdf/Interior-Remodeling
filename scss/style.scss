@@ -286,13 +286,13 @@ a {
 					img {
 						width: 45px;
 						height: 45px;
-						// background: #555;
 					}
 				}
 				&.on .icon {
 					opacity: 1;
 				}
 			}
+
 			dd {
 				width: 100%;
 				height: 350px;
@@ -446,16 +446,175 @@ a {
 		}
 
 		.prev {
-			position: absolute;
+			display: block;
+			width: 50px;
+			height: 50px;
 			top: 50%;
-			left: 50px;
-			margin-top: -50px;
+			float: left;
+			margin: 100px;
+			position: absolute;
+			strong {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transition: all 0.5s;
+				opacity: 0;
+				transform: translate(100%, -50%);
+				font: bold 12px/1 "arial";
+				color: #111;
+			}
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #000;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: rotate(-30deg);
+				transform-origin: left center;
+				transition: all 0.5s;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #000;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: rotate(30deg);
+				transform-origin: left center;
+				transition: all 0.5s;
+			}
+			&:hover {
+				&::before {
+					top: 0%;
+					transform: rotate(-180deg);
+					transform-origin: center center;
+				}
+				&::after {
+					top: 100%;
+					transform: rotate(180deg);
+					transform-origin: center center;
+				}
+				strong {
+					transform: translate(-50%, -50%);
+					opacity: 1;
+				}
+			}
 		}
+
 		.next {
-			position: absolute;
+			display: block;
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin: 100px;
 			top: 50%;
-			right: 50px;
-			margin-top: -50px;
+			right: 0%;
+			position: absolute;
+			strong {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-150%, -50%);
+				opacity: 0;
+				transition: all 0.5s;
+				font: bold 12px/1 "arial";
+				color: #111;
+			}
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #000;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: rotate(30deg);
+				transform-origin: right center;
+				transition: all 0.5s;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #000;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: rotate(-30deg);
+				transform-origin: right center;
+				transition: all 0.5s;
+			}
+			&:hover {
+				&::before {
+					top: 0%;
+					transform-origin: center center;
+					transform: rotate(180deg);
+				}
+				&::after {
+					top: 100%;
+					transform: rotate(-180deg);
+					transform-origin: center center;
+				}
+				strong {
+					transform: translate(-50%, -50%);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	width: 100%;
+	padding: 80px 0;
+	background: #444;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		h1 {
+			font: bold 30px/1 "arial";
+			color: #666;
+			float: left;
+		}
+		ul {
+			float: right;
+			li {
+				float: left;
+				margin-left: 20px;
+				a {
+					font: bold 14px/1 "arial";
+					color: #666;
+				}
+			}
+		}
+		address {
+			float: left;
+			width: 100%;
+			font: 14px/1.3 "arial";
+			color: #777;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #888;
+		}
+		p {
+			float: left;
+			width: 100%;
+			font: 12px/1 "arial";
+			color: #777;
 		}
 	}
 }

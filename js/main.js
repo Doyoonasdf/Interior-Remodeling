@@ -1,4 +1,46 @@
+// ___상단은 탭메뉴
 
+const dts = document.querySelectorAll("dt");
+const dds = document.querySelectorAll("dd");
+
+const dts_icon = document.querySelectorAll("dt .icon");
+
+dts_icon.forEach((el, index) => {
+  el.addEventListener("focusin", () => {
+    activation(dts, index);
+    activation(dds, index);
+  })
+})
+
+
+
+
+dts.forEach((el, index) => {
+
+  el.addEventListener("click", () => {
+    activation(dts, index);
+    activation(dds, index);
+
+
+  })
+})
+
+//활성화 함수를 만듦
+function activation(arr, index) {
+  for (let el of arr) {
+    el.classList.remove("on");
+  }
+  arr[index].classList.add("on");
+}
+
+
+
+
+
+
+
+
+// ________ 하단은 슬라이더
 
 const Slider = document.querySelector(".slider")
 const ul = Slider.querySelector("ul");
