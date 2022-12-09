@@ -328,11 +328,7 @@ a {
 	.QiuckJoin {
 		position: relative;
 		//동의합니다가 위에있음.. 서브밋 왼쪽에 두고싶은데..
-		opacity: 0;
 		border-radius: 0px;
-		transform: translateY(100px);
-		transition-property: all;
-		transition-duration: 1s;
 		form {
 			position: absolute;
 			top: -54px;
@@ -390,12 +386,6 @@ a {
 					font-size: 20px;
 				}
 			}
-		}
-		&:hover {
-			opacity: 1;
-			border-radius: 20px;
-			height: 150px;
-			transform: translateY(0px);
 		}
 	}
 }
@@ -465,7 +455,7 @@ a {
 					top: 0;
 					left: 0;
 					overflow: hidden;
-					transition: 0.5s;
+					transition: 0.3s;
 					display: none;
 					&::after {
 						content: "";

@@ -289,11 +289,7 @@ a {
 }
 #information .QiuckJoin {
   position: relative;
-  opacity: 0;
   border-radius: 0px;
-  transform: translateY(100px);
-  transition-property: all;
-  transition-duration: 1s;
 }
 #information .QiuckJoin form {
   position: absolute;
@@ -342,12 +338,6 @@ a {
 }
 #information .QiuckJoin form .agreement label[for=agree] {
   font-size: 20px;
-}
-#information .QiuckJoin:hover {
-  opacity: 1;
-  border-radius: 20px;
-  height: 150px;
-  transform: translateY(0px);
 }
 
 #services {
@@ -413,7 +403,7 @@ a {
   top: 0;
   left: 0;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.3s;
   display: none;
 }
 #services .inner main section article::after {
