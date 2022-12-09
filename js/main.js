@@ -49,7 +49,7 @@ const next = visual.querySelector(".next");
 const lis = ul.querySelectorAll("li");
 let len = lis.length; //추가가되도 자동 li의 갯수를 세어줌
 let enableClick = true;
-let speed = 500;
+let speed = 1000;
 
 //초기화 함수를 호출
 init();
