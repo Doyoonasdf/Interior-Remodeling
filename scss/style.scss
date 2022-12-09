@@ -34,18 +34,6 @@ a {
 	top: 50%;
 	left: 50%;
 	margin-left: -50%;
-	// 에프터선 그은 이유 : nav랑 다르게 보더바텀만 좀 연하게 해주고싶어서,,
-	// &::after {
-	// 	content: " ";
-	// 	display: block;
-	// 	width: 80%;
-	// 	left: 50%;
-	// 	transform: translate(-50%);
-	// 	height: 2px;
-	// 	opacity: 0.5;
-	// 	position: absolute;
-	// 	background-color: black;
-	// }
 	.inner {
 		width: 1180px;
 		height: 100px;
@@ -81,6 +69,19 @@ a {
 					}
 				}
 			}
+			// 에프터선 그은 이유 : nav랑 다르게 보더바텀만 좀 연하게 해주고싶어서,, =>
+			// &::after {
+			// 	content: " ";
+			// 	display: block;
+			// 	width: 100%;
+			// 	left: 50%;
+			// 	top: 90%;
+			// 	transform: translate(-50%);
+			// 	height: 2px;
+			// 	// opacity: 0.5;
+			// 	position: absolute;
+			// 	background-color: black;
+			// }
 		}
 		.btnCall {
 			position: absolute;
@@ -404,11 +405,10 @@ a {
 		margin: 0 auto;
 		position: relative;
 		.wrap {
-			width: 580px;
+			width: 600px;
 			float: left;
 			height: 100%;
 			margin-right: 20px;
-			//h1부터 p a 미동없음
 			h1 {
 				margin: 30px auto 10px;
 				text-align: left;
@@ -417,15 +417,16 @@ a {
 			}
 			p {
 				font: 20px/1.3 "arial";
+				letter-spacing: 1.3px; // 레터 스페이싱이 안먹음...
 			}
 			a {
 				display: block;
 				width: 150px;
 				height: 40px;
 				border: 1px solid;
+				letter-spacing: 1px;
 				font: bold 15px/40px "arial";
 				color: #fff;
-
 				text-align: center;
 				letter-spacing: 2px;
 				margin: 20px 0px 10px;
@@ -445,8 +446,7 @@ a {
 		form {
 			position: absolute;
 			top: -54px;
-			right: 0;
-
+			right: 80px;
 			h1 {
 				color: rgba(255, 255, 255, 0.735);
 				background-color: rgba(235, 213, 69, 0.989);
@@ -457,8 +457,9 @@ a {
 				// border-top: 2px solid #999;
 				th {
 					width: 40%;
-					padding: 10px 20px;
-					font: bold 18px/1 "arial";
+					padding: 20px 30px;
+					font: normal 14px/1 "arial";
+					// border-bottom: 1px solid rgba(235, 213, 69, 0.989);
 					color: #666;
 					// border-right: 1px solid #bbb;
 					// border-bottom: 1px solid #bbb;
@@ -469,15 +470,16 @@ a {
 						width: 150px;
 						height: 30px;
 						border: none;
+						margin-left: 40px;
 						background-color: rgba(28, 27, 23, 0.989);
-
+						cursor: pointer;
 						font: bold 14px/1 "arial";
 						color: #fff;
 					}
 				}
 				td {
 					// border-bottom: 1px solid #bbb;
-					padding: 15px 30px;
+					padding: 0px 30px;
 					background: white;
 
 					input[type="text"] {
@@ -494,10 +496,10 @@ a {
 					}
 				}
 			}
-			.agreement {
-				label[for="agree"] {
-					font-size: 20px;
-				}
+			label[for="agree"] {
+				font-size: 14px;
+				text-align: left;
+				cursor: pointer;
 			}
 		}
 	}
@@ -677,10 +679,9 @@ a {
 					z-index: 3;
 				}
 				a {
-					font-size: 20px;
+					font-size: 15px;
 					font-family: "arial";
 					color: rgba(235, 213, 69, 0.989);
-
 					position: absolute;
 					z-index: 5;
 					// transition: 0.5s;

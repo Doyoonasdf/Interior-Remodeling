@@ -358,7 +358,7 @@ a {
   position: relative;
 }
 #information .inner .wrap {
-  width: 580px;
+  width: 600px;
   float: left;
   height: 100%;
   margin-right: 20px;
@@ -371,12 +371,14 @@ a {
 }
 #information .inner .wrap p {
   font: 20px/1.3 "arial";
+  letter-spacing: 1.3px;
 }
 #information .inner .wrap a {
   display: block;
   width: 150px;
   height: 40px;
   border: 1px solid;
+  letter-spacing: 1px;
   font: bold 15px/40px "arial";
   color: #fff;
   text-align: center;
@@ -395,7 +397,7 @@ a {
 #information .QiuckJoin form {
   position: absolute;
   top: -54px;
-  right: 0;
+  right: 80px;
 }
 #information .QiuckJoin form h1 {
   color: rgba(255, 255, 255, 0.735);
@@ -407,8 +409,8 @@ a {
 }
 #information .QiuckJoin form table th {
   width: 40%;
-  padding: 10px 20px;
-  font: bold 18px/1 "arial";
+  padding: 20px 30px;
+  font: normal 14px/1 "arial";
   color: #666;
 }
 #information .QiuckJoin form table th:last-child {
@@ -418,12 +420,14 @@ a {
   width: 150px;
   height: 30px;
   border: none;
+  margin-left: 40px;
   background-color: rgba(28, 27, 23, 0.989);
+  cursor: pointer;
   font: bold 14px/1 "arial";
   color: #fff;
 }
 #information .QiuckJoin form table td {
-  padding: 15px 30px;
+  padding: 0px 30px;
   background: white;
 }
 #information .QiuckJoin form table td input[type=text] {
@@ -437,8 +441,10 @@ a {
   text-align: center;
   font: bold 12px/1 "";
 }
-#information .QiuckJoin form .agreement label[for=agree] {
-  font-size: 20px;
+#information .QiuckJoin form label[for=agree] {
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
 }
 
 #services {
@@ -612,7 +618,7 @@ a {
   z-index: 3;
 }
 #LatestProjects .inner .wrap article a {
-  font-size: 20px;
+  font-size: 15px;
   font-family: "arial";
   color: rgba(235, 213, 69, 0.989);
   position: absolute;
