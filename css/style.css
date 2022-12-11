@@ -25,42 +25,43 @@ a {
   width: 100%;
   height: 100px;
   position: relative;
-  top: 50%;
-  left: 50%;
-  margin-left: -50%;
 }
 #header .inner {
   width: 1180px;
-  height: 100px;
+  height: 100%;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#header .inner .hd_logo img {
+  filter: invert(86%) sepia(17%) saturate(1662%) hue-rotate(37deg) brightness(10%) contrast(84%);
+  width: 100px;
+}
+#header .inner .menuWeb {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #header .inner .menuWeb #gnb {
-  position: absolute;
-  bottom: 0;
-}
-#header .inner .menuWeb #gnb::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#header .inner .menuWeb #gnb li {
-  float: left;
+  display: flex;
 }
 #header .inner .menuWeb #gnb li a {
   width: 100%;
+  height: 100%;
   display: block;
-  padding: 14px 40px;
-  font: bold 20px/1 "arial";
+  padding: 0px 20px;
+  font: bold 20px/100px "arial";
   color: white;
   opacity: 0.7;
   text-align: center;
+  transition: 0.3s ease;
 }
 #header .inner .menuWeb #gnb li a:hover {
-  height: 5px;
-  width: 100%;
   color: rgba(235, 213, 69, 0.989);
-  transition: 1s ease;
 }
 #header .inner .btnCall {
   position: absolute;
@@ -68,8 +69,8 @@ a {
   top: 50%;
   transform: translateY(-50%);
   display: none;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 #header .inner .btnCall::before {
   content: "";
@@ -159,14 +160,30 @@ a {
 
 #visual {
   width: 100%;
-  height: 600px;
+  height: 80vh;
   margin-top: -100px;
+  position: relative;
+  min-height: 650px;
 }
 #visual .slider {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
+}
+#visual .slider .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+#visual .slider .inner h1 {
+  font: bold 50px/1 "arial";
+  color: rgba(235, 213, 69, 0.989);
+  text-align: center;
 }
 #visual .slider ul {
   position: absolute;
@@ -213,30 +230,23 @@ a {
   z-index: 3;
   background: rgba(0, 0, 0, 0.279);
 }
-#visual .inner {
-  width: 1180px;
-  margin: 0 auto;
+#visual .Slide_btn {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
 }
-#visual .inner h1 {
-  font: bold 50px/1 "arial";
-  color: rgba(235, 213, 69, 0.989);
-  margin-bottom: 25%;
-  text-align: center;
-}
-#visual .prev {
+#visual .Slide_btn .prev {
   display: block;
   width: 50px;
   height: 50px;
-  top: 25%;
-  float: left;
-  margin: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
   position: absolute;
 }
-#visual .prev strong {
+#visual .Slide_btn .prev strong {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -246,7 +256,7 @@ a {
   font: bold 12px/1 "arial";
   color: rgba(235, 213, 69, 0.989);
 }
-#visual .prev::before {
+#visual .Slide_btn .prev::before {
   content: "";
   display: block;
   width: 100%;
@@ -259,7 +269,7 @@ a {
   transform-origin: left center;
   transition: all 0.5s;
 }
-#visual .prev::after {
+#visual .Slide_btn .prev::after {
   content: "";
   display: block;
   width: 100%;
@@ -272,31 +282,30 @@ a {
   transform-origin: left center;
   transition: all 0.5s;
 }
-#visual .prev:hover::before {
+#visual .Slide_btn .prev:hover::before {
   top: 0%;
   transform: rotate(-180deg);
   transform-origin: center center;
 }
-#visual .prev:hover::after {
+#visual .Slide_btn .prev:hover::after {
   top: 100%;
   transform: rotate(180deg);
   transform-origin: center center;
 }
-#visual .prev:hover strong {
+#visual .Slide_btn .prev:hover strong {
   transform: translate(-50%, -50%);
   opacity: 1;
 }
-#visual .next {
+#visual .Slide_btn .next {
   display: block;
   width: 50px;
   height: 50px;
-  float: left;
-  margin: 100px;
-  top: 25%;
-  right: 0%;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 100px;
   position: absolute;
 }
-#visual .next strong {
+#visual .Slide_btn .next strong {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -306,7 +315,7 @@ a {
   font: bold 12px/1 "arial";
   color: rgba(235, 213, 69, 0.989);
 }
-#visual .next::before {
+#visual .Slide_btn .next::before {
   content: "";
   display: block;
   width: 100%;
@@ -319,7 +328,7 @@ a {
   transform-origin: right center;
   transition: all 0.5s;
 }
-#visual .next::after {
+#visual .Slide_btn .next::after {
   content: "";
   display: block;
   width: 100%;
@@ -332,48 +341,50 @@ a {
   transform-origin: right center;
   transition: all 0.5s;
 }
-#visual .next:hover::before {
+#visual .Slide_btn .next:hover::before {
   top: 0%;
   transform-origin: center center;
   transform: rotate(180deg);
 }
-#visual .next:hover::after {
+#visual .Slide_btn .next:hover::after {
   top: 100%;
   transform: rotate(-180deg);
   transform-origin: center center;
 }
-#visual .next:hover strong {
+#visual .Slide_btn .next:hover strong {
   transform: translate(-50%, -50%);
   opacity: 1;
 }
 
-#information {
+#information.action {
   width: 100%;
-  height: calc(100vh - 600px);
+  padding-bottom: 150px;
 }
-#information .inner {
+#information.action .inner {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-#information .inner .wrap {
+#information.action .inner .wrap {
   width: 600px;
-  float: left;
   height: 100%;
   margin-right: 20px;
 }
-#information .inner .wrap h1 {
-  margin: 30px auto 10px;
+#information.action .inner .wrap h1 {
+  margin: 70px 0px 30px;
   text-align: left;
-  font: bold 40px/1 "arial";
+  font: bold 50px/1 "arial";
   color: rgba(235, 213, 69, 0.989);
 }
-#information .inner .wrap p {
+#information.action .inner .wrap p {
   font: 20px/1.3 "arial";
   letter-spacing: 1.3px;
 }
-#information .inner .wrap a {
+#information.action .inner .wrap a {
   display: block;
   width: 150px;
   height: 40px;
@@ -386,37 +397,42 @@ a {
   margin: 20px 0px 10px;
   background-color: rgba(235, 213, 69, 0.989);
 }
-#information .inner .wrap a:hover {
+#information.action .inner .wrap a:hover {
   background: #fff;
   color: rgba(235, 213, 69, 0.989);
 }
-#information .QiuckJoin {
+#information.action .QiuckJoin {
   position: relative;
+  margin-top: -71px;
   border-radius: 0px;
+  min-width: 500px;
 }
-#information .QiuckJoin form {
-  position: absolute;
-  top: -54px;
-  right: 80px;
-}
-#information .QiuckJoin form h1 {
+#information.action .QiuckJoin form h1 {
   color: rgba(255, 255, 255, 0.735);
   background-color: rgba(235, 213, 69, 0.989);
-  padding: 10px 8px;
+  padding: 0px 40px 0px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 30px;
 }
-#information .QiuckJoin form table {
+#information.action .QiuckJoin form fieldset {
+  padding: 15px;
+  border: 1px solid #555;
+  border-top: none;
+}
+#information.action .QiuckJoin form fieldset table {
   width: 100%;
 }
-#information .QiuckJoin form table th {
+#information.action .QiuckJoin form fieldset table th {
   width: 40%;
   padding: 20px 30px;
-  font: normal 14px/1 "arial";
+  font: bold 18px/1 "arial";
   color: #666;
 }
-#information .QiuckJoin form table th:last-child {
+#information.action .QiuckJoin form fieldset table th:last-child {
   border-bottom: none;
 }
-#information .QiuckJoin form table th input[type=submit] {
+#information.action .QiuckJoin form fieldset table th input[type=submit] {
   width: 150px;
   height: 30px;
   border: none;
@@ -426,22 +442,22 @@ a {
   font: bold 14px/1 "arial";
   color: #fff;
 }
-#information .QiuckJoin form table td {
+#information.action .QiuckJoin form fieldset table td {
   padding: 0px 30px;
   background: white;
 }
-#information .QiuckJoin form table td input[type=text] {
+#information.action .QiuckJoin form fieldset table td input[type=text] {
   width: 100%;
-  height: 25px;
+  height: 40px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid rgba(235, 213, 69, 0.989);
   background: none;
   text-align: center;
-  font: bold 12px/1 "";
+  font: normal 16px/1 "arial";
 }
-#information .QiuckJoin form label[for=agree] {
+#information.action .QiuckJoin form fieldset label[for=agree] {
   font-size: 14px;
   text-align: left;
   cursor: pointer;
@@ -449,35 +465,31 @@ a {
 
 #services {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 150px 0px 650px;
+  background-color: #efefef;
 }
 #services .inner {
   width: 1180px;
+  margin: 0 auto;
 }
 #services .inner h1 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   color: #555;
   text-align: center;
-  margin-top: 100px;
   letter-spacing: 1px;
 }
-#services .inner main {
-  width: 1180px;
-}
-#services .inner main div {
+#services main {
   width: 100%;
 }
-#services .inner main div ul {
+#services main .inner ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 80px;
 }
-#services .inner main div ul li {
+#services main .inner ul li {
   width: 100%;
   height: 100%;
   padding: 1px 41px;
@@ -485,7 +497,7 @@ a {
   color: black;
   text-align: center;
 }
-#services .inner main div ul li a {
+#services main .inner ul li a {
   width: 100%;
   height: 100%;
   display: block;
@@ -493,79 +505,87 @@ a {
   font: bold 18px/1 "arial";
   color: rgba(0, 0, 0, 0.747);
   text-align: center;
-  transition: all 1s;
+  transition: all 0.3s;
 }
-#services .inner main div ul li.on a {
+#services main .inner ul li.on a {
   color: rgba(235, 213, 69, 0.989);
   scale: 1.2;
 }
-#services .inner main section {
+#services main section {
   width: 100%;
-  height: 350px;
   position: relative;
   margin-top: 50px;
 }
-#services .inner main section article {
+#services main section article {
   position: absolute;
   top: 0;
   left: 0;
+  visibility: hidden;
   overflow: hidden;
   transition: 0.3s;
-  display: none;
+  display: flex;
+  opacity: 0;
 }
-#services .inner main section article::after {
+#services main section article::after {
   content: "";
   display: block;
   clear: both;
 }
-#services .inner main section article .pic {
+#services main section article .pic {
   float: left;
   width: 50%;
   overflow: hidden;
-  height: 400px;
+  height: 500px;
 }
-#services .inner main section article .pic img {
+#services main section article .pic img {
   width: 100%;
-  min-height: 350px;
+  height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
-#services .inner main section article .wrap {
+#services main section article .wrap {
   float: left;
   width: 50%;
   overflow: hidden;
   min-height: 350px;
   background-color: rgba(235, 213, 69, 0.989);
+  padding: 60px 100px 60px 60px;
   position: relative;
 }
-#services .inner main section article .wrap h2 {
-  padding: 30px 30px 10px;
+#services main section article .wrap h2 {
+  padding: 0 0 30px;
   font: bold 40px/1.3 "arial";
 }
-#services .inner main section article .wrap p {
-  padding-left: 50px;
-  font: 18px/1.3 "arial";
+#services main section article .wrap p {
+  font: 20px/1.3 "arial";
   width: 100%;
   text-align: left;
-  margin-bottom: 50px;
 }
-#services .inner main section article .wrap a {
+#services main section article .wrap a {
   display: block;
-  width: 100px;
+  width: 200px;
+  text-align: center;
   margin: 80px 10px 10px;
   border: 1px solid black;
-  padding: 10px 30px;
+  padding: 20px 30px;
   color: black;
   letter-spacing: 1px;
   font: 13px/1.3 "arial";
+  transition: 0.3s ease;
 }
-#services .inner main section article.on {
+#services main section article .wrap a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#services main section article.on {
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 #LatestProjects {
   width: 100%;
-  padding: 180px 0 150px;
+  padding: 150px 0px;
 }
 #LatestProjects .inner {
   width: 1180px;
@@ -574,10 +594,9 @@ a {
 }
 #LatestProjects .inner h1 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   color: #555;
   text-align: center;
-  margin-top: 100px;
   letter-spacing: 1px;
 }
 #LatestProjects .inner .wrap {
@@ -690,10 +709,12 @@ a {
   color: rgba(235, 213, 69, 0.989);
 }
 
-@media screen and (max-width: 1179px) {
-  #header .inner {
-    width: 100%;
-    height: 100px;
+@media screen and (max-width: 1180px) {
+  .inner {
+    width: 100% !important;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
   }
   #header .inner .menuWeb {
     display: none;
@@ -701,85 +722,168 @@ a {
   #header .inner .btnCall {
     display: block;
   }
-  #visual {
+  #visual .slider .inner h1 {
+    font: bold 40px/1 "arial";
+  }
+  #visual .Slide_btn .prev {
+    left: 30px;
+  }
+  #visual .Slide_btn .next {
+    right: 30px;
+  }
+  #information.action .inner {
+    display: block;
+  }
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
+  }
+  #information.action .inner .wrap {
     width: 100%;
-    height: calc(100vh - 350px);
   }
-  #visual .inner {
+  #information.action .inner .wrap h1 {
+    text-align: center;
+    margin: 0px 0px 30px;
+    padding-top: 0;
+  }
+  #information.action .inner .wrap a {
+    margin: 30px auto 0px;
+  }
+  #information.action {
+    padding: 100px 0;
+  }
+  #services {
+    padding: 100px 0px 600px;
+  }
+  #services .inner {
     width: 100%;
   }
-  #information {
-    padding: 50px 30px;
-  }
-  #information .inner {
+  #services main section article {
     width: 100%;
   }
-  #information .inner ::after {
+  #services main section article {
+    display: block;
+    width: 100%;
+    height: 500px;
+  }
+  #services main section article .pic {
+    width: 100%;
+    height: auto;
+  }
+  #services main section article .wrap {
+    height: auto;
+    width: 100%;
+  }
+  #services main section article .wrap a {
+    height: auto;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 50px 10px;
+  }
+  #LatestProjects {
+    padding: 100px 0px;
+  }
+  #LatestProjects .inner .wrap article {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .inner {
+    width: 100% !important;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #visual .slider .inner h1 {
+    font: bold 30px/1 "arial";
+  }
+  #visual .Slide_btn .prev {
+    width: 30px;
+    height: 30px;
+    left: 20px;
+  }
+  #visual .Slide_btn .next {
+    right: 20px;
+    height: 30px;
+    width: 30px;
+  }
+  #information.action .inner {
+    display: block;
+  }
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
+  }
+  #information.action .inner .wrap {
+    width: 100%;
+  }
+  #information.action .inner .wrap h1 {
+    text-align: center;
+    margin: 0px 0px 20px;
+    padding-top: 0;
+  }
+  #information.action .inner .wrap a {
+    margin: 30px auto 0px;
+  }
+  #information.action {
+    padding: 100px 0;
+  }
+  #services {
+    padding: 100px 0px 400px;
+  }
+  #services .inner {
+    width: 100%;
+  }
+  #services main .inner ul {
+    padding-top: 40px;
+  }
+  #services main .inner ul li {
+    padding: 0px 20px;
+  }
+  #services main .inner ul li a {
+    padding: 0px 0px;
+    font: bold 13px/1 "arial";
+  }
+  #services main section article {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  #services main section article .pic {
+    width: 100%;
+    height: auto;
+  }
+  #services main section article .wrap {
+    height: auto;
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+  }
+  #services main section article .wrap h2 {
+    font: bold 25px/1.3 "arial";
+    padding: 0 0 20px;
+  }
+  #services main section article .wrap p {
+    font: 10px/1.3 "arial";
+  }
+  #services main section article .wrap a {
+    height: auto;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 30px 10px 10px;
+  }
+  #LatestProjects {
+    padding: 50px 0px;
+  }
+  #LatestProjects::after {
     content: "";
     display: block;
     clear: both;
   }
-  #information .inner .wrap {
-    width: 100%;
-    height: 100%;
+  #LatestProjects .inner .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  #information .inner .wrap h1 {
-    text-align: left;
-  }
-  #information .inner .wrap p {
-    text-align: center;
-  }
-  #information .inner .wrap a {
-    margin: 0 auto;
-  }
-  #information .QiuckJoin form {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #information .QiuckJoin form h1 {
-    padding: 0px 0pax;
-    width: 100%;
-    height: 100%;
-  }
-  #brand {
-    padding: 100px 30px;
-  }
-  #brand .inner {
-    width: 100%;
-  }
-  #brand .inner .wrap article:nth-of-type(1) {
-    width: 49%;
-    margin-right: 2%;
-  }
-  #brand .inner .wrap article:nth-of-type(2) {
-    width: 49%;
-    margin-right: 0px;
+  #LatestProjects .inner .wrap article {
     margin-bottom: 20px;
-  }
-  #brand .inner .wrap article:nth-of-type(3) {
-    width: 49%;
-  }
-  #brand .inner .wrap article:nth-of-type(4) {
-    width: 100%;
-  }
-  #banner {
-    padding: 150px 30px;
-  }
-  #banner .inner {
-    width: 100%;
-  }
-  #comments {
-    padding: 100px 30px;
-  }
-  #comments .inner {
-    width: 100%;
-  }
-  #footer {
-    padding: 80px 30px;
-  }
-  #footer .inner {
-    width: 100%;
   }
 }
 
