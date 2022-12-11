@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-$tablet: 1180px;
+$tablet: 1179px;
 $mobile: 539px;
 
 * {
@@ -23,6 +23,52 @@ a {
 	position: absolute;
 	top: -99999999px;
 	opacity: 0;
+}
+
+.Scroll {
+	position: fixed;
+	right: 1vw;
+	top: 60%;
+	// transform: translateY(-50%);
+	z-index: 10;
+	margin-bottom: 10px;
+	li {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		height: 20px;
+		width: 100px;
+		border-radius: 10px;
+		background-color: #aaa;
+		margin-bottom: 35px;
+		margin-right: -7px;
+		padding: 0px 2px;
+		cursor: pointer;
+		transition: 0.7s;
+		// color: black;
+		span {
+			letter-spacing: 1px;
+			font-size: 12px;
+			color: #efefef;
+			opacity: 1;
+			transition: 0.3s;
+			line-height: 12px;
+		}
+		a {
+			display: block;
+			// color: black;
+		}
+		&.on {
+			align-items: flex-start;
+			scale: (1.1);
+			background-color: rgba(235, 213, 69, 0.989);
+			span {
+				opacity: 0;
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 // Header 영역
@@ -619,7 +665,7 @@ a {
 					min-height: 350px;
 					background-color: rgba(235, 213, 69, 0.989);
 					padding: 60px 100px 60px 60px;
-
+					height: 500px;
 					position: relative;
 					h2 {
 						padding: 0 0 30px;
@@ -660,6 +706,9 @@ a {
 #LatestProjects {
 	width: 100%;
 	padding: 150px 0px;
+	opacity: 0;
+	transform: rotateY(200deg) translateY(100px);
+	transition: 0.5s;
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -686,6 +735,7 @@ a {
 				margin-right: 20px;
 				position: relative;
 				overflow: hidden;
+
 				&:last-child {
 					margin-right: 0px;
 				}
@@ -736,6 +786,10 @@ a {
 				}
 			}
 		}
+	}
+	&.on {
+		opacity: 1;
+		transform: rotateY(0deg) translateY(0px);
 	}
 }
 
@@ -802,8 +856,12 @@ a {
 	#header .inner .btnCall {
 		display: block;
 	}
+	#visual .slider .inner {
+		top: 40%;
+	}
+
 	#visual .slider .inner h1 {
-		font: bold 40px/1 "arial"; //h1에 대해서 10px 줄이기
+		font: bold 40px/1 "arial";
 	}
 	#visual .Slide_btn .prev {
 		left: 30px;
@@ -814,6 +872,7 @@ a {
 	#information.action .inner {
 		display: block;
 	}
+
 	#information.action .QiuckJoin {
 		margin: 50px auto 0;
 	}
@@ -878,9 +937,12 @@ a {
 		overflow: hidden;
 		padding: 0px 10px;
 	}
+	#visual .slider .inner {
+		top: 40%;
+	}
 
 	#visual .slider .inner h1 {
-		font: bold 30px/1 "arial";
+		font: bold 25px/1 "arial";
 	}
 	#visual .Slide_btn .prev {
 		width: 30px;
