@@ -166,7 +166,7 @@ a {
 #header .inner .menuMo {
   width: 270px;
   height: 100vh;
-  background: #333;
+  background-color: rgba(235, 213, 69, 0.989);
   position: fixed;
   top: 0;
   left: -270px;
@@ -180,6 +180,8 @@ a {
 #header .inner .menuMo h1 {
   padding-bottom: 30px;
   border-bottom: 1px solid #666;
+  text-align: center;
+  letter-spacing: 1px;
 }
 #header .inner .menuMo h1 a {
   display: block;
@@ -715,7 +717,7 @@ a {
 #footer {
   width: 100%;
   padding: 80px 0;
-  background-color: rgba(50, 49, 44, 0.989);
+  background-color: #efefef;
   opacity: 0.9;
 }
 #footer .inner {
@@ -761,8 +763,8 @@ a {
 }
 
 @media screen and (max-width: 1179px) {
-  .inner {
-    width: 100% !important;
+  #header .inner {
+    width: 100%;
     max-width: 1180px;
     overflow: hidden;
     padding: 0px 10px;
@@ -775,6 +777,10 @@ a {
   }
   #visual .slider .inner {
     top: 40%;
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
   }
   #visual .slider .inner h1 {
     font: bold 40px/1 "arial";
@@ -785,11 +791,15 @@ a {
   #visual .Slide_btn .next {
     right: 30px;
   }
-  #information.action .inner {
-    display: block;
+  #information.action {
+    padding: 100px 0;
   }
-  #information.action .QiuckJoin {
-    margin: 50px auto 0;
+  #information.action .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+    display: block;
   }
   #information.action .inner .wrap {
     width: 100%;
@@ -802,22 +812,22 @@ a {
   #information.action .inner .wrap a {
     margin: 30px auto 0px;
   }
-  #information.action {
-    padding: 100px 0;
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
   }
   #services {
     padding: 100px 0px 600px;
   }
   #services .inner {
     width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
   }
   #services main section article {
-    width: 100%;
-  }
-  #services main section article {
-    display: block;
     width: 100%;
     height: 500px;
+    display: block;
   }
   #services main section article .pic {
     width: 100%;
@@ -839,6 +849,16 @@ a {
   #LatestProjects .inner .wrap article {
     margin-right: 10px;
   }
+  #footer {
+    padding: 80px 0;
+  }
+  #footer .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+    display: block;
+  }
 }
 @media screen and (max-width: 539px) {
   .inner {
@@ -848,6 +868,10 @@ a {
     padding: 0px 10px;
   }
   #visual .slider .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
     top: 40%;
   }
   #visual .slider .inner h1 {
@@ -863,11 +887,15 @@ a {
     height: 30px;
     width: 30px;
   }
-  #information.action .inner {
-    display: block;
+  #information.action {
+    padding: 100px 0;
   }
-  #information.action .QiuckJoin {
-    margin: 50px auto 0;
+  #information.action .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+    display: block;
   }
   #information.action .inner .wrap {
     width: 100%;
@@ -880,14 +908,23 @@ a {
   #information.action .inner .wrap a {
     margin: 30px auto 0px;
   }
-  #information.action {
-    padding: 100px 0;
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
   }
   #services {
     padding: 100px 0px 400px;
   }
   #services .inner {
     width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #services main .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
   }
   #services main .inner ul {
     padding-top: 40px;
@@ -933,6 +970,12 @@ a {
     content: "";
     display: block;
     clear: both;
+  }
+  #LatestProjects .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
   }
   #LatestProjects .inner .wrap {
     display: flex;
