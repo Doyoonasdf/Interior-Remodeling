@@ -16,7 +16,7 @@ let zoom = true;
 
 
 mapOption = {
-  center: new kakao.maps.LatLng(37.5258975, 126.9284261), //지도의 중심좌표
+  center: new kakao.maps.LatLng(37.5308096, 126.8983384), //지도의 중심좌표
   level: 3 //지도의 확대레벨
 };
 //보여질 지도의 옵션을 설정
