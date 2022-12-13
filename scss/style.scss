@@ -719,7 +719,7 @@ a {
 	padding: 150px 0px;
 	opacity: 1;
 	transform: rotateY(200deg) translateY(100px);
-	transition: 0.5s;
+	transition: 1s ease;
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -915,6 +915,9 @@ a {
 					margin: 0px 0px 30px;
 					padding-top: 0;
 				}
+				p {
+					text-align: center;
+				}
 				a {
 					margin: 30px auto 0px;
 				}
@@ -980,13 +983,6 @@ a {
 }
 
 @media screen and (max-width: $mobile) {
-	.inner {
-		width: 100% !important;
-		max-width: 1180px;
-		overflow: hidden;
-		padding: 0px 10px;
-	}
-
 	#visual {
 		.slider {
 			.inner {
@@ -1113,6 +1109,20 @@ a {
 				align-items: center;
 				article {
 					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	#footer {
+		.inner {
+			h1 {
+				margin-bottom: 20px;
+			}
+			ul {
+				width: 100%;
+				li {
+					margin-left: 0px;
+					margin: 5px;
 				}
 			}
 		}
