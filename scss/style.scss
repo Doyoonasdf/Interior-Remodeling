@@ -33,6 +33,13 @@ a {
 	opacity: 0;
 }
 
+fieldset {
+	border: none;
+}
+table {
+	border-collapse: collapse;
+}
+
 .Scroll {
 	position: fixed;
 	right: 1vw;
@@ -588,7 +595,7 @@ a {
 	width: 100%;
 	padding: 150px 0px 650px;
 	background-color: #efefef;
-	.inner {
+	.innerH1 {
 		width: 1180px;
 		margin: 0 auto;
 		h1 {
@@ -930,7 +937,7 @@ a {
 
 	#services {
 		padding: 100px 0px 600px;
-		.inner {
+		.innerH1 {
 			width: 100%;
 			max-width: 1180px;
 			overflow: hidden;
@@ -986,10 +993,6 @@ a {
 	#visual {
 		.slider {
 			.inner {
-				width: 100%;
-				max-width: 1180px;
-				overflow: hidden;
-				padding: 0px 10px;
 				top: 40%;
 				h1 {
 					font: bold 25px/1 "arial";
@@ -1010,22 +1013,10 @@ a {
 		}
 	}
 	#information.action {
-		padding: 100px 0;
 		.inner {
-			width: 100%;
-			max-width: 1180px;
-			overflow: hidden;
-			padding: 0px 10px;
-			display: block;
 			.wrap {
-				width: 100%;
 				h1 {
-					text-align: center;
-					margin: 0px 0px 20px;
-					padding-top: 0;
-				}
-				a {
-					margin: 30px auto 0px;
+					font: bold 25px/1 "arial";
 				}
 			}
 		}
@@ -1036,7 +1027,7 @@ a {
 
 	#services {
 		padding: 100px 0px 400px;
-		.inner {
+		.innerH1 {
 			width: 100%;
 			max-width: 1180px;
 			overflow: hidden;
