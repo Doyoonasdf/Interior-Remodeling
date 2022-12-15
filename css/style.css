@@ -416,6 +416,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 0px 0px 150px;
+  margin: 0 auto;
 }
 .department .list li + li {
   border-left: 1px solid #ddd;
@@ -437,18 +438,21 @@
   object-fit: cover;
   transition: 0.5s;
 }
-.department .list li b {
+.department .list li span {
   width: 100%;
-  font-size: 40px;
+  font-size: 30px;
   padding-bottom: 5px;
+}
+.department .list li span b {
+  font-size: 35px;
 }
 .department .list li p {
   width: 100%;
-  font-size: 20px;
+  font-size: 25px;
 }
 .department .wrap {
   width: 100%;
-  padding: 0px 0px 150px;
+  padding: 0px 0px 500px;
   height: 350px;
 }
 .department .wrap h2 {
@@ -478,6 +482,19 @@
 }
 .department .wrap article:hover .pic {
   filter: grayscale(0);
+}
+.department .wrap article h3 {
+  text-align: center;
+  padding: 20px;
+}
+.department .wrap article h3 a {
+  font: bold 20px/1 "arial";
+  color: #000;
+}
+.department .wrap article p {
+  font: bold 20px/1 "arial";
+  color: #000;
+  text-align: center;
 }
 
 .location {

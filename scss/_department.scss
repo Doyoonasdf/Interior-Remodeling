@@ -10,6 +10,7 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		padding: 0px 0px 150px;
+		margin: 0 auto;
 		li + li {
 			border-left: 1px solid #ddd;
 		}
@@ -30,21 +31,24 @@
 					transition: 0.5s;
 				}
 			}
-			b {
+			span {
 				width: 100%;
-				font-size: 40px;
+				font-size: 30px;
 				padding-bottom: 5px;
+				b {
+					font-size: 35px;
+				}
 			}
 			p {
 				width: 100%;
-				font-size: 20px;
+				font-size: 25px;
 			}
 		}
 	}
 
 	.wrap {
 		width: 100%;
-		padding: 0px 0px 150px;
+		padding: 0px 0px 500px;
 		height: 350px;
 		h2 {
 			font: bold 30px/1 "arial";
@@ -74,6 +78,19 @@
 				.pic {
 					filter: grayscale(0);
 				}
+			}
+			h3 {
+				text-align: center;
+				padding: 20px;
+				a {
+					font: bold 20px/1 "arial";
+					color: #000;
+				}
+			}
+			p {
+				font: bold 20px/1 "arial";
+				color: #000;
+				text-align: center;
 			}
 		}
 	}
