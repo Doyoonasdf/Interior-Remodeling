@@ -1,12 +1,12 @@
 
 
 
-counter(".list_1", 1975, 200);
-counter(".list_2", 300, 20);
-counter(".list_3", 500, 200);
-counter(".list_4", 100, 10);
-counter(".list_5", 2500, 200);
-counter(".list_6", 600, 100);
+counter(".list_1", 1975, 1000);
+counter(".list_2", 250, 2000);
+counter(".list_3", 500, 1000);
+counter(".list_4", 80, 1000);
+counter(".list_5", 1500, 1000);
+counter(".list_6", 600, 1000);
 
 
 function counter(el, num, time) { //el 적용할 요소, num 최종도달할 값, time 기간
