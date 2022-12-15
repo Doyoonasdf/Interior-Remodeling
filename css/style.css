@@ -443,6 +443,8 @@
 }
 .department .wrap {
   width: 100%;
+  padding: 0px 0px 150px;
+  height: 350px;
 }
 .department .wrap article {
   float: left;
