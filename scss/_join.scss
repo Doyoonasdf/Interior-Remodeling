@@ -1,0 +1,87 @@
+@import "reset.scss";
+.join {
+	.inner {
+		.wrap {
+			width: 100%;
+			h2 {
+				font: bold 30px/1 "arial";
+				color: #000;
+				padding-bottom: 60px;
+			}
+			#terms {
+				width: 100%;
+				height: 200px;
+				resize: none;
+				padding: 10px 20px;
+				font: 13px/1.5 "arial";
+				color: #888;
+				background: #efefef;
+			}
+			.agreement {
+				padding-bottom: 70px;
+				label[for="agree"] {
+					font-size: 14px;
+				}
+			}
+			table {
+				width: 100%;
+				border-top: 2px solid #999;
+				border-bottom: 2px solid #999;
+				th,
+				td {
+					border-bottom: 1px solid #ddd;
+					padding: 15px 25px;
+				}
+				th {
+					width: 20%;
+
+					input[type="reset"],
+					input[type="submit"] {
+						width: 30%;
+						height: 40px;
+
+						margin: 10px;
+						font: bold 14px/40px "arial";
+						color: #555;
+						cursor: pointer;
+						transition: 0.5s;
+
+						&:hover {
+							background-color: rgba(235, 213, 69, 0.989);
+							color: #fff;
+							border: 1px solid rgba(235, 213, 69, 0.989);
+						}
+					}
+				}
+				td {
+					border-left: 1px solid #aaa;
+					input[type="text"],
+					input[type="password"],
+					select {
+						width: 40%;
+						background: rgba(0, 0, 0, 0.03);
+						padding: 10px;
+						border: 1px solid #aaa;
+					}
+					input[type="radio"],
+					input[type="chekbox"] {
+						margin-right: 30px;
+					}
+					textarea {
+						resize: none;
+						width: 60%;
+						height: 150px;
+						background: rgba(0, 0, 0, 0.03);
+						padding: 10px;
+						border: 1px solid #aaa;
+					}
+					p {
+						font: 11px/1 "맑은 고딕";
+						color: hotpink;
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+}
