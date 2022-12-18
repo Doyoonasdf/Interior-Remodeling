@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>기업형 인테리어 리모델링 </title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://kit.fontawesome.com/c12878d3ba.js" crossorigin="anonymous"></script>
   <script defer src="js/btnCall.js"></script>
   <script defer src="js/anime.js"></script>
-  <!-- <script defer src="js/Tab.js/"></script> -->
+  <script defer src="js/gallery.js"></script>
+
 </head>
 
 <body>
@@ -20,7 +22,9 @@
 
     <div class="inner">
       <!-- 웹페이지 메뉴 -->
-      <div class="hd_logo"><img src="img/logo.png" alt="헤더로고"></div>
+      <h1>
+        <a href="index.html">SMK</a>
+      </h1>
       <nav class="menuWeb">
         <ul id="gnb">
           <li><a href="index.html">HOME</a></li>
@@ -39,10 +43,11 @@
 
       <nav class="menuMo">
         <h1>
-          <a href="#">Interior</a>
-          <span>INTERIOR INSTUTUTE</span>
+          <a href="index.html">SMK</a>
+          <span>INTERIOR DESIGN STUDIO</span>
         </h1>
         <ul id="gnbMo">
+          <li><a href="index.html">HOME</a></li>
           <li><a href="department.html">DEPARTMENT</a></li>
           <li><a href="join.html">JOIN</a></li>
           <li><a href="gallery.html">GALLERY</a></li>
@@ -57,8 +62,34 @@
 
   <section class="content gallery">
     <div class="inner">
-      <h1>Sub Title <span>서브페이지 제목</span></h1>
-      <!-- 컨텐츠가 들어가는 부분 -->
+      <h1>GALLERY <span>OUR PROJECTS</span></h1>
+      <article id="searchBox">
+        <input type="text" id="search" placeholder="검색어 입력">
+        <button class="btnSearch">SEARCH</button>
+      </article>
+
+      <article id="wrap">
+        <img src="img/gellery/gallery_loading.gif" class="loading" alt="로딩중입니다">
+        <ul id="list">
+          <!-- <li class="item">
+            <div>
+              <a href="큰이미지주소">
+                <img src="썸네일주소" alt="">
+              </a>
+              <p>이미지 제목</p>
+              <span>
+                <img 버디아이콘>
+                <strong>사진의 주인</strong>
+              </span>
+            </div>
+          </li> -->
+        </ul>
+      </article>
+      <!-- <aside>
+      <img src="" alt="">
+      <span class="close">close</span>
+    </aside> -->
+
     </div>
 
   </section>
@@ -68,22 +99,20 @@
 
   <footer id="footer_sub">
     <div class="inner">
-      <h1><img src="img/logo.png" alt="푸터로고"></h1>
+      <h1>SMK</h1>
       <ul>
-        <li><a href="#">POLICY</a></li>
-        <li><a href="#">TERMS</a></li>
-        <li><a href="#">CUSTOMMER</a></li>
-        <li><a href="#">CONTACT US</a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i></a></li>
       </ul>
 
       <address>
-        address : Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nesciunt!
-        TEL : +82-032-333-4444 FAX : +82-032-333-4434
+        Address : Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nesciunt!
+        <br>TEL : +82-032-333-4444 FAX : +82-032-333-4434
       </address>
       <p>Copyright &copy; 2022 SMK ALL Right reserved</p>
     </div>
   </footer>
-
 
 
 </body>

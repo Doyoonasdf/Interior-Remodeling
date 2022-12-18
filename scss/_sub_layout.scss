@@ -3,7 +3,6 @@
 	width: 100%;
 	height: 100px;
 	position: relative;
-	// background-color: rgba(235, 213, 69, 0.989);
 	background: linear-gradient(
 		135deg,
 		rgba(235, 213, 69, 0.989),
@@ -18,11 +17,11 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		.hd_logo {
-			img {
-				filter: invert(86%) sepia(17%) saturate(1662%)
-					hue-rotate(37deg) brightness(10%) contrast(84%);
+		h1 {
+			a {
+				color: #444;
 				width: 100px;
+				font-size: 40px;
 			}
 		}
 		.menuWeb {
@@ -42,7 +41,9 @@
 						// justify-content: center;
 						// align-items: center;
 						padding: 0px 20px;
-						font: bold 20px/100px "arial";
+						font-weight: bold;
+						font-size: 20px;
+						line-height: 100px;
 						color: white;
 						opacity: 0.7;
 						text-align: center;
@@ -129,6 +130,7 @@
 		.menuMo {
 			width: 270px;
 			height: 100vh;
+			letter-spacing: 1px;
 			background-color: rgba(235, 213, 69, 0.989);
 			position: fixed;
 			top: 0;
@@ -147,13 +149,16 @@
 				letter-spacing: 1px;
 				a {
 					display: block;
-					font: bold 24px/1 "arial";
-					color: #fff;
+					font-weight: bold;
+					margin: 15px auto;
+					font-size: 40px;
+					line-height: 1px;
+					color: rgba(0, 0, 0, 0.747);
 					text-align: center;
 				}
 				span {
 					font-size: 12px;
-					color: #aaa;
+					color: #444;
 				}
 			}
 			#gnbMo {
@@ -161,11 +166,15 @@
 					a {
 						display: block;
 						width: 100%;
-						padding: 20px 0;
-						border-bottom: 1px solid #444;
-						font: bold 14px/1 "arial";
-						color: #888;
+						padding: 30px 0;
+						font-weight: bold;
+						font-size: 20px;
+						line-height: 1px;
+						color: #efefef;
 						text-align: center;
+						&:hover {
+							color: #444;
+						}
 					}
 				}
 			}
@@ -181,14 +190,22 @@
 		min-height: 500px;
 		padding: 0px 0 150px;
 		h1 {
-			font: bold 50px/1 "arial";
+			// font: bold 50px/1 "arial";
+			font-weight: bold;
+			font-size: 50px;
+			line-height: 1px;
 			color: #000;
-			padding-bottom: 60px;
+			padding-bottom: 70px;
 			span {
-				font: normal 20px/1 "맑은 고딕";
+				// font-family: "맑은고딕";
+				font-family: "BlackHanSans";
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 1px;
 				color: #aaa;
 				&::before {
 					content: "/";
+					font-weight: normal;
 					margin-right: 20px;
 					margin-left: 10px;
 				}
@@ -205,13 +222,16 @@
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
+		padding: 10px;
 		&::after {
 			content: "";
 			display: block;
 			clear: both;
 		}
 		h1 {
-			font: bold 30px/1 "arial";
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 1px;
 			color: rgba(0, 0, 0, 0.747);
 			float: left;
 			img {
@@ -226,8 +246,12 @@
 				float: left;
 				margin-left: 20px;
 				a {
-					font: bold 14px/1 "arial";
+					// font: bold 14px/1 "arial";
+					font-size: 20px;
+					line-height: 1px;
+					font-weight: bold;
 					color: rgba(0, 0, 0, 0.747);
+					// color: rgba(235, 213, 69, 0.989);
 				}
 			}
 		}
@@ -236,7 +260,6 @@
 			width: 100%;
 			font: 14px/1.3 "arial";
 			color: rgba(0, 0, 0, 0.747);
-
 			margin-bottom: 20px;
 			margin-top: 20px;
 			padding-top: 20px;
@@ -252,7 +275,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	#header_sub {
+	#header {
 		.inner {
 			width: 100%;
 			max-width: 1180px;
@@ -270,17 +293,117 @@
 		}
 	}
 
-	.content {
-		padding: 100px 0px;
+	#visual {
+		.slider {
+			.inner {
+				top: 40%;
+				width: 100%;
+				max-width: 1180px;
+				overflow: hidden;
+				padding: 0px 10px;
+				h1 {
+					font: bold 40px/1 "arial";
+				}
+			}
+		}
+		.Slide_btn {
+			.prev {
+				left: 30px;
+			}
+			.next {
+				right: 30px;
+			}
+		}
+	}
+
+	#information.action {
+		padding: 100px 0;
 		.inner {
 			width: 100%;
 			max-width: 1180px;
 			overflow: hidden;
 			padding: 0px 10px;
+			display: block;
+			.wrap {
+				width: 100%;
+				h1 {
+					text-align: center;
+					margin: 30px 0px 40px;
+					padding-top: 0;
+				}
+				p {
+					text-align: center;
+				}
+				a {
+					margin: 30px auto 0px;
+				}
+			}
+		}
+		.QiuckJoin {
+			margin: 50px auto 0;
+			form {
+				h1 {
+					text-align: center;
+				}
+				fieldset {
+					table {
+						th {
+							input[type="submit"] {
+								width: 100%;
+								margin-left: 0px;
+								margin-top: 20px;
+								height: 30px;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
-	#footer_sub {
+	#services {
+		padding: 100px 0px 600px;
+		.innerH1 {
+			width: 100%;
+			max-width: 1180px;
+			overflow: hidden;
+			padding: 0px 10px;
+		}
+		main {
+			section {
+				article {
+					width: 100%;
+					height: 500px;
+					display: block;
+					.pic {
+						width: 100%;
+						height: auto;
+					}
+					.wrap {
+						height: auto;
+						width: 100%;
+						a {
+							height: auto;
+							width: 100%;
+							padding: 10px 20px;
+							margin: 50px 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#LatestProjects {
+		padding: 100px 0px;
+		.inner {
+			.wrap {
+				article {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	#footer {
 		padding: 80px 0;
 		.inner {
 			width: 100%;
@@ -288,18 +411,138 @@
 			overflow: hidden;
 			padding: 0px 10px;
 			display: block;
+			padding: 10px;
 		}
 	}
 }
 
 @media screen and (max-width: $mobile) {
-	#footer_sub {
+	#visual {
+		.slider {
+			.inner {
+				top: 40%;
+				h1 {
+					font-size: 25px;
+					font-weight: bold;
+				}
+			}
+		}
+		.Slide_btn {
+			.prev {
+				width: 30px;
+				height: 30px;
+				left: 20px;
+			}
+			.next {
+				right: 20px;
+				height: 30px;
+				width: 30px;
+			}
+		}
+	}
+	#information.action {
 		.inner {
+			.wrap {
+				h1 {
+					// font: bold 25px/1 "arial";
+					font-weight: bold;
+					font-size: 25px;
+					line-height: 1px;
+				}
+			}
+		}
+		.QiuckJoin {
+			margin: 50px auto 0;
+		}
+	}
+
+	#services {
+		padding: 100px 0px 400px;
+		.innerH1 {
+			width: 100%;
+			max-width: 1180px;
+			overflow: hidden;
+			padding: 0px 10px;
+		}
+		main {
+			.inner {
+				width: 100%;
+				max-width: 1180px;
+				overflow: hidden;
+				padding: 0px 10px;
+				ul {
+					padding-top: 40px;
+					li {
+						padding: 0px 20px;
+						a {
+							padding: 0px 0px;
+							font: bold 13px/1 "arial";
+						}
+					}
+				}
+			}
+			section {
+				article {
+					display: block;
+					width: 100%;
+					height: 300px;
+					.pic {
+						width: 100%;
+						height: auto;
+					}
+					.wrap {
+						height: auto;
+						width: 100%;
+						padding: 20px 60px 20px 20px;
+						h2 {
+							font: bold 25px/1.3 "arial";
+							padding: 0 0 20px;
+						}
+						p {
+							font: 10px/1.3 "arial";
+						}
+						a {
+							height: auto;
+							width: 100%;
+							padding: 10px 10px;
+							margin: 30px 10px 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#LatestProjects {
+		padding: 50px 0px;
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.inner {
+			width: 100%;
+			max-width: 1180px;
+			overflow: hidden;
+			padding: 0px 10px;
+			.wrap {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				article {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	#footer {
+		.inner {
+			padding: 10px;
 			h1 {
 				margin-bottom: 20px;
 			}
 			ul {
-				width: 100%;
+				// width: 100%;
 				li {
 					margin-left: 0px;
 					margin: 5px;

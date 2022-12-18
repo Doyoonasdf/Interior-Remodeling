@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Ubuntu:wght@500&display=swap");
 #header_sub {
   z-index: 10;
   width: 100%;
@@ -16,9 +16,10 @@
   justify-content: flex-start;
   align-items: center;
 }
-#header_sub .inner .hd_logo img {
-  filter: invert(86%) sepia(17%) saturate(1662%) hue-rotate(37deg) brightness(10%) contrast(84%);
+#header_sub .inner h1 a {
+  color: #444;
   width: 100px;
+  font-size: 40px;
 }
 #header_sub .inner .menuWeb {
   position: absolute;
@@ -35,7 +36,9 @@
   height: 100%;
   display: block;
   padding: 0px 20px;
-  font: bold 20px/100px "arial";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100px;
   color: white;
   opacity: 0.7;
   text-align: center;
@@ -104,6 +107,7 @@
 #header_sub .inner .menuMo {
   width: 270px;
   height: 100vh;
+  letter-spacing: 1px;
   background-color: rgba(235, 213, 69, 0.989);
   position: fixed;
   top: 0;
@@ -124,22 +128,29 @@
 }
 #header_sub .inner .menuMo h1 a {
   display: block;
-  font: bold 24px/1 "arial";
-  color: #fff;
+  font-weight: bold;
+  margin: 15px auto;
+  font-size: 40px;
+  line-height: 1px;
+  color: rgba(0, 0, 0, 0.747);
   text-align: center;
 }
 #header_sub .inner .menuMo h1 span {
   font-size: 12px;
-  color: #aaa;
+  color: #444;
 }
 #header_sub .inner .menuMo #gnbMo li a {
   display: block;
   width: 100%;
-  padding: 20px 0;
-  border-bottom: 1px solid #444;
-  font: bold 14px/1 "arial";
-  color: #888;
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1px;
+  color: #efefef;
   text-align: center;
+}
+#header_sub .inner .menuMo #gnbMo li a:hover {
+  color: #444;
 }
 
 .content {
@@ -152,16 +163,22 @@
   padding: 0px 0 150px;
 }
 .content .inner h1 {
-  font: bold 50px/1 "arial";
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1px;
   color: #000;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 .content .inner h1 span {
-  font: normal 20px/1 "맑은 고딕";
+  font-family: "BlackHanSans";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1px;
   color: #aaa;
 }
 .content .inner h1 span::before {
   content: "/";
+  font-weight: normal;
   margin-right: 20px;
   margin-left: 10px;
 }
@@ -175,6 +192,7 @@
 #footer_sub .inner {
   width: 1180px;
   margin: 0 auto;
+  padding: 10px;
 }
 #footer_sub .inner::after {
   content: "";
@@ -182,7 +200,9 @@
   clear: both;
 }
 #footer_sub .inner h1 {
-  font: bold 30px/1 "arial";
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1px;
   color: rgba(0, 0, 0, 0.747);
   float: left;
 }
@@ -198,7 +218,9 @@
   margin-left: 20px;
 }
 #footer_sub .inner ul li a {
-  font: bold 14px/1 "arial";
+  font-size: 20px;
+  line-height: 1px;
+  font-weight: bold;
   color: rgba(0, 0, 0, 0.747);
 }
 #footer_sub .inner address {
@@ -219,49 +241,226 @@
 }
 
 @media screen and (max-width: 1179px) {
-  #header_sub .inner {
+  #header .inner {
     width: 100%;
     max-width: 1180px;
     overflow: hidden;
     padding: 0px 10px;
   }
-  #header_sub .inner .menuWeb {
+  #header .inner .menuWeb {
     display: none;
   }
-  #header_sub .inner .btnCall {
+  #header .inner .btnCall {
     display: block;
   }
-  #header_sub .inner .menuMo {
+  #header .inner .menuMo {
     display: block;
   }
-  .content {
+  #visual .slider .inner {
+    top: 40%;
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #visual .slider .inner h1 {
+    font: bold 40px/1 "arial";
+  }
+  #visual .Slide_btn .prev {
+    left: 30px;
+  }
+  #visual .Slide_btn .next {
+    right: 30px;
+  }
+  #information.action {
+    padding: 100px 0;
+  }
+  #information.action .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+    display: block;
+  }
+  #information.action .inner .wrap {
+    width: 100%;
+  }
+  #information.action .inner .wrap h1 {
+    text-align: center;
+    margin: 30px 0px 40px;
+    padding-top: 0;
+  }
+  #information.action .inner .wrap p {
+    text-align: center;
+  }
+  #information.action .inner .wrap a {
+    margin: 30px auto 0px;
+  }
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
+  }
+  #information.action .QiuckJoin form h1 {
+    text-align: center;
+  }
+  #information.action .QiuckJoin form fieldset table th input[type=submit] {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    height: 30px;
+  }
+  #services {
+    padding: 100px 0px 600px;
+  }
+  #services .innerH1 {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #services main section article {
+    width: 100%;
+    height: 500px;
+    display: block;
+  }
+  #services main section article .pic {
+    width: 100%;
+    height: auto;
+  }
+  #services main section article .wrap {
+    height: auto;
+    width: 100%;
+  }
+  #services main section article .wrap a {
+    height: auto;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 50px 10px;
+  }
+  #LatestProjects {
     padding: 100px 0px;
   }
-  .content .inner {
-    width: 100%;
-    max-width: 1180px;
-    overflow: hidden;
-    padding: 0px 10px;
+  #LatestProjects .inner .wrap article {
+    margin-right: 10px;
   }
-  #footer_sub {
+  #footer {
     padding: 80px 0;
   }
-  #footer_sub .inner {
+  #footer .inner {
     width: 100%;
     max-width: 1180px;
     overflow: hidden;
     padding: 0px 10px;
     display: block;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 539px) {
-  #footer_sub .inner h1 {
+  #visual .slider .inner {
+    top: 40%;
+  }
+  #visual .slider .inner h1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #visual .Slide_btn .prev {
+    width: 30px;
+    height: 30px;
+    left: 20px;
+  }
+  #visual .Slide_btn .next {
+    right: 20px;
+    height: 30px;
+    width: 30px;
+  }
+  #information.action .inner .wrap h1 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1px;
+  }
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
+  }
+  #services {
+    padding: 100px 0px 400px;
+  }
+  #services .innerH1 {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #services main .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #services main .inner ul {
+    padding-top: 40px;
+  }
+  #services main .inner ul li {
+    padding: 0px 20px;
+  }
+  #services main .inner ul li a {
+    padding: 0px 0px;
+    font: bold 13px/1 "arial";
+  }
+  #services main section article {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  #services main section article .pic {
+    width: 100%;
+    height: auto;
+  }
+  #services main section article .wrap {
+    height: auto;
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+  }
+  #services main section article .wrap h2 {
+    font: bold 25px/1.3 "arial";
+    padding: 0 0 20px;
+  }
+  #services main section article .wrap p {
+    font: 10px/1.3 "arial";
+  }
+  #services main section article .wrap a {
+    height: auto;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 30px 10px 10px;
+  }
+  #LatestProjects {
+    padding: 50px 0px;
+  }
+  #LatestProjects::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #LatestProjects .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #LatestProjects .inner .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #LatestProjects .inner .wrap article {
     margin-bottom: 20px;
   }
-  #footer_sub .inner ul {
-    width: 100%;
+  #footer .inner {
+    padding: 10px;
   }
-  #footer_sub .inner ul li {
+  #footer .inner h1 {
+    margin-bottom: 20px;
+  }
+  #footer .inner ul li {
     margin-left: 0px;
     margin: 5px;
   }
@@ -301,7 +500,7 @@
   text-align: left;
 }
 .community table tr td:nth-of-type(3) {
-  font-family: "맑은 고딕";
+  font-family: "BlackHanSans";
 }
 .community table tr td a {
   color: #333;
@@ -406,8 +605,10 @@
   }
 }
 .department h2 {
-  font: bold 30px/1 "arial";
-  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1px;
+  color: #444;
   padding-bottom: 60px;
 }
 .department .list {
@@ -430,8 +631,8 @@
   align-items: center;
 }
 .department .list li div {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 }
 .department .list li div img {
   width: 100%;
@@ -441,15 +642,17 @@
 }
 .department .list li span {
   width: 100%;
-  font-size: 30px;
-  padding-bottom: 5px;
+  font-family: "BlackHanSans";
+  font-size: 25px;
+  padding-top: 10px;
 }
 .department .list li span b {
-  font-size: 35px;
+  font-size: 30px;
 }
 .department .list li p {
+  font-family: "BlackHanSans";
   width: 100%;
-  font-size: 25px;
+  font-size: 20px;
 }
 .department .wrap {
   width: 100%;
@@ -461,14 +664,21 @@
   position: relative;
 }
 .department .wrap h2 {
-  font: bold 30px/1 "arial";
-  color: #000;
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1px;
+  color: #444;
 }
 .department .wrap article {
   flex: 1;
   position: relative;
   padding-top: 20px;
   opacity: 0.6;
+  cursor: pointer;
   transition: all 1s;
   width: 280px;
   margin-right: 20px;
@@ -483,7 +693,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 45px;
   left: -200px;
   opacity: 0;
   transition: 1s;
@@ -498,7 +708,8 @@
   transition: 1s;
   margin-bottom: 30px;
   color: white;
-  font: normal 25px/1 "arial";
+  font-family: "BlackHanSans";
+  font-size: 20px;
 }
 .department .wrap article .txt h3::after {
   content: "";
@@ -507,16 +718,19 @@
   height: 2px;
   transition: 1s;
   background: #777;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .department .wrap article .txt p {
   transition: 1s;
-  font: normal 20px/1 "arial";
+  font-family: "BlackHanSans";
+  font-size: 15px;
   color: white;
+  font-weight: bold;
   text-align: right;
 }
 .department .wrap article .pic {
   width: 100%;
+  height: 350px;
   overflow: hidden;
   filter: grayscale(1);
   transform-origin: left center;
@@ -528,7 +742,7 @@
   object-fit: cover;
 }
 .department .wrap article:hover {
-  flex: 1.5;
+  flex: 1.3;
   opacity: 1;
   z-index: 2;
 }
@@ -541,56 +755,158 @@
   z-index: 3;
 }
 .department .wrap article:hover .txt h3 {
-  color: #444;
-  font-size: 50px;
+  color: black;
+  font-size: 30px;
 }
 .department .wrap article:hover .txt h3::after {
   width: 120px;
   background-color: #efefef;
 }
 .department .wrap article:hover .txt p {
-  color: #444;
-  font-size: 40px;
+  color: black;
+  font-size: 25px;
 }
 .department .wrap article:hover .pic {
   filter: grayscale(0);
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.gallery #searchBox {
+  width: 100%;
+  padding: 50px 60px 0px;
+  overflow: hidden;
+  font-size: 0;
+  display: flex;
+  justify-content: right;
 }
-
-ul,
-ol,
-li {
-  list-style: none;
+.gallery #searchBox input[type=text] {
+  width: 300px;
+  height: 30px;
+  background: #efefef;
+  border: 1px solid #ddd;
+  padding-left: 10px;
 }
-
-a {
-  text-decoration: none;
-}
-
-fieldset {
+.gallery #searchBox .btnSearch {
+  width: 80px;
+  height: 30px;
+  background: rgba(235, 213, 69, 0.989);
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
   border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  vertical-align: top;
+  color: #efefef;
 }
-
-table {
-  border-collapse: collapse;
+.gallery #wrap {
+  width: 100%;
+  padding: 50px;
+  overflow: hidden;
 }
-
-.h {
+.gallery #wrap .loading {
+  width: 100px;
   position: absolute;
-  top: -9999px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  opacity: 1;
+}
+.gallery #wrap .loading.off {
   opacity: 0;
+}
+.gallery #wrap #list {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+.gallery #wrap #list.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.gallery #wrap #list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.gallery #wrap #list .item {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+.gallery #wrap #list .item div {
+  width: 100%;
+  padding: 15px;
+  background-color: #efefef;
+}
+.gallery #wrap #list .item div a img {
+  width: 100%;
+}
+.gallery #wrap #list .item div p {
+  opacity: 0;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #444;
+  transition: all 0.5s;
+}
+.gallery #wrap #list .item div span {
+  transition: all 0.5s;
+  font-size: 10px;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery #wrap #list .item div span img {
+  width: 20px;
+  height: 20px;
+}
+.gallery #wrap #list .item div span strong {
+  font-size: 10px;
+}
+.gallery #wrap #list .item:hover p {
+  opacity: 1;
+}
+.gallery #wrap #list .item:hover span {
+  opacity: 1;
+}
+.gallery aside {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+.gallery aside img {
+  height: 100%;
+}
+.gallery aside span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+.gallery aside span:hover {
+  color: rgba(235, 213, 69, 0.989);
 }
 
 .join .inner .wrap {
   width: 100%;
 }
 .join .inner .wrap h2 {
-  font: bold 30px/1 "arial";
-  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1px;
+  color: #444;
   padding-bottom: 60px;
 }
 .join .inner .wrap #terms {
@@ -598,8 +914,10 @@ table {
   height: 200px;
   resize: none;
   padding: 10px 20px;
-  font: 13px/1.5 "arial";
-  color: #888;
+  font-family: "BlackHanSans";
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: BLACK;
   background: #efefef;
 }
 .join .inner .wrap .agreement {
@@ -607,6 +925,7 @@ table {
 }
 .join .inner .wrap .agreement label[for=agree] {
   font-size: 14px;
+  font-family: "BlackHanSans";
 }
 .join .inner .wrap table {
   width: 100%;
@@ -626,7 +945,9 @@ table {
   width: 30%;
   height: 40px;
   margin: 10px;
-  font: bold 14px/40px "arial";
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: bold;
   color: #555;
   cursor: pointer;
   transition: 0.5s;
@@ -649,7 +970,7 @@ table {
   border: 1px solid #aaa;
 }
 .join .inner .wrap table td input[type=radio],
-.join .inner .wrap table td input[type=chekbox] {
+.join .inner .wrap table td input[type=checkbox] {
   margin-right: 30px;
 }
 .join .inner .wrap table td textarea {
@@ -659,11 +980,6 @@ table {
   background: rgba(0, 0, 0, 0.03);
   padding: 10px;
   border: 1px solid #aaa;
-}
-.join .inner .wrap table td p {
-  font: 11px/1 "맑은 고딕";
-  color: hotpink;
-  margin-top: 5px;
 }
 
 .location {
@@ -696,7 +1012,10 @@ table {
   width: 200px;
   height: 40px;
   background: #efefef;
-  font: bold 12px/40px "맑은 고딕";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 40px;
+  font-family: "BlackHanSans";
   color: #333;
   text-align: center;
 }
@@ -716,7 +1035,10 @@ table {
   width: 200px;
   height: 40px;
   background: #efefef;
-  font: bold 12px/40px "맑은 고딕";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 40px;
+  font-family: "BlackHanSans";
   color: #333;
   text-align: center;
 }
@@ -731,10 +1053,12 @@ table {
   margin: 0 auto;
 }
 .location .container h1 {
-  color: #333;
+  color: #444;
   float: left;
   width: 100px;
-  font: bold 40px/1.2 "arial";
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
 }
 .location .container .tab {
   position: relative;
@@ -778,8 +1102,9 @@ table {
 .location .container .tab input[type=radio]:checked ~ label h3 {
   background: #efefef;
   padding: 2px 10px;
-  font: bold px/1 "arial";
-  color: #333;
+  font-weight: bold;
+  font-size: 25px;
+  color: #444;
 }
 .location .container .tab label {
   display: flex;
@@ -797,7 +1122,6 @@ table {
 .location .container .tab label h2 {
   width: 40px;
   height: 40px;
-  background: #333;
   color: rgba(235, 213, 69, 0.989);
   background: #efefef;
   font-size: 20px;
@@ -807,7 +1131,7 @@ table {
 .location .container .tab label h3 {
   position: relative;
   font-weight: 500;
-  color: #333;
+  color: #444;
   z-index: 10;
 }
 .location .container .tab .content {
@@ -822,6 +1146,509 @@ table {
   z-index: 10;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Ubuntu;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.h {
+  position: absolute;
+  top: -9999px;
+  opacity: 0;
+}
+
+.hidden {
+  position: absolute;
+  top: -99999999px;
+  opacity: 0;
+}
+
+#header_sub {
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background: linear-gradient(135deg, rgba(235, 213, 69, 0.989), #f4c663);
+  margin-bottom: 100px;
+}
+#header_sub .inner {
+  width: 1180px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#header_sub .inner h1 a {
+  color: #444;
+  width: 100px;
+  font-size: 40px;
+}
+#header_sub .inner .menuWeb {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#header_sub .inner .menuWeb #gnb {
+  display: flex;
+}
+#header_sub .inner .menuWeb #gnb li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0px 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100px;
+  color: white;
+  opacity: 0.7;
+  text-align: center;
+  transition: 0.3s ease;
+}
+#header_sub .inner .menuWeb #gnb li a:hover {
+  color: rgba(0, 0, 0, 0.747);
+}
+#header_sub .inner .btnCall {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+#header_sub .inner .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header_sub .inner .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header_sub .inner .btnCall span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  transition: 1s;
+  text-indent: -9999px;
+}
+#header_sub .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header_sub .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header_sub .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#header_sub .inner .menuMo {
+  width: 270px;
+  height: 100vh;
+  letter-spacing: 1px;
+  background-color: rgba(235, 213, 69, 0.989);
+  position: fixed;
+  top: 0;
+  left: -270px;
+  padding: 35px 30px;
+  z-index: 10;
+  transition: 0.5s;
+  display: none;
+}
+#header_sub .inner .menuMo.on {
+  left: 0;
+}
+#header_sub .inner .menuMo h1 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #666;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#header_sub .inner .menuMo h1 a {
+  display: block;
+  font-weight: bold;
+  margin: 15px auto;
+  font-size: 40px;
+  line-height: 1px;
+  color: rgba(0, 0, 0, 0.747);
+  text-align: center;
+}
+#header_sub .inner .menuMo h1 span {
+  font-size: 12px;
+  color: #444;
+}
+#header_sub .inner .menuMo #gnbMo li a {
+  display: block;
+  width: 100%;
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1px;
+  color: #efefef;
+  text-align: center;
+}
+#header_sub .inner .menuMo #gnbMo li a:hover {
+  color: #444;
+}
+
+.content {
+  width: 100%;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+  padding: 0px 0 150px;
+}
+.content .inner h1 {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1px;
+  color: #000;
+  padding-bottom: 70px;
+}
+.content .inner h1 span {
+  font-family: "BlackHanSans";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1px;
+  color: #aaa;
+}
+.content .inner h1 span::before {
+  content: "/";
+  font-weight: normal;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+#footer_sub {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #efefef;
+  opacity: 0.9;
+}
+#footer_sub .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 10px;
+}
+#footer_sub .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer_sub .inner h1 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1px;
+  color: rgba(0, 0, 0, 0.747);
+  float: left;
+}
+#footer_sub .inner h1 img {
+  filter: invert(86%) sepia(17%) saturate(1662%) hue-rotate(37deg) brightness(10%) contrast(84%);
+  width: 100px;
+}
+#footer_sub .inner ul {
+  float: right;
+}
+#footer_sub .inner ul li {
+  float: left;
+  margin-left: 20px;
+}
+#footer_sub .inner ul li a {
+  font-size: 20px;
+  line-height: 1px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.747);
+}
+#footer_sub .inner address {
+  float: left;
+  width: 100%;
+  font: 14px/1.3 "arial";
+  color: rgba(0, 0, 0, 0.747);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(235, 213, 69, 0.989);
+}
+#footer_sub .inner p {
+  float: left;
+  width: 100%;
+  font: 12px/1 "arial";
+  color: rgba(0, 0, 0, 0.747);
+}
+
+@media screen and (max-width: 1179px) {
+  #header .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #header .inner .menuWeb {
+    display: none;
+  }
+  #header .inner .btnCall {
+    display: block;
+  }
+  #header .inner .menuMo {
+    display: block;
+  }
+  #visual .slider .inner {
+    top: 40%;
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #visual .slider .inner h1 {
+    font: bold 40px/1 "arial";
+  }
+  #visual .Slide_btn .prev {
+    left: 30px;
+  }
+  #visual .Slide_btn .next {
+    right: 30px;
+  }
+  #information.action {
+    padding: 100px 0;
+  }
+  #information.action .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+    display: block;
+  }
+  #information.action .inner .wrap {
+    width: 100%;
+  }
+  #information.action .inner .wrap h1 {
+    text-align: center;
+    margin: 30px 0px 40px;
+    padding-top: 0;
+  }
+  #information.action .inner .wrap p {
+    text-align: center;
+  }
+  #information.action .inner .wrap a {
+    margin: 30px auto 0px;
+  }
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
+  }
+  #information.action .QiuckJoin form h1 {
+    text-align: center;
+  }
+  #information.action .QiuckJoin form fieldset table th input[type=submit] {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    height: 30px;
+  }
+  #services {
+    padding: 100px 0px 600px;
+  }
+  #services .innerH1 {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #services main section article {
+    width: 100%;
+    height: 500px;
+    display: block;
+  }
+  #services main section article .pic {
+    width: 100%;
+    height: auto;
+  }
+  #services main section article .wrap {
+    height: auto;
+    width: 100%;
+  }
+  #services main section article .wrap a {
+    height: auto;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 50px 10px;
+  }
+  #LatestProjects {
+    padding: 100px 0px;
+  }
+  #LatestProjects .inner .wrap article {
+    margin-right: 10px;
+  }
+  #footer {
+    padding: 80px 0;
+  }
+  #footer .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+    display: block;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 539px) {
+  #visual .slider .inner {
+    top: 40%;
+  }
+  #visual .slider .inner h1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #visual .Slide_btn .prev {
+    width: 30px;
+    height: 30px;
+    left: 20px;
+  }
+  #visual .Slide_btn .next {
+    right: 20px;
+    height: 30px;
+    width: 30px;
+  }
+  #information.action .inner .wrap h1 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1px;
+  }
+  #information.action .QiuckJoin {
+    margin: 50px auto 0;
+  }
+  #services {
+    padding: 100px 0px 400px;
+  }
+  #services .innerH1 {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #services main .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #services main .inner ul {
+    padding-top: 40px;
+  }
+  #services main .inner ul li {
+    padding: 0px 20px;
+  }
+  #services main .inner ul li a {
+    padding: 0px 0px;
+    font: bold 13px/1 "arial";
+  }
+  #services main section article {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  #services main section article .pic {
+    width: 100%;
+    height: auto;
+  }
+  #services main section article .wrap {
+    height: auto;
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+  }
+  #services main section article .wrap h2 {
+    font: bold 25px/1.3 "arial";
+    padding: 0 0 20px;
+  }
+  #services main section article .wrap p {
+    font: 10px/1.3 "arial";
+  }
+  #services main section article .wrap a {
+    height: auto;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 30px 10px 10px;
+  }
+  #LatestProjects {
+    padding: 50px 0px;
+  }
+  #LatestProjects::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #LatestProjects .inner {
+    width: 100%;
+    max-width: 1180px;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+  #LatestProjects .inner .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #LatestProjects .inner .wrap article {
+    margin-bottom: 20px;
+  }
+  #footer .inner {
+    padding: 10px;
+  }
+  #footer .inner h1 {
+    margin-bottom: 20px;
+  }
+  #footer .inner ul li {
+    margin-left: 0px;
+    margin: 5px;
+  }
+}
 .vidList {
   width: 100%;
   display: flex;
@@ -904,36 +1731,6 @@ table {
   color: rgba(235, 213, 69, 0.989);
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-ul,
-ol,
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.hidden {
-  position: absolute;
-  top: -99999999px;
-  opacity: 0;
-}
-
-fieldset {
-  border: none;
-}
-
-table {
-  border-collapse: collapse;
-}
-
 .Scroll {
   position: fixed;
   right: 1vw;
@@ -992,9 +1789,10 @@ table {
   justify-content: flex-start;
   align-items: center;
 }
-#header .inner .hd_logo img {
-  filter: invert(86%) sepia(17%) saturate(1662%) hue-rotate(37deg) brightness(10%) contrast(84%);
+#header .inner h1 a {
+  color: #fff;
   width: 100px;
+  font-size: 40px;
 }
 #header .inner .menuWeb {
   position: absolute;
@@ -1011,13 +1809,16 @@ table {
   height: 100%;
   display: block;
   padding: 0px 20px;
-  font: bold 20px/100px "arial";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100px;
   color: white;
   opacity: 0.7;
   text-align: center;
   transition: 0.3s ease;
 }
 #header .inner .menuWeb #gnb li a:hover {
+  opacity: 1;
   color: rgba(235, 213, 69, 0.989);
 }
 #header .inner .btnCall {
@@ -1080,6 +1881,7 @@ table {
 #header .inner .menuMo {
   width: 270px;
   height: 100vh;
+  letter-spacing: 1px;
   background-color: rgba(235, 213, 69, 0.989);
   position: fixed;
   top: 0;
@@ -1100,22 +1902,29 @@ table {
 }
 #header .inner .menuMo h1 a {
   display: block;
-  font: bold 24px/1 "arial";
-  color: #fff;
+  font-weight: bold;
+  margin: 15px auto;
+  font-size: 40px;
+  line-height: 1px;
+  color: rgba(0, 0, 0, 0.747);
   text-align: center;
 }
 #header .inner .menuMo h1 span {
   font-size: 12px;
-  color: #aaa;
+  color: #444;
 }
 #header .inner .menuMo #gnbMo li a {
   display: block;
   width: 100%;
-  padding: 20px 0;
-  border-bottom: 1px solid #444;
-  font: bold 14px/1 "arial";
-  color: #888;
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1px;
+  color: #efefef;
   text-align: center;
+}
+#header .inner .menuMo #gnbMo li a:hover {
+  color: #444;
 }
 
 #visual {
@@ -1141,7 +1950,9 @@ table {
   z-index: 2;
 }
 #visual .slider .inner h1 {
-  font: bold 50px/1 "arial";
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1px;
   color: rgba(235, 213, 69, 0.989);
   text-align: center;
 }
@@ -1160,20 +1971,22 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  font: bold 20vw/1 "arial";
-  opacity: 0.7;
+  font-weight: bold;
+  font-size: 20vw;
+  line-height: 1px;
+  opacity: 0.8;
 }
 #visual .slider ul li[data-index="1"] {
-  background: url(../img/DEUX\ VILLE\ _\ livingaxis.jpg) no-repeat center/cover;
+  background: url(../img/index_visual/visual2.jpg) no-repeat center/cover;
 }
 #visual .slider ul li[data-index="2"] {
-  background: url(../img/Koral\ Brothers\ Inc_\ -\ Hamptons\ Custom\ Home\ Builder\ &\ General\ Contractors.png) no-repeat center/cover;
+  background: url(../img/index_visual/visual1.jpg) no-repeat center/cover;
   opacity: 0.5;
   height: 100%;
   width: 100%;
 }
 #visual .slider ul li[data-index="3"] {
-  background: url(../img//project_villa.jpg) no-repeat center/cover;
+  background: url(../img/index_visual/visual3.jpg) no-repeat center/cover;
   background-color: white;
   height: 100%;
   width: 100%;
@@ -1213,7 +2026,9 @@ table {
   transition: all 0.5s;
   opacity: 0;
   transform: translate(100%, -50%);
-  font: bold 12px/1 "arial";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1px;
   color: rgba(235, 213, 69, 0.989);
 }
 #visual .Slide_btn .prev::before {
@@ -1272,7 +2087,9 @@ table {
   transform: translate(-150%, -50%);
   opacity: 0;
   transition: all 0.5s;
-  font: bold 12px/1 "arial";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1px;
   color: rgba(235, 213, 69, 0.989);
 }
 #visual .Slide_btn .next::before {
@@ -1328,6 +2145,7 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 10px;
 }
 #information.action .inner .wrap {
   width: 600px;
@@ -1335,13 +2153,17 @@ table {
   margin-right: 20px;
 }
 #information.action .inner .wrap h1 {
-  margin: 70px 0px 30px;
+  margin: 70px 0px 40px;
   text-align: left;
-  font: bold 50px/1 "arial";
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1px;
   color: rgba(235, 213, 69, 0.989);
 }
 #information.action .inner .wrap p {
-  font: 20px/1.3 "arial";
+  font-weight: normal;
+  font-family: arial;
+  font-size: 20px;
   letter-spacing: 1.3px;
 }
 #information.action .inner .wrap a {
@@ -1349,8 +2171,8 @@ table {
   width: 150px;
   height: 40px;
   border: 1px solid;
-  letter-spacing: 1px;
-  font: bold 15px/40px "arial";
+  font-size: 15px;
+  line-height: 40px;
   color: #fff;
   text-align: center;
   letter-spacing: 2px;
@@ -1363,7 +2185,7 @@ table {
 }
 #information.action .QiuckJoin {
   position: relative;
-  margin-top: -71px;
+  margin-top: -81px;
   border-radius: 0px;
   min-width: 500px;
 }
@@ -1374,6 +2196,7 @@ table {
   height: 70px;
   line-height: 70px;
   font-size: 30px;
+  letter-spacing: 1px;
 }
 #information.action .QiuckJoin form fieldset {
   padding: 15px;
@@ -1385,8 +2208,9 @@ table {
 }
 #information.action .QiuckJoin form fieldset table th {
   width: 40%;
-  padding: 20px 30px;
-  font: bold 18px/1 "arial";
+  padding: 30px 30px;
+  font-size: 20px;
+  line-height: 1px;
   color: #666;
 }
 #information.action .QiuckJoin form fieldset table th:last-child {
@@ -1399,7 +2223,8 @@ table {
   margin-left: 40px;
   background-color: rgba(28, 27, 23, 0.989);
   cursor: pointer;
-  font: bold 14px/1 "arial";
+  font-size: 14px;
+  line-height: 1px;
   color: #fff;
 }
 #information.action .QiuckJoin form fieldset table td {
@@ -1415,7 +2240,9 @@ table {
   border-bottom: 1px solid rgba(235, 213, 69, 0.989);
   background: none;
   text-align: center;
-  font: normal 16px/1 "arial";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1px;
 }
 #information.action .QiuckJoin form fieldset label[for=agree] {
   font-size: 14px;
@@ -1452,8 +2279,9 @@ table {
 #services main .inner ul li {
   width: 100%;
   height: 100%;
-  padding: 1px 41px;
-  font: bold 20px/1 "arial";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1px;
   color: black;
   text-align: center;
 }
@@ -1462,7 +2290,6 @@ table {
   height: 100%;
   display: block;
   padding: 20px 0px;
-  font: bold 18px/1 "arial";
   color: rgba(0, 0, 0, 0.747);
   text-align: center;
   transition: all 0.3s;
@@ -1514,11 +2341,14 @@ table {
   position: relative;
 }
 #services main section article .wrap h2 {
-  padding: 0 0 30px;
-  font: bold 40px/1.3 "arial";
+  padding: 10px 0px 50px;
+  font-size: 40px;
+  line-height: 1.3px;
 }
 #services main section article .wrap p {
-  font: 20px/1.3 "arial";
+  font-family: arial;
+  font-size: 20px;
+  letter-spacing: 1px;
   width: 100%;
   text-align: left;
 }
@@ -1526,17 +2356,19 @@ table {
   display: block;
   width: 200px;
   text-align: center;
-  margin: 80px 10px 10px;
+  margin: 40px 0px 10px;
   border: 1px solid black;
   padding: 20px 30px;
   color: black;
   letter-spacing: 1px;
-  font: 13px/1.3 "arial";
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.3px;
   transition: 0.3s ease;
 }
 #services main section article .wrap a:hover {
   background-color: #000;
-  color: #fff;
+  color: #efefef;
 }
 #services main section article.on {
   display: flex;
@@ -1548,7 +2380,7 @@ table {
   width: 100%;
   padding: 150px 0px;
   opacity: 1;
-  transform: rotateY(200deg) translateY(100px);
+  transform: rotateY(100deg) translateY(300px);
   transition: 1s ease;
 }
 #LatestProjects .inner {
@@ -1601,8 +2433,7 @@ table {
   z-index: 3;
 }
 #LatestProjects .inner .wrap article a {
-  font-size: 15px;
-  font-family: "arial";
+  font-size: 20px;
   color: rgba(235, 213, 69, 0.989);
   position: absolute;
   z-index: 5;
@@ -1638,6 +2469,7 @@ table {
 #footer .inner {
   width: 1180px;
   margin: 0 auto;
+  padding: 10px;
 }
 #footer .inner::after {
   content: "";
@@ -1645,7 +2477,9 @@ table {
   clear: both;
 }
 #footer .inner h1 {
-  font: bold 30px/1 "arial";
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1px;
   color: rgba(0, 0, 0, 0.747);
   float: left;
 }
@@ -1661,7 +2495,9 @@ table {
   margin-left: 20px;
 }
 #footer .inner ul li a {
-  font: bold 14px/1 "arial";
+  font-size: 20px;
+  line-height: 1px;
+  font-weight: bold;
   color: rgba(0, 0, 0, 0.747);
 }
 #footer .inner address {
@@ -1728,7 +2564,7 @@ table {
   }
   #information.action .inner .wrap h1 {
     text-align: center;
-    margin: 0px 0px 30px;
+    margin: 30px 0px 40px;
     padding-top: 0;
   }
   #information.action .inner .wrap p {
@@ -1739,6 +2575,15 @@ table {
   }
   #information.action .QiuckJoin {
     margin: 50px auto 0;
+  }
+  #information.action .QiuckJoin form h1 {
+    text-align: center;
+  }
+  #information.action .QiuckJoin form fieldset table th input[type=submit] {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    height: 30px;
   }
   #services {
     padding: 100px 0px 600px;
@@ -1783,6 +2628,7 @@ table {
     overflow: hidden;
     padding: 0px 10px;
     display: block;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 539px) {
@@ -1790,7 +2636,8 @@ table {
     top: 40%;
   }
   #visual .slider .inner h1 {
-    font: bold 25px/1 "arial";
+    font-size: 25px;
+    font-weight: bold;
   }
   #visual .Slide_btn .prev {
     width: 30px;
@@ -1803,7 +2650,9 @@ table {
     width: 30px;
   }
   #information.action .inner .wrap h1 {
-    font: bold 25px/1 "arial";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1px;
   }
   #information.action .QiuckJoin {
     margin: 50px auto 0;
@@ -1882,11 +2731,11 @@ table {
   #LatestProjects .inner .wrap article {
     margin-bottom: 20px;
   }
+  #footer .inner {
+    padding: 10px;
+  }
   #footer .inner h1 {
     margin-bottom: 20px;
-  }
-  #footer .inner ul {
-    width: 100%;
   }
   #footer .inner ul li {
     margin-left: 0px;

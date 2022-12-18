@@ -1,6 +1,8 @@
 * {
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: Ubuntu;
 }
 ul,
 ol,
@@ -19,5 +21,11 @@ table {
 .h {
 	position: absolute;
 	top: -9999px;
+	opacity: 0;
+}
+
+.hidden {
+	position: absolute;
+	top: -99999999px;
 	opacity: 0;
 }
