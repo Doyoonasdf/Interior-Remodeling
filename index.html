@@ -11,6 +11,7 @@
   <script defer src="js/main.js"></script>
   <script defer src="js/btnCall.js"></script>
   <script defer src="js/anime.js"></script>
+  <script defer src="js/_mainActionform.js"></script>
   <!-- <script defer src="js/Tab.js/"></script> -->
 </head>
 
@@ -114,9 +115,16 @@
               </tr>
 
               <tr>
-                <th scope="row"><label for="PhoneNumber">PhoneNumber</label></th>
+                <th scope="row"><label for="tell">PhoneNumber</label></th>
                 <td>
-                  <input type="text" id="PhoneNumber" required placeholder="핸드폰 번호를 입력해 주세요">
+                  <select name="tell" id="tell">
+                    <option value="010">010</option>
+                    <option value="070">070</option>
+                  </select>
+                  <span class="inputSpan">-</span>
+                  <input type="tel" name="tell" id="tellMiddle">
+                  <span class="inputSpan">-</span>
+                  <input type="tel" name="tell" id="tellEnd">
                 </td>
               </tr>
 
@@ -124,14 +132,7 @@
                 <th scope="row"><label for="email">E-MAIL</label></th>
                 <td>
                   <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해 주세요">
-                  <!-- 
-                    안쓰는게 나을듯
-                    <select name="company" id="company">
-                    <option value="">선택하세요</option>
-                    <option value="naver">@naver.com</option>
-                    <option value="daum">@hanmail.net</option>
-                    <option value="nate">@nate.com</option>
-                  </select> -->
+
                 </td>
               </tr>
               <!-- 

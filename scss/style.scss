@@ -476,7 +476,8 @@ $mobile: 539px;
 		align-items: flex-start;
 		padding: 10px;
 		.wrap {
-			width: 600px;
+			//
+			width: 50%;
 			height: 100%;
 			margin-right: 20px;
 			h1 {
@@ -519,6 +520,7 @@ $mobile: 539px;
 		margin-top: -81px;
 		border-radius: 0px;
 		min-width: 500px;
+		width: 50%;
 		form {
 			h1 {
 				color: rgba(255, 255, 255, 0.735);
@@ -581,10 +583,17 @@ $mobile: 539px;
 							font-size: 16px;
 							line-height: 1px;
 						}
+						input[type="tel"],
+						#tell {
+							// width: calc(100% / 3);
+							width: 30%;
+							padding: 5px;
+							font-size: 14px;
+						}
 					}
 				}
 				label[for="agree"] {
-					font-size: 14px;
+					font-size: 16px;
 					text-align: left;
 					cursor: pointer;
 				}
@@ -1059,6 +1068,15 @@ $mobile: 539px;
 		}
 		.QiuckJoin {
 			margin: 50px auto 0;
+			form {
+				fieldset {
+					table {
+						td {
+							padding: 0px;
+						}
+					}
+				}
+			}
 		}
 	}
 
