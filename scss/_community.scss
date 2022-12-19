@@ -57,7 +57,7 @@
 			height: 30px;
 			background: rgba(235, 213, 69, 0.989);
 			color: #eee;
-			font-size: 20px;
+			font-size: 30px;
 			text-align: center;
 		}
 		.next {
@@ -67,7 +67,7 @@
 			height: 30px;
 			background: rgba(235, 213, 69, 0.989);
 			color: #eee;
-			font-size: 20px;
+			font-size: 30px;
 			text-align: center;
 		}
 		.numbers {
@@ -118,6 +118,7 @@
 				}
 			}
 			.pagination {
+				margin-bottom: 30px;
 				.numbers {
 					a {
 						@for $i from 6 through 10 {

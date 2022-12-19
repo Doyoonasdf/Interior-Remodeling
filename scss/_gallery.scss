@@ -69,6 +69,7 @@
 					width: 100%;
 					padding: 15px;
 					background-color: #efefef;
+					// background-color: pink;
 					a {
 						img {
 							width: 100%;
@@ -150,12 +151,39 @@
 
 @media screen and (max-width: $mobile) {
 	.gallery {
+		#searchBox {
+			padding: 0px 60px 0px;
+		}
 		#wrap {
 			max-width: 1180px;
 			#list {
 				.item {
 					width: calc(100% / 3);
+					padding: 10px;
+					div {
+						padding: 10px;
+						p {
+							font-size: 10px;
+							margin-bottom: 10px;
+						}
+						span {
+							strong {
+								font-size: 10px;
+							}
+						}
+					}
 				}
+			}
+		}
+
+		aside {
+			top: 60%;
+			left: 50%;
+			transform: translate(-60%, -50%);
+			width: 100vw;
+			height: 50vh;
+			span {
+				right: 0px;
 			}
 		}
 	}

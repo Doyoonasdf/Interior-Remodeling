@@ -180,7 +180,7 @@ function delayLoading() {
 
     let thumb = el.closest(".item").querySelector(".thumb");
     thumb.onerror = (e) => {
-      e.currentTarget.closest(".item").querySelector("div a img").setAttribute("src", "img/k1.jpg");
+      e.currentTarget.closest(".item").querySelector("div a img").setAttribute("src", "img/gellery/k1.png");
     }
 
     // let imgTitle = el.closest(".item").querySelector("p");
