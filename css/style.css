@@ -841,6 +841,13 @@
   font-size: 16px;
   font-family: "BlackHanSans";
 }
+.join .inner .wrap .agreement p {
+  font-size: 12px;
+  font-family: "BlackHanSans";
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
+}
 .join .inner .wrap table {
   width: 100%;
   border-top: 2px solid #999;
@@ -894,6 +901,13 @@
   background: rgba(0, 0, 0, 0.03);
   padding: 10px;
   border: 1px solid #aaa;
+}
+.join .inner .wrap table td p {
+  font-size: 12px;
+  font-family: "BlackHanSans";
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 1179px) {
