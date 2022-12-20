@@ -2162,6 +2162,15 @@ table {
   line-height: 1px;
   color: #fff;
 }
+#information.action .QiuckJoin form fieldset table th p {
+  font-size: 12px;
+  font-family: "BlackHanSans";
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
+  text-align: left;
+  padding-left: 13%;
+}
 #information.action .QiuckJoin form fieldset table td {
   padding: 0px 30px;
   background: white;
@@ -2185,10 +2194,24 @@ table {
   padding: 5px;
   font-size: 14px;
 }
+#information.action .QiuckJoin form fieldset table td p {
+  font-size: 12px;
+  font-family: "BlackHanSans";
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
+}
 #information.action .QiuckJoin form fieldset label[for=agree] {
   font-size: 16px;
   text-align: left;
   cursor: pointer;
+}
+#information.action .QiuckJoin form fieldset label[for=agree] p {
+  font-size: 12px;
+  font-family: "BlackHanSans";
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
 }
 
 #services {
