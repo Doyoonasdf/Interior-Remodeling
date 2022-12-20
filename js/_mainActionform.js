@@ -106,12 +106,12 @@ function isAgree(el) {
 
 //폰넘버는 8글자만 가능하다
 function isNum(el, len) {
-  if (len === undefined) len = 8;
+  if (len === undefined) len = 4;
   let input = form.querySelector(`[name=${el}]`);
   let txt = input.value;
   const num = /[0-9]/;
 
-  if (txt.length >= len && num.test(txt)) {
+  if (txt.length == len && num.test(txt)) {
     const errMsgs = input.closest("td").querySelectorAll("p");
     if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
     return true;
