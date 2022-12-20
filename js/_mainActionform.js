@@ -3,7 +3,7 @@ const btnSubmit = form.querySelector("input[type=submit]");
 
 
 
-//폰넘버는 4글자만 가능하다
+
 
 
 
@@ -19,13 +19,14 @@ btnSubmit.addEventListener("click", (e) => {
   if (!isAgree("agree")) e.preventDefault();
 
   //핸드폰 (앞자리 중간자리 뒷자리)
-  // if (!isSelect("tell")) e.preventDefault();
+
   if (!isNum("tell")) e.preventDefault();
+  if (!isSelect("tell1")) e.preventDefault();
 
 });
 
 
-//name 이름은 빈값이면 안된다 
+//name 이름은 빈값이면 안된다 빈값이면 안보낼거임 
 
 function isTxt(el) {
   let input = form.querySelector(`[name=${el}]`);
@@ -103,20 +104,18 @@ function isAgree(el) {
 
 }
 
+//폰넘버는 8글자만 가능하다
 function isNum(el, len) {
-  if (len === undefined) len = 4;
+  if (len === undefined) len = 8;
   let input = form.querySelector(`[name=${el}]`);
   let txt = input.value;
-  if (txt.length >= len) {
+  const num = /[0-9]/;
 
+  if (txt.length >= len && num.test(txt)) {
     const errMsgs = input.closest("td").querySelectorAll("p");
-
     if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
-
     return true;
   } else {
-
-
     const errMsgs = input.closest("td").querySelectorAll("p");
 
     if (errMsgs.length > 0) return false;
@@ -124,6 +123,22 @@ function isNum(el, len) {
     const errMsg = document.createElement("p");
     errMsg.append(`핸드폰 번호를 입력해주세요`);
     input.closest("td").append(errMsg);
+    return false;
+  }
+
+}
+
+//셀렉트 010 부분 
+function isSelect(el) {
+  let sel = form.querySelector(`[name=${el}]`);
+  let sel_index = sel.options.selectedIndex;
+
+  let val = sel[sel_index].value;
+
+  if (val !== "") {
+
+    return true;
+  } else {
     return false;
   }
 
