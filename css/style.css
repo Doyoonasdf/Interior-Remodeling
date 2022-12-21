@@ -721,7 +721,7 @@
   width: 100%;
 }
 .gallery #wrap #list .item div p {
-  opacity: 1;
+  opacity: 0;
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 15px;
@@ -731,7 +731,7 @@
 .gallery #wrap #list .item div span {
   transition: all 0.5s;
   font-size: 10px;
-  opacity: 1;
+  opacity: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1697,7 +1697,7 @@ table {
   background: linear-gradient(135deg, rgba(235, 213, 69, 0.989), #f1af22);
 }
 .result2 .wrap .txt h2 {
-  font-size: 30px;
+  font-size: 28px;
   font-family: "BlackHanSans";
   color: black;
 }

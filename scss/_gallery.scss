@@ -76,8 +76,8 @@
 						}
 					}
 					p {
-						// opacity: 0;
-						opacity: 1;
+						opacity: 0;
+						// opacity: 1;
 						font-size: 14px;
 						font-weight: bold;
 						margin-bottom: 15px;
@@ -87,8 +87,8 @@
 					span {
 						transition: all 0.5s;
 						font-size: 10px;
-						// opacity: 0;
-						opacity: 1;
+						opacity: 0;
+						// opacity: 1;
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
