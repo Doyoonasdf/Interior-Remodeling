@@ -2403,6 +2403,7 @@ table {
   letter-spacing: 1px;
   width: 100%;
   text-align: left;
+  color: #333;
 }
 #services main section article .wrap a {
   display: block;

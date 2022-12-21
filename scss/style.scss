@@ -3,18 +3,18 @@
 $tablet: 1179px;
 $mobile: 539px;
 
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Ubuntu:wght@500&display=swap");
-@import "sub_layout.scss";
-@import "community.scss";
-@import "department.scss";
-@import "gallery.scss";
-@import "join.scss";
-@import "location.scss";
-@import "reset.scss";
-@import "sub_layout.scss";
-@import "youtube.scss";
-@import "result.scss";
-@import "result2.scss";
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Ubuntu:wght@500&display=swap');
+@import 'sub_layout.scss';
+@import 'community.scss';
+@import 'department.scss';
+@import 'gallery.scss';
+@import 'join.scss';
+@import 'location.scss';
+@import 'reset.scss';
+@import 'sub_layout.scss';
+@import 'youtube.scss';
+@import 'result.scss';
+@import 'result2.scss';
 
 .Scroll {
 	position: fixed;
@@ -137,7 +137,7 @@ $mobile: 539px;
 			width: 30px;
 			height: 30px;
 			&::before {
-				content: "";
+				content: '';
 				display: block;
 				width: 100%;
 				height: 2px;
@@ -148,7 +148,7 @@ $mobile: 539px;
 				transition: top 0.5s 0s, transform 0.5s 0.5s;
 			}
 			&::after {
-				content: "";
+				content: '';
 				display: block;
 				width: 100%;
 				height: 2px;
@@ -290,29 +290,26 @@ $mobile: 539px;
 				font-size: 20vw;
 				line-height: 1px;
 				opacity: 0.8;
-				&[data-index="1"] {
-					background: url(../img/index_visual/visual2.jpg)
-						no-repeat center/cover;
+				&[data-index='1'] {
+					background: url(../img/index_visual/visual2.jpg) no-repeat center/cover;
 					// background-color: hotpink;
 					// height: 100%;
 					// width: 100%;
 				}
-				&[data-index="2"] {
-					background: url(../img/index_visual/visual1.jpg)
-						no-repeat center/cover;
+				&[data-index='2'] {
+					background: url(../img/index_visual/visual1.jpg) no-repeat center/cover;
 					opacity: 0.5;
 					height: 100%;
 					width: 100%;
 				}
-				&[data-index="3"] {
-					background: url(../img/index_visual/visual3.jpg)
-						no-repeat center/cover;
+				&[data-index='3'] {
+					background: url(../img/index_visual/visual3.jpg) no-repeat center/cover;
 					background-color: white;
 					height: 100%;
 					width: 100%;
 				}
 				&::after {
-					content: "";
+					content: '';
 					display: block;
 					width: 100%;
 					height: 100%;
@@ -355,7 +352,7 @@ $mobile: 539px;
 				color: rgba(235, 213, 69, 0.989);
 			}
 			&::before {
-				content: "";
+				content: '';
 				display: block;
 				width: 100%;
 				height: 1px;
@@ -368,7 +365,7 @@ $mobile: 539px;
 				transition: all 0.5s;
 			}
 			&::after {
-				content: "";
+				content: '';
 				display: block;
 				width: 100%;
 				height: 1px;
@@ -420,7 +417,7 @@ $mobile: 539px;
 				color: rgba(235, 213, 69, 0.989);
 			}
 			&::before {
-				content: "";
+				content: '';
 				display: block;
 				width: 100%;
 				height: 1px;
@@ -433,7 +430,7 @@ $mobile: 539px;
 				transition: all 0.5s;
 			}
 			&::after {
-				content: "";
+				content: '';
 				display: block;
 				width: 100%;
 				height: 1px;
@@ -554,7 +551,7 @@ $mobile: 539px;
 						&:last-child {
 							border-bottom: none;
 						}
-						input[type="submit"] {
+						input[type='submit'] {
 							width: 150px;
 							height: 30px;
 							border: none;
@@ -567,7 +564,7 @@ $mobile: 539px;
 						}
 						p {
 							font-size: 12px;
-							font-family: "BlackHanSans";
+							font-family: 'BlackHanSans';
 							font-weight: bold;
 							color: red;
 							margin-top: 5px;
@@ -580,21 +577,20 @@ $mobile: 539px;
 						padding: 0px 30px;
 						background: white;
 
-						input[type="text"] {
+						input[type='text'] {
 							width: 100%;
 							height: 40px;
 							border-top: none;
 							border-left: none;
 							border-right: none;
-							border-bottom: 1px solid
-								rgba(235, 213, 69, 0.989);
+							border-bottom: 1px solid rgba(235, 213, 69, 0.989);
 							background: none;
 							text-align: center;
 							font-weight: normal;
 							font-size: 16px;
 							line-height: 1px;
 						}
-						input[type="tel"],
+						input[type='tel'],
 						#tell {
 							// width: calc(100% / 3);
 							width: 30%;
@@ -603,7 +599,7 @@ $mobile: 539px;
 						}
 						p {
 							font-size: 12px;
-							font-family: "BlackHanSans";
+							font-family: 'BlackHanSans';
 							font-weight: bold;
 							color: red;
 							// color: pink;
@@ -611,13 +607,13 @@ $mobile: 539px;
 						}
 					}
 				}
-				label[for="agree"] {
+				label[for='agree'] {
 					font-size: 16px;
 					text-align: left;
 					cursor: pointer;
 					p {
 						font-size: 12px;
-						font-family: "BlackHanSans";
+						font-family: 'BlackHanSans';
 						font-weight: bold;
 						color: red;
 						margin-top: 5px;
@@ -698,7 +694,7 @@ $mobile: 539px;
 				opacity: 0;
 
 				&::after {
-					content: "";
+					content: '';
 					display: block;
 					clear: both;
 				}
@@ -735,6 +731,7 @@ $mobile: 539px;
 						letter-spacing: 1px;
 						width: 100%;
 						text-align: left;
+						color: #333;
 					}
 					a {
 						display: block;
@@ -787,7 +784,7 @@ $mobile: 539px;
 			padding-top: 80px;
 			width: 100%;
 			&::after {
-				content: "";
+				content: '';
 				display: block;
 				clear: both;
 			}
@@ -809,7 +806,7 @@ $mobile: 539px;
 					transition: 1s;
 				}
 				&::after {
-					content: "";
+					content: '';
 					display: block;
 					width: 100%;
 					height: 100%;
@@ -834,8 +831,7 @@ $mobile: 539px;
 						top: 50%;
 						left: 50%;
 						transform: translate(-50%, -50%);
-						border-bottom: 1px solid
-							rgba(235, 213, 69, 0.989);
+						border-bottom: 1px solid rgba(235, 213, 69, 0.989);
 					}
 					img {
 						transform: scale(1.2);
@@ -865,7 +861,7 @@ $mobile: 539px;
 		margin: 0 auto;
 		padding: 10px;
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			clear: both;
 		}
@@ -876,8 +872,8 @@ $mobile: 539px;
 			color: rgba(0, 0, 0, 0.747);
 			float: left;
 			img {
-				filter: invert(86%) sepia(17%) saturate(1662%)
-					hue-rotate(37deg) brightness(10%) contrast(84%);
+				filter: invert(86%) sepia(17%) saturate(1662%) hue-rotate(37deg) brightness(10%)
+					contrast(84%);
 				width: 100px;
 			}
 		}
@@ -899,7 +895,7 @@ $mobile: 539px;
 		address {
 			float: left;
 			width: 100%;
-			font: 14px/1.3 "arial";
+			font: 14px/1.3 'arial';
 			color: rgba(0, 0, 0, 0.747);
 			margin-bottom: 20px;
 			margin-top: 20px;
@@ -909,7 +905,7 @@ $mobile: 539px;
 		p {
 			float: left;
 			width: 100%;
-			font: 12px/1 "arial";
+			font: 12px/1 'arial';
 			color: rgba(0, 0, 0, 0.747);
 		}
 	}
@@ -943,7 +939,7 @@ $mobile: 539px;
 				overflow: hidden;
 				padding: 0px 10px;
 				h1 {
-					font: bold 40px/1 "arial";
+					font: bold 40px/1 'arial';
 				}
 			}
 		}
@@ -989,7 +985,7 @@ $mobile: 539px;
 				fieldset {
 					table {
 						th {
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 100%;
 								margin-left: 0px;
 								margin-top: 20px;
@@ -1126,7 +1122,7 @@ $mobile: 539px;
 						padding: 0px 20px;
 						a {
 							padding: 0px 0px;
-							font: bold 13px/1 "arial";
+							font: bold 13px/1 'arial';
 						}
 					}
 				}
@@ -1145,11 +1141,11 @@ $mobile: 539px;
 						width: 100%;
 						padding: 20px 60px 20px 20px;
 						h2 {
-							font: bold 25px/1.3 "arial";
+							font: bold 25px/1.3 'arial';
 							padding: 0 0 20px;
 						}
 						p {
-							font: 10px/1.3 "arial";
+							font: 10px/1.3 'arial';
 						}
 						a {
 							height: auto;
@@ -1166,7 +1162,7 @@ $mobile: 539px;
 	#LatestProjects {
 		padding: 50px 0px;
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			clear: both;
 		}
