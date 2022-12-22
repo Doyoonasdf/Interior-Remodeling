@@ -2319,26 +2319,27 @@ table {
   text-align: center;
   letter-spacing: 1px;
 }
-#services main {
+#services .inner {
   width: 100%;
 }
-#services main .inner ul {
+#services .inner .wrapUl ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 80px;
 }
-#services main .inner ul li {
-  width: 100%;
+#services .inner .wrapUl ul li {
   height: 100%;
+  display: block;
+  padding: 1px 41px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1px;
   color: black;
   text-align: center;
 }
-#services main .inner ul li a {
+#services .inner .wrapUl ul li a {
   width: 100%;
   height: 100%;
   display: block;
@@ -2347,16 +2348,16 @@ table {
   text-align: center;
   transition: all 0.3s;
 }
-#services main .inner ul li.on a {
+#services .inner .wrapUl ul li.on a {
   color: rgba(235, 213, 69, 0.989);
   scale: 1.2;
 }
-#services main section {
+#services .inner .wrapArc {
   width: 100%;
   position: relative;
   margin-top: 50px;
 }
-#services main section article {
+#services .inner .wrapArc article {
   position: absolute;
   top: 0;
   left: 0;
@@ -2366,24 +2367,24 @@ table {
   display: flex;
   opacity: 0;
 }
-#services main section article::after {
+#services .inner .wrapArc article::after {
   content: "";
   display: block;
   clear: both;
 }
-#services main section article .pic {
+#services .inner .wrapArc article .pic {
   float: left;
   width: 50%;
   overflow: hidden;
   height: 500px;
 }
-#services main section article .pic img {
+#services .inner .wrapArc article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
-#services main section article .wrap {
+#services .inner .wrapArc article .txt {
   float: left;
   width: 50%;
   overflow: hidden;
@@ -2392,12 +2393,12 @@ table {
   height: 500px;
   position: relative;
 }
-#services main section article .wrap h2 {
+#services .inner .wrapArc article .txt h2 {
   padding: 10px 0px 50px;
   font-size: 40px;
   line-height: 1.3px;
 }
-#services main section article .wrap p {
+#services .inner .wrapArc article .txt p {
   font-family: arial;
   font-size: 20px;
   letter-spacing: 1px;
@@ -2405,7 +2406,7 @@ table {
   text-align: left;
   color: #333;
 }
-#services main section article .wrap a {
+#services .inner .wrapArc article .txt a {
   display: block;
   width: 200px;
   text-align: center;
@@ -2419,11 +2420,11 @@ table {
   line-height: 1.3px;
   transition: 0.3s ease;
 }
-#services main section article .wrap a:hover {
+#services .inner .wrapArc article .txt a:hover {
   background-color: #000;
   color: #efefef;
 }
-#services main section article.on {
+#services .inner .wrapArc article.on {
   display: flex;
   opacity: 1;
   visibility: visible;
@@ -2647,20 +2648,20 @@ table {
     overflow: hidden;
     padding: 0px 10px;
   }
-  #services main section article {
+  #services .inner .wrapArc article {
     width: 100%;
     height: 500px;
     display: block;
   }
-  #services main section article .pic {
+  #services .inner .wrapArc article .pic {
     width: 100%;
     height: auto;
   }
-  #services main section article .wrap {
+  #services .inner .wrapArc article .txt {
     height: auto;
     width: 100%;
   }
-  #services main section article .wrap a {
+  #services .inner .wrapArc article .txt a {
     height: auto;
     width: 100%;
     padding: 10px 20px;
@@ -2722,44 +2723,44 @@ table {
     overflow: hidden;
     padding: 0px 10px;
   }
-  #services main .inner {
+  #services .inner .wrapUl {
     width: 100%;
     max-width: 1180px;
     overflow: hidden;
     padding: 0px 10px;
   }
-  #services main .inner ul {
+  #services .inner .wrapUl ul {
     padding-top: 40px;
   }
-  #services main .inner ul li {
+  #services .inner .wrapUl ul li {
     padding: 0px 20px;
   }
-  #services main .inner ul li a {
+  #services .inner .wrapUl ul li a {
     padding: 0px 0px;
     font: bold 13px/1 "arial";
   }
-  #services main section article {
+  #services .inner .wrapArc article {
     display: block;
     width: 100%;
     height: 300px;
   }
-  #services main section article .pic {
+  #services .inner .wrapArc article .pic {
     width: 100%;
     height: auto;
   }
-  #services main section article .wrap {
+  #services .inner .wrapArc article .txt {
     height: auto;
     width: 100%;
     padding: 20px 60px 20px 20px;
   }
-  #services main section article .wrap h2 {
+  #services .inner .wrapArc article .txt h2 {
     font: bold 25px/1.3 "arial";
     padding: 0 0 20px;
   }
-  #services main section article .wrap p {
+  #services .inner .wrapArc article .txt p {
     font: 10px/1.3 "arial";
   }
-  #services main section article .wrap a {
+  #services .inner .wrapArc article .txt a {
     height: auto;
     width: 100%;
     padding: 10px 10px;
